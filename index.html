@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle."&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Find Your Perfect Non-Cow Milk | noncow.com&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 60px rgba(0,0,0,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.logo p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.screen {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.screen.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.5s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.start-screen {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.start-screen h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.start-screen p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s, box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e8e8e8;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(5px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option.selected {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f0f4ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option-desc {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result-icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result-desc {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.affiliate-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.affiliate-section h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-link {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-link:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateX(5px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.product-desc {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.share-buttons {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.share-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.share-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.nav-buttons {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-secondary:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #d0d0d0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>padding: 30px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.logo h1 {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.share-buttons {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="logo"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;🥛 NonCow&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Find Your Perfect Plant Milk&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Start Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="screen active" id="start-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="start-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;Discover Your Dairy Alternative Match&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Answer 5 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="startQuiz()"&gt;Start Quiz&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Quiz Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="screen" id="quiz-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="progress"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="progress-bar" id="progress-bar"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="question" id="question-container"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="nav-buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn btn-secondary" onclick="prevQuestion()" id="prev-btn" style="display: none;"&gt;Back&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="nextQuestion()" id="next-btn"&gt;Next&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Result Screen --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="screen" id="result-screen"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="result" id="result-container"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const questions = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "What's your main use for milk?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Coffee &amp; Tea", desc: "I need something that froths well", value: "coffee" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Cereal &amp; Smoothies", desc: "I want a creamy, versatile option", value: "cereal" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Cooking &amp; Baking", desc: "I need a neutral flavor for recipes", value: "cooking" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Drinking Straight", desc: "I want something delicious on its own", value: "drinking" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "What's your flavor preference?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Creamy &amp; Rich", desc: "I love a full-bodied taste", value: "creamy" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Light &amp; Neutral", desc: "I prefer subtle flavors", value: "neutral" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Naturally Sweet", desc: "A hint of sweetness is nice", value: "sweet" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Nutty &amp; Unique", desc: "I enjoy distinctive flavors", value: "nutty" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "What matters most to you?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Sustainability", desc: "Low environmental impact is key", value: "eco" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Nutrition", desc: "High protein and vitamins", value: "nutrition" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Price", desc: "Budget-friendly options", value: "budget" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Allergen-Free", desc: "No nuts or common allergens", value: "allergen" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "How do you feel about texture?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Super Smooth", desc: "No graininess whatsoever", value: "smooth" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Thick &amp; Velvety", desc: "I want richness", value: "thick" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Light &amp; Watery", desc: "I prefer less dense", value: "light" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Don't Mind", desc: "Texture isn't a big deal", value: "any" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>question: "What's your grocery shopping style?",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Mainstream Brands", desc: "Available everywhere", value: "mainstream" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Specialty Stores", desc: "I seek out unique options", value: "specialty" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "DIY Enthusiast", desc: "I might make my own", value: "diy" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ text: "Whatever's On Sale", desc: "I'm flexible with brands", value: "flexible" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const milkTypes = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>oat: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name: "Oat Milk",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🌾",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description: "You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>products: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Oatly Barista Edition", desc: "The gold standard for coffee - froths like a dream" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Califia Farms Oat Barista Blend", desc: "Rich and creamy with zero added sugar" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Planet Oat Extra Creamy", desc: "Budget-friendly and delicious" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>almond: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name: "Almond Milk",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🌰",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description: "You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>products: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Califia Farms Unsweetened", desc: "Clean ingredients, smooth texture" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Silk Almond Unsweetened", desc: "Widely available and reliable" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Almond Breeze Original", desc: "Classic choice with great consistency" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>soy: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name: "Soy Milk",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🫘",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description: "You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>products: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Silk Organic Soymilk", desc: "High protein and smooth texture" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Westsoy Organic Unsweetened", desc: "Pure and simple ingredients" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Edensoy Extra Original", desc: "Rich taste with no added oils" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>coconut: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name: "Coconut Milk",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🥥",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description: "You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>products: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "So Delicious Original", desc: "Creamy with authentic coconut flavor" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Silk Coconutmilk", desc: "Light and versatile everyday option" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Thai Kitchen Organic", desc: "Full-fat richness for cooking" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cashew: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>name: "Cashew Milk",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>icon: "🥜",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>description: "You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy.",</p>
+<p class="p1"><span class="Apple-converted-space">                </span>products: [</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Silk Cashew Unsweetened", desc: "Velvety smooth with minimal ingredients" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "So Delicious Cashew", desc: "Rich and naturally sweet" },</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>{ name: "Elmhurst Milked Cashews", desc: "Simple ingredients, maximum creaminess" }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentQuestion = 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let answers = {};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function startQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showScreen('quiz-screen');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showScreen(screenId) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.screen').forEach(s =&gt; s.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById(screenId).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q = questions[currentQuestion];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const container = document.getElementById('question-container');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let html = `&lt;h3&gt;Question ${currentQuestion + 1} of ${questions.length}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p style="color: #666; margin-bottom: 20px;"&gt;${q.question}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>q.options.forEach((opt, idx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const selected = answers[currentQuestion] === opt.value ? 'selected' : '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>html += `&lt;div class="option ${selected}" onclick="selectOption(${currentQuestion}, '${opt.value}', this)"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="option-title"&gt;${opt.text}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="option-desc"&gt;${opt.desc}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>html += '&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>container.innerHTML = html;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateProgress();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateButtons();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function selectOption(questionIdx, value, element) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>answers[questionIdx] = value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.option').forEach(o =&gt; o.classList.remove('selected'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>element.classList.add('selected');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateProgress() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const progress = ((currentQuestion + 1) / questions.length) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('progress-bar').style.width = progress + '%';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function updateButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('prev-btn').style.display = currentQuestion &gt; 0 ? 'block' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('next-btn').textContent =<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentQuestion === questions.length - 1 ? 'See Results' : 'Next';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function nextQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!answers[currentQuestion]) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Please select an option before continuing!');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentQuestion &lt; questions.length - 1) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentQuestion++;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showResults();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function prevQuestion() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentQuestion &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>currentQuestion--;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showQuestion();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showResults() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Simple matching logic</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const milk = calculateMatch();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const result = milkTypes[milk];</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>let html = `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="result-icon"&gt;${result.icon}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2&gt;${result.name}&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="result-desc"&gt;${result.description}&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="affiliate-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;🛒 Our Top Picks:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>${result.products.map(p =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="product-link" onclick="alert('Add your affiliate link here!'); return false;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="product-name"&gt;${p.name}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="product-desc"&gt;${p.desc}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`).join('')}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="share-buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="share-btn" onclick="shareResult('${result.name}')"&gt;Share Result&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button class="share-btn" onclick="restartQuiz()"&gt;Take Again&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('result-container').innerHTML = html;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showScreen('result-screen');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calculateMatch() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Simple scoring based on answers</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const values = Object.values(answers);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (values.includes('coffee') || values.includes('creamy')) return 'oat';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (values.includes('nutrition') || values.includes('allergen')) return 'soy';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (values.includes('budget') || values.includes('neutral')) return 'almond';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (values.includes('sweet')) return 'coconut';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return 'cashew';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function shareResult(milkName) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const text = `I'm a ${milkName} person! Find your perfect dairy alternative at noncow.com`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (navigator.share) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>navigator.share({ text: text, url: window.location.href });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Share this: ' + text);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function restartQuiz() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentQuestion = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>answers = {};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>showScreen('start-screen');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
