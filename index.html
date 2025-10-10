@@ -417,52 +417,32 @@
             oat: {
                 name: "Oat Milk",
                 icon: "🌾",
-                description: "You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint.",
-                products: [
-                    { name: "Oatly Barista Edition", desc: "The gold standard for coffee - froths like a dream" },
-                    { name: "Califia Farms Oat Barista Blend", desc: "Rich and creamy with zero added sugar" },
-                    { name: "Planet Oat Extra Creamy", desc: "Budget-friendly and delicious" }
-                ]
+                searchTerm: "oat+milk+unsweetened",
+                description: "You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."
             },
             almond: {
                 name: "Almond Milk",
                 icon: "🌰",
-                description: "You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking.",
-                products: [
-                    { name: "Califia Farms Unsweetened", desc: "Clean ingredients, smooth texture" },
-                    { name: "Silk Almond Unsweetened", desc: "Widely available and reliable" },
-                    { name: "Almond Breeze Original", desc: "Classic choice with great consistency" }
-                ]
+                searchTerm: "almond+milk+unsweetened",
+                description: "You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."
             },
             soy: {
                 name: "Soy Milk",
                 icon: "🫘",
-                description: "You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options.",
-                products: [
-                    { name: "Silk Organic Soymilk", desc: "High protein and smooth texture" },
-                    { name: "Westsoy Organic Unsweetened", desc: "Pure and simple ingredients" },
-                    { name: "Edensoy Extra Original", desc: "Rich taste with no added oils" }
-                ]
+                searchTerm: "soy+milk+organic",
+                description: "You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."
             },
             coconut: {
                 name: "Coconut Milk",
                 icon: "🥥",
-                description: "You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness.",
-                products: [
-                    { name: "So Delicious Original", desc: "Creamy with authentic coconut flavor" },
-                    { name: "Silk Coconutmilk", desc: "Light and versatile everyday option" },
-                    { name: "Thai Kitchen Organic", desc: "Full-fat richness for cooking" }
-                ]
+                searchTerm: "coconut+milk+beverage",
+                description: "You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."
             },
             cashew: {
                 name: "Cashew Milk",
                 icon: "🥜",
-                description: "You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy.",
-                products: [
-                    { name: "Silk Cashew Unsweetened", desc: "Velvety smooth with minimal ingredients" },
-                    { name: "So Delicious Cashew", desc: "Rich and naturally sweet" },
-                    { name: "Elmhurst Milked Cashews", desc: "Simple ingredients, maximum creaminess" }
-                ]
+                searchTerm: "cashew+milk+unsweetened",
+                description: "You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."
             }
         };
 
@@ -551,13 +531,11 @@
                 <p class="result-desc">${result.description}</p>
                 
                 <div class="affiliate-section">
-                    <h3>🛒 Our Top Picks:</h3>
-                    ${result.products.map(p => `
-                        <a href="#" class="product-link" onclick="alert('Add your affiliate link here!'); return false;">
-                            <div class="product-name">${p.name}</div>
-                            <div class="product-desc">${p.desc}</div>
-                        </a>
-                    `).join('')}
+                    <h3>🛒 Shop ${result.name} on Amazon:</h3>
+                    <a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+                        <div class="product-name">Browse ${result.name} Options →</div>
+                        <div class="product-desc">See current prices, ratings, and availability on Amazon</div>
+                    </a>
                 </div>
                 
                 <div class="share-buttons">
