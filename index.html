@@ -3,13 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <title>Find Your Perfect Non-Cow Milk | noncow.com</title>
+    <meta name="description" content="Find your perfect plant-based milk with our interactive quiz. Expert guides on dairy alternatives for every lifestyle.">
+    <title>NonCow - Find Your Perfect Plant Milk</title>
+    <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://noncow.com/#website","url":"https://noncow.com","name":"NonCow","description":"Find your perfect dairy alternative with our interactive plant milk matcher quiz","publisher":{"@id":"https://noncow.com/#organization"}},{"@type":"Organization","@id":"https://noncow.com/#organization","name":"NonCow","url":"https://noncow.com","logo":{"@type":"ImageObject","url":"https://noncow.com/logo.png"}},{"@type":"WebApplication","@id":"https://noncow.com/#webapp","url":"https://noncow.com","name":"Dairy Alternative Matcher","description":"Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Personalized milk recommendations","5-question interactive quiz","Product recommendations","Shareable results"]}]}
+    {"@context":"https://schema.org","@type":"WebSite","url":"https://noncow.com","name":"NonCow","description":"Find your perfect dairy alternative with our interactive plant milk matcher quiz and expert guides","potentialAction":{"@type":"SearchAction","target":"https://noncow.com/quiz","query-input":"required name=search_term_string"}}
     </script>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}.container{background:white;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3);max-width:600px;width:100%;padding:40px;position:relative;overflow:hidden}.logo{text-align:center;margin-bottom:30px}.logo h1{font-size:2.5em;color:#667eea;margin-bottom:10px}.logo p{color:#666;font-size:1.1em}.screen{display:none}.screen.active{display:block;animation:fadeIn 0.5s}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.start-screen{text-align:center}.start-screen h2{font-size:2em;color:#333;margin-bottom:20px}.start-screen p{color:#666;font-size:1.1em;line-height:1.6;margin-bottom:30px}.btn{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;border:none;padding:15px 40px;font-size:1.1em;border-radius:50px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;font-weight:600}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(102,126,234,0.4)}.question{margin-bottom:30px}.question h3{color:#333;font-size:1.5em;margin-bottom:20px}.progress{background:#e0e0e0;height:8px;border-radius:10px;margin-bottom:30px;overflow:hidden}.progress-bar{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);height:100%;transition:width 0.3s}.options{display:flex;flex-direction:column;gap:15px}.option{background:#f5f5f5;border:2px solid transparent;padding:20px;border-radius:15px;cursor:pointer;transition:all 0.3s;text-align:left;display:flex;align-items:center}.option:hover{background:#e8e8e8;transform:translateX(5px)}.option.selected{background:#e8f5e9;border-color:#4e9f3d}.option-title{font-weight:600;color:#333;margin-bottom:5px}.option-desc{color:#666;font-size:0.9em}.result{text-align:center}.result-icon{font-size:5em;margin-bottom:20px}.result h2{font-size:2.5em;color:#333;margin-bottom:15px}.result-desc{color:#666;font-size:1.1em;line-height:1.6;margin-bottom:30px}.affiliate-section{background:#f8f9ff;padding:25px;border-radius:15px;margin:30px 0}.affiliate-section h3{color:#333;margin-bottom:15px}.product-link{display:block;background:white;padding:15px;border-radius:10px;margin-bottom:10px;text-decoration:none;color:#333;border:2px solid #e0e0e0;transition:all 0.3s}.product-link:hover{border-color:#4e9f3d;transform:translateX(5px)}.product-name{font-weight:600;margin-bottom:5px}.product-desc{font-size:0.9em;color:#666}.share-buttons{display:flex;gap:10px;justify-content:center;margin-top:30px}.share-btn{padding:12px 25px;border-radius:25px;border:2px solid #4e9f3d;background:white;color:#4e9f3d;cursor:pointer;font-weight:600;transition:all 0.3s}.share-btn:hover{background:#4e9f3d;color:white}.nav-buttons{display:flex;gap:15px;margin-top:30px}.btn-secondary{background:#e0e0e0;color:#333}.btn-secondary:hover{background:#d0d0d0}@media (max-width:600px){body{padding:10px}.container{padding:25px 20px;border-radius:15px}.logo h1{font-size:2em}.logo{margin-bottom:20px}.share-buttons{flex-direction:column}.result-icon{font-size:3.5em;margin-bottom:10px}.result h2{font-size:1.8em;margin-bottom:10px}.result-desc{font-size:0.95em;line-height:1.4;margin-bottom:20px}.affiliate-section{padding:15px;margin:20px 0}.affiliate-section h3{font-size:1em;margin-bottom:10px}.product-link{padding:12px}.share-buttons{margin-top:20px;gap:8px}.share-btn{padding:10px 20px}}.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:white;padding:20px;box-shadow:0 -4px 20px rgba(0,0,0,0.2);display:none;z-index:1000;animation:slideUp 0.5s}.cookie-banner.show{display:block}@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}.cookie-content{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:20px;flex-wrap:wrap}.cookie-text{flex:1;min-width:250px}.cookie-text p{margin:0;color:#333;font-size:0.95em}.cookie-buttons{display:flex;gap:10px}.cookie-btn{padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-weight:600;font-size:0.9em;transition:all 0.3s}.cookie-accept{background:#4e9f3d;color:white}.cookie-accept:hover{background:#3d7a2e}.cookie-decline{background:#e0e0e0;color:#333}.cookie-decline:hover{background:#d0d0d0}@media (max-width:600px){.cookie-content{flex-direction:column;text-align:center}.cookie-buttons{width:100%;flex-direction:column}.cookie-btn{width:100%}}
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .hero .btn {
+            font-size: 1.2em;
+            padding: 18px 50px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9ff;
+            border-radius: 15px;
+        }
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .featured-post {
+            background: #f8f9ff;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 50px 0;
+            border: 2px solid #e0e0e0;
+        }
+        .featured-post h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .featured-post p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            color: #333;
+            margin: 60px 0 30px;
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero .subtitle {
+                font-size: 1.1em;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .featured-post {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -22,23 +104,57 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="logo"><h1>🥛 NonCow</h1><p>Find Your Perfect Plant Milk</p></div>
-        <div class="screen active" id="start-screen">
-            <div class="start-screen"><h2>Discover Your Dairy Alternative Match</h2><p>Answer 5 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p><button class="btn" onclick="startQuiz()">Start Quiz</button></div>
+    
+    <div class="container wide">
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
         </div>
-        <div class="screen" id="quiz-screen">
-            <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
-            <div class="question" id="question-container"></div>
-            <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="prevQuestion()" id="prev-btn" style="display:none;">Back</button>
-                <button class="btn" onclick="nextQuestion()" id="next-btn">Next</button>
+        
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
+        
+        <div class="hero">
+            <h1>Not sure which plant milk is right for you?</h1>
+            <p class="subtitle">Take our 2-minute quiz to discover your perfect dairy alternative based on your taste preferences, lifestyle, and values.</p>
+            <a href="/quiz" class="btn">Take the Quiz Now</a>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Quick & Easy</h3>
+                <p>Just 6 questions to find your perfect match. Takes less than 2 minutes!</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Personalized Results</h3>
+                <p>Get matched with the plant milk that fits your specific needs and preferences.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🛒</div>
+                <h3>Shop Smart</h3>
+                <p>Discover the best brands and where to buy your perfect plant milk.</p>
             </div>
         </div>
-        <div class="screen" id="result-screen">
-            <div class="result" id="result-container"></div>
+        
+        <h2 class="section-title">Featured Guide</h2>
+        
+        <div class="featured-post">
+            <h2>🥥 Best Plant Milk for Keto Diet</h2>
+            <p>Following a keto lifestyle? Not all plant milks are created equal when it comes to carb counts. Discover which dairy alternatives will keep you in ketosis while still enjoying your coffee, smoothies, and recipes.</p>
+            <a href="/blog/best-plant-milk-for-keto.html" class="btn">Read the Guide</a>
+        </div>
+        
+        <div style="text-align: center; margin: 60px 0 40px;">
+            <h2 style="color: #333; margin-bottom: 20px;">Ready to find your perfect plant milk?</h2>
+            <a href="/quiz" class="btn">Take the Quiz</a>
         </div>
     </div>
+    
     <script>
         function setCookie(name,value,days){const d=new Date();d.setTime(d.getTime()+(days*24*60*60*1000));document.cookie=name+"="+value+";expires="+d.toUTCString()+";path=/"}
         function getCookie(name){const nameEQ=name+"=";const ca=document.cookie.split(';');for(let i=0;i<ca.length;i++){let c=ca[i];while(c.charAt(0)===' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)===0)return c.substring(nameEQ.length,c.length)}return null}
@@ -46,53 +162,6 @@
         function acceptCookies(){setCookie('cookieConsent','accepted',365);document.getElementById('cookie-banner').classList.remove('show');loadGoogleAnalytics()}
         function declineCookies(){setCookie('cookieConsent','declined',365);document.getElementById('cookie-banner').classList.remove('show')}
         window.addEventListener('DOMContentLoaded',function(){const consent=getCookie('cookieConsent');if(!consent){document.getElementById('cookie-banner').classList.add('show')}else if(consent==='accepted'){loadGoogleAnalytics()}});
-        
-        const questions=[
-            {question:"How do you use milk? (Select all that apply)",type:"multiple",options:[{text:"Coffee & Tea",desc:"I need something that froths well",value:"coffee"},{text:"Cereal & Smoothies",desc:"I want a creamy, versatile option",value:"cereal"},{text:"Cooking & Baking",desc:"I need a neutral flavor for recipes",value:"cooking"},{text:"Drinking Straight",desc:"I want something delicious on its own",value:"drinking"}]},
-            {question:"What's your flavor preference?",type:"single",options:[{text:"Creamy & Rich",desc:"I love a full-bodied taste",value:"creamy"},{text:"Light & Neutral",desc:"I prefer subtle flavors",value:"neutral"},{text:"Naturally Sweet",desc:"A hint of sweetness is nice",value:"sweet"},{text:"Nutty & Unique",desc:"I enjoy distinctive flavors",value:"nutty"}]},
-            {question:"What matters most to you?",type:"single",options:[{text:"Sustainability",desc:"Low environmental impact is key",value:"eco"},{text:"Nutrition",desc:"High protein and vitamins",value:"nutrition"},{text:"Price",desc:"Budget-friendly options",value:"budget"},{text:"No Strong Preference",desc:"I'm flexible on this",value:"flexible"}]},
-            {question:"Which allergens do you need to avoid? (Select all that apply)",type:"multiple",options:[{text:"Tree Nuts",desc:"Almond, cashew allergies",value:"nuts"},{text:"Soy",desc:"Soy allergy or sensitivity",value:"soy"},{text:"Oats",desc:"Oat allergy or gluten concerns",value:"oats"},{text:"Coconut",desc:"Coconut allergy",value:"coconut"},{text:"No Allergies",desc:"No dietary restrictions",value:"none"}]},
-            {question:"How do you feel about texture?",type:"single",options:[{text:"Super Smooth",desc:"No graininess whatsoever",value:"smooth"},{text:"Thick & Velvety",desc:"I want richness",value:"thick"},{text:"Light & Watery",desc:"I prefer less dense",value:"light"},{text:"Don't Mind",desc:"Texture isn't a big deal",value:"any"}]},
-            {question:"What's your grocery shopping style?",type:"single",options:[{text:"Mainstream Brands",desc:"Available everywhere",value:"mainstream"},{text:"Specialty Stores",desc:"I seek out unique options",value:"specialty"},{text:"DIY Enthusiast",desc:"I might make my own",value:"diy"},{text:"Whatever's On Sale",desc:"I'm flexible with brands",value:"flexible"}]}
-        ];
-        const milkTypes={oat:{name:"Oat Milk",icon:"🌾",searchTerm:"oat+milk+unsweetened",description:"You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."},almond:{name:"Almond Milk",icon:"🌰",searchTerm:"almond+milk+unsweetened",description:"You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."},soy:{name:"Soy Milk",icon:"🫘",searchTerm:"soy+milk+organic",description:"You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."},coconut:{name:"Coconut Milk",icon:"🥥",searchTerm:"coconut+milk+beverage",description:"You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."},cashew:{name:"Cashew Milk",icon:"🥜",searchTerm:"cashew+milk+unsweetened",description:"You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."}};
-        let currentQuestion=0;let answers={};
-        function startQuiz(){showScreen('quiz-screen');showQuestion()}
-        function showScreen(screenId){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(screenId).classList.add('active')}
-        function showQuestion(){const q=questions[currentQuestion];const container=document.getElementById('question-container');let html=`<h3>Question ${currentQuestion+1} of ${questions.length}</h3><p style="color:#666;margin-bottom:20px;">${q.question}</p><div class="options">`;q.options.forEach((opt,idx)=>{const inputType=q.type==='multiple'?'checkbox':'radio';const inputName=q.type==='multiple'?`q${currentQuestion}_${idx}`:`q${currentQuestion}`;let isSelected=false;if(q.type==='multiple'){isSelected=answers[currentQuestion]&&answers[currentQuestion].includes(opt.value)}else{isSelected=answers[currentQuestion]===opt.value}const selected=isSelected?'selected':'';html+=`<div class="option ${selected}" onclick="selectOption(${currentQuestion},'${opt.value}',this,'${q.type}')"><input type="${inputType}" name="${inputName}" value="${opt.value}" ${isSelected?'checked':''} style="margin-right:10px;pointer-events:none;"><div style="flex:1;"><div class="option-title">${opt.text}</div><div class="option-desc">${opt.desc}</div></div></div>`});html+='</div>';container.innerHTML=html;updateProgress();updateButtons()}        function selectOption(questionIdx,value,element,type){
-    if(type==='multiple'){
-        if(!answers[questionIdx]){answers[questionIdx]=[]}
-        const checkbox=element.querySelector('input[type="checkbox"]');
-        
-        // Toggle the checkbox state
-        if(checkbox.checked){
-            checkbox.checked=false;
-            answers[questionIdx]=answers[questionIdx].filter(v=>v!==value);
-            element.classList.remove('selected')
-        }else{
-            checkbox.checked=true;
-            if(!answers[questionIdx].includes(value)){
-                answers[questionIdx].push(value)
-            }
-            element.classList.add('selected')
-        }
-    }else{
-        answers[questionIdx]=value;
-        const allOptions=element.parentElement.querySelectorAll('.option');
-        allOptions.forEach(o=>o.classList.remove('selected'));
-        element.classList.add('selected');
-        const radio=element.querySelector('input[type="radio"]');
-        if(radio)radio.checked=true
-    }
-}
-        function updateProgress(){const progress=((currentQuestion+1)/questions.length)*100;document.getElementById('progress-bar').style.width=progress+'%'}
-        function updateButtons(){document.getElementById('prev-btn').style.display=currentQuestion>0?'block':'none';document.getElementById('next-btn').textContent=currentQuestion===questions.length-1?'See Results':'Next'}
-        function nextQuestion(){const q=questions[currentQuestion];if(!answers[currentQuestion]||(Array.isArray(answers[currentQuestion])&&answers[currentQuestion].length===0)){alert('Please select at least one option before continuing!');return}if(currentQuestion<questions.length-1){currentQuestion++;showQuestion()}else{showResults()}}
-        function prevQuestion(){if(currentQuestion>0){currentQuestion--;showQuestion()}}
-        function showResults(){const milk=calculateMatch();const result=milkTypes[milk];let html=`<div class="result-icon">${result.icon}</div><h2>${result.name}</h2><p class="result-desc">${result.description}</p><div class="affiliate-section"><h3>🛒 Shop ${result.name} on Amazon:</h3><a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener"><div class="product-name">Browse ${result.name} Options →</div><div class="product-desc">See current prices, ratings, and availability on Amazon</div></a></div><div class="share-buttons"><button class="share-btn" onclick="shareResult('${result.name}')">Share Result</button><button class="share-btn" onclick="restartQuiz()">Take Again</button></div>`;document.getElementById('result-container').innerHTML=html;showScreen('result-screen')}
-        function calculateMatch(){const scores={oat:0,almond:0,soy:0,coconut:0,cashew:0};const uses=Array.isArray(answers[0])?answers[0]:[answers[0]];uses.forEach(use=>{if(use==='coffee'){scores.oat+=3;scores.soy+=2;scores.cashew+=1}else if(use==='cereal'){scores.cashew+=3;scores.oat+=2;scores.almond+=1}else if(use==='cooking'){scores.soy+=3;scores.almond+=2;scores.oat+=1}else if(use==='drinking'){scores.cashew+=3;scores.coconut+=2;scores.oat+=1}});const flavor=answers[1];if(flavor==='creamy'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(flavor==='neutral'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(flavor==='sweet'){scores.coconut+=3;scores.oat+=2;scores.cashew+=1}else if(flavor==='nutty'){scores.almond+=3;scores.cashew+=2;scores.coconut+=1}const priority=answers[2];if(priority==='eco'){scores.oat+=3;scores.soy+=2;scores.almond+=1}else if(priority==='nutrition'){scores.soy+=3;scores.oat+=2;scores.almond+=1}else if(priority==='budget'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(priority==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const allergens=Array.isArray(answers[3])?answers[3]:[answers[3]];if(!allergens.includes('none')){if(allergens.includes('nuts')){scores.almond=-999;scores.cashew=-999}if(allergens.includes('soy')){scores.soy=-999}if(allergens.includes('oats')){scores.oat=-999}if(allergens.includes('coconut')){scores.coconut=-999}}const texture=answers[4];if(texture==='smooth'){scores.cashew+=3;scores.almond+=2;scores.soy+=1}else if(texture==='thick'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(texture==='light'){scores.almond+=3;scores.coconut+=2;scores.soy+=1}else if(texture==='any'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const shopping=answers[5];if(shopping==='mainstream'){scores.almond+=2;scores.soy+=2;scores.oat+=1}else if(shopping==='specialty'){scores.cashew+=2;scores.oat+=2;scores.coconut+=1}else if(shopping==='diy'){scores.oat+=2;scores.almond+=2;scores.cashew+=1}else if(shopping==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}let maxScore=-1000;let bestMilk='oat';for(const[milk,score]of Object.entries(scores)){if(score>maxScore){maxScore=score;bestMilk=milk}}return bestMilk}
-        function shareResult(milkName){const text=`I'm a ${milkName} person! Find your perfect dairy alternative at noncow.com`;if(navigator.share){navigator.share({text:text,url:window.location.href})}else{alert('Share this: '+text)}}
-        function restartQuiz(){currentQuestion=0;answers={};showScreen('start-screen')}
     </script>
 </body>
 </html>
