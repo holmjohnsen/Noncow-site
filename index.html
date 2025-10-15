@@ -60,7 +60,32 @@
         function startQuiz(){showScreen('quiz-screen');showQuestion()}
         function showScreen(screenId){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(screenId).classList.add('active')}
         function showQuestion(){const q=questions[currentQuestion];const container=document.getElementById('question-container');let html=`<h3>Question ${currentQuestion+1} of ${questions.length}</h3><p style="color:#666;margin-bottom:20px;">${q.question}</p><div class="options">`;q.options.forEach((opt,idx)=>{const inputType=q.type==='multiple'?'checkbox':'radio';const inputName=q.type==='multiple'?`q${currentQuestion}_${idx}`:`q${currentQuestion}`;let isSelected=false;if(q.type==='multiple'){isSelected=answers[currentQuestion]&&answers[currentQuestion].includes(opt.value)}else{isSelected=answers[currentQuestion]===opt.value}const selected=isSelected?'selected':'';html+=`<div class="option ${selected}" onclick="selectOption(${currentQuestion},'${opt.value}',this,'${q.type}')"><input type="${inputType}" name="${inputName}" value="${opt.value}" ${isSelected?'checked':''} style="margin-right:10px;" onclick="event.stopPropagation();"><div style="flex:1;"><div class="option-title">${opt.text}</div><div class="option-desc">${opt.desc}</div></div></div>`});html+='</div>';container.innerHTML=html;updateProgress();updateButtons()}
-        function selectOption(questionIdx,value,element,type){if(type==='multiple'){if(!answers[questionIdx]){answers[questionIdx]=[]}const checkbox=element.querySelector('input[type="checkbox"]');if(answers[questionIdx].includes(value)){answers[questionIdx]=answers[questionIdx].filter(v=>v!==value);element.classList.remove('selected');checkbox.checked=false}else{answers[questionIdx].push(value);element.classList.add('selected');checkbox.checked=true}}else{answers[questionIdx]=value;const allOptions=element.parentElement.querySelectorAll('.option');allOptions.forEach(o=>o.classList.remove('selected'));element.classList.add('selected');const radio=element.querySelector('input[type="radio"]');if(radio)radio.checked=true}}
+        function selectOption(questionIdx,value,element,type){
+    if(type==='multiple'){
+        if(!answers[questionIdx]){answers[questionIdx]=[]}
+        const checkbox=element.querySelector('input[type="checkbox"]');
+        
+        // Toggle the checkbox state
+        if(checkbox.checked){
+            checkbox.checked=false;
+            answers[questionIdx]=answers[questionIdx].filter(v=>v!==value);
+            element.classList.remove('selected')
+        }else{
+            checkbox.checked=true;
+            if(!answers[questionIdx].includes(value)){
+                answers[questionIdx].push(value)
+            }
+            element.classList.add('selected')
+        }
+    }else{
+        answers[questionIdx]=value;
+        const allOptions=element.parentElement.querySelectorAll('.option');
+        allOptions.forEach(o=>o.classList.remove('selected'));
+        element.classList.add('selected');
+        const radio=element.querySelector('input[type="radio"]');
+        if(radio)radio.checked=true
+    }
+}
         function updateProgress(){const progress=((currentQuestion+1)/questions.length)*100;document.getElementById('progress-bar').style.width=progress+'%'}
         function updateButtons(){document.getElementById('prev-btn').style.display=currentQuestion>0?'block':'none';document.getElementById('next-btn').textContent=currentQuestion===questions.length-1?'See Results':'Next'}
         function nextQuestion(){const q=questions[currentQuestion];if(!answers[currentQuestion]||(Array.isArray(answers[currentQuestion])&&answers[currentQuestion].length===0)){alert('Please select at least one option before continuing!');return}if(currentQuestion<questions.length-1){currentQuestion++;showQuestion()}else{showResults()}}
