@@ -118,38 +118,69 @@
         function declineCookies(){setCookie('cookieConsent','declined',365);document.getElementById('cookie-banner').classList.remove('show')}
         window.addEventListener('DOMContentLoaded',function(){const c=getCookie('cookieConsent');if(!c){document.getElementById('cookie-banner').classList.add('show')}else if(c==='accepted'){loadGoogleAnalytics()}});
 
-        const questions=[
-            {question:"What's your main use for milk?",options:[
-                {text:"Coffee & Tea",desc:"I need something that froths well",value:"coffee"},
-                {text:"Cereal & Smoothies",desc:"I want a creamy, versatile option",value:"cereal"},
-                {text:"Cooking & Baking",desc:"I need a neutral flavor for recipes",value:"cooking"},
-                {text:"Drinking Straight",desc:"I want something delicious on its own",value:"drinking"}
-            ]},
-            {question:"What's your flavor preference?",options:[
-                {text:"Creamy & Rich",desc:"I love a full-bodied taste",value:"creamy"},
-                {text:"Light & Neutral",desc:"I prefer subtle flavors",value:"neutral"},
-                {text:"Naturally Sweet",desc:"A hint of sweetness is nice",value:"sweet"},
-                {text:"Nutty & Unique",desc:"I enjoy distinctive flavors",value:"nutty"}
-            ]},
-            {question:"What matters most to you?",options:[
-                {text:"Sustainability",desc:"Low environmental impact is key",value:"eco"},
-                {text:"Nutrition",desc:"High protein and vitamins",value:"nutrition"},
-                {text:"Price",desc:"Budget-friendly options",value:"budget"},
-                {text:"Allergen-Free",desc:"No nuts or common allergens",value:"allergen"}
-            ]},
-            {question:"How do you feel about texture?",options:[
-                {text:"Super Smooth",desc:"No graininess whatsoever",value:"smooth"},
-                {text:"Thick & Velvety",desc:"I want richness",value:"thick"},
-                {text:"Light & Watery",desc:"I prefer less dense",value:"light"},
-                {text:"Don't Mind",desc:"Texture isn't a big deal",value:"any"}
-            ]},
-            {question:"What's your grocery shopping style?",options:[
-                {text:"Mainstream Brands",desc:"Available everywhere",value:"mainstream"},
-                {text:"Specialty Stores",desc:"I seek out unique options",value:"specialty"},
-                {text:"DIY Enthusiast",desc:"I might make my own",value:"diy"},
-                {text:"Whatever's On Sale",desc:"I'm flexible with brands",value:"flexible"}
-            ]}
-        ];
+        const questions = [
+    {
+        question: "How do you use milk? (Select all that apply)",
+        type: "multiple", // NEW: indicates checkboxes
+        options: [
+            { text: "Coffee & Tea", desc: "I need something that froths well", value: "coffee" },
+            { text: "Cereal & Smoothies", desc: "I want a creamy, versatile option", value: "cereal" },
+            { text: "Cooking & Baking", desc: "I need a neutral flavor for recipes", value: "cooking" },
+            { text: "Drinking Straight", desc: "I want something delicious on its own", value: "drinking" }
+        ]
+    },
+    {
+        question: "What's your flavor preference?",
+        type: "single",
+        options: [
+            { text: "Creamy & Rich", desc: "I love a full-bodied taste", value: "creamy" },
+            { text: "Light & Neutral", desc: "I prefer subtle flavors", value: "neutral" },
+            { text: "Naturally Sweet", desc: "A hint of sweetness is nice", value: "sweet" },
+            { text: "Nutty & Unique", desc: "I enjoy distinctive flavors", value: "nutty" }
+        ]
+    },
+    {
+        question: "What matters most to you?",
+        type: "single",
+        options: [
+            { text: "Sustainability", desc: "Low environmental impact is key", value: "eco" },
+            { text: "Nutrition", desc: "High protein and vitamins", value: "nutrition" },
+            { text: "Price", desc: "Budget-friendly options", value: "budget" },
+            { text: "No Strong Preference", desc: "I'm flexible on this", value: "flexible" } // NEW
+        ]
+    },
+    {
+        question: "Which allergens do you need to avoid? (Select all that apply)",
+        type: "multiple", // NEW: changed from single
+        options: [
+            { text: "Tree Nuts", desc: "Almond, cashew allergies", value: "nuts" },
+            { text: "Soy", desc: "Soy allergy or sensitivity", value: "soy" },
+            { text: "Oats", desc: "Oat allergy or gluten concerns", value: "oats" },
+            { text: "Coconut", desc: "Coconut allergy", value: "coconut" },
+            { text: "No Allergies", desc: "No dietary restrictions", value: "none" }
+        ]
+    },
+    {
+        question: "How do you feel about texture?",
+        type: "single",
+        options: [
+            { text: "Super Smooth", desc: "No graininess whatsoever", value: "smooth" },
+            { text: "Thick & Velvety", desc: "I want richness", value: "thick" },
+            { text: "Light & Watery", desc: "I prefer less dense", value: "light" },
+            { text: "Don't Mind", desc: "Texture isn't a big deal", value: "any" }
+        ]
+    },
+    {
+        question: "What's your grocery shopping style?",
+        type: "single",
+        options: [
+            { text: "Mainstream Brands", desc: "Available everywhere", value: "mainstream" },
+            { text: "Specialty Stores", desc: "I seek out unique options", value: "specialty" },
+            { text: "DIY Enthusiast", desc: "I might make my own", value: "diy" },
+            { text: "Whatever's On Sale", desc: "I'm flexible with brands", value: "flexible" }
+        ]
+    }
+];
 
         const milkTypes={
             oat:{name:"Oat Milk",icon:"🌾",searchTerm:"oat+milk+unsweetened",description:"You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."},
@@ -163,17 +194,251 @@
 
         function startQuiz(){showScreen('quiz-screen');showQuestion()}
         function showScreen(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active')}
-        function showQuestion(){const q=questions[currentQuestion];let html=`<h3>Question ${currentQuestion+1} of ${questions.length}</h3><p style="color: #666; margin-bottom: 20px;">${q.question}</p><div class="options">`;q.options.forEach(opt=>{const sel=answers[currentQuestion]===opt.value?'selected':'';html+=`<div class="option ${sel}" onclick="selectOption(${currentQuestion},'${opt.value}',this)"><div class="option-title">${opt.text}</div><div class="option-desc">${opt.desc}</div></div>`});html+='</div>';document.getElementById('question-container').innerHTML=html;updateProgress();updateButtons()}
-        function selectOption(idx,val,el){answers[idx]=val;document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));el.classList.add('selected')}
+        function showQuestion() {
+    const q = questions[currentQuestion];
+    const container = document.getElementById('question-container');
+    
+    let html = `<h3>Question ${currentQuestion + 1} of ${questions.length}</h3>
+                <p style="color: #666; margin-bottom: 20px;">${q.question}</p>
+                <div class="options">`;
+    
+    q.options.forEach((opt, idx) => {
+        const inputType = q.type === 'multiple' ? 'checkbox' : 'radio';
+        const inputName = q.type === 'multiple' ? `q${currentQuestion}_${idx}` : `q${currentQuestion}`;
+        
+        // Check if this option was previously selected
+        let isSelected = false;
+        if (q.type === 'multiple') {
+            isSelected = answers[currentQuestion] && answers[currentQuestion].includes(opt.value);
+        } else {
+            isSelected = answers[currentQuestion] === opt.value;
+        }
+        
+        const selected = isSelected ? 'selected' : '';
+        
+        html += `<div class="option ${selected}" onclick="selectOption(${currentQuestion}, '${opt.value}', this, '${q.type}')">
+                    <input type="${inputType}" name="${inputName}" value="${opt.value}" 
+                           ${isSelected ? 'checked' : ''} 
+                           style="margin-right: 10px;" 
+                           onclick="event.stopPropagation();">
+                    <div style="flex: 1;">
+                        <div class="option-title">${opt.text}</div>
+                        <div class="option-desc">${opt.desc}</div>
+                    </div>
+                </div>`;
+    });
+    
+    html += '</div>';
+    container.innerHTML = html;
+    
+    updateProgress();
+    updateButtons();
+}
+        function selectOption(questionIdx, value, element, type) {
+    if (type === 'multiple') {
+        // Handle multiple selection
+        if (!answers[questionIdx]) {
+            answers[questionIdx] = [];
+        }
+        
+        const checkbox = element.querySelector('input[type="checkbox"]');
+        
+        if (answers[questionIdx].includes(value)) {
+            // Remove value
+            answers[questionIdx] = answers[questionIdx].filter(v => v !== value);
+            element.classList.remove('selected');
+            checkbox.checked = false;
+        } else {
+            // Add value
+            answers[questionIdx].push(value);
+            element.classList.add('selected');
+            checkbox.checked = true;
+        }
+    } else {
+        // Handle single selection
+        answers[questionIdx] = value;
+        const allOptions = element.parentElement.querySelectorAll('.option');
+        allOptions.forEach(o => o.classList.remove('selected'));
+        element.classList.add('selected');
+        
+        const radio = element.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+    }
+}
         function updateProgress(){document.getElementById('progress-bar').style.width=((currentQuestion+1)/questions.length)*100+'%'}
         function updateButtons(){document.getElementById('prev-btn').style.display=currentQuestion>0?'block':'none';document.getElementById('next-btn').textContent=currentQuestion===questions.length-1?'See Results':'Next'}
-        function nextQuestion(){if(!answers[currentQuestion]){alert('Please select an option!');return}if(currentQuestion<questions.length-1){currentQuestion++;showQuestion()}else{showResults()}}
+        function nextQuestion() {
+    const q = questions[currentQuestion];
+    
+    // Validation
+    if (!answers[currentQuestion] || 
+        (Array.isArray(answers[currentQuestion]) && answers[currentQuestion].length === 0)) {
+        alert('Please select at least one option before continuing!');
+        return;
+    }
+    
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+    } else {
+        showResults();
+    }
+}
         function prevQuestion(){if(currentQuestion>0){currentQuestion--;showQuestion()}}
         
         function showResults(){const milk=calculateMatch(),result=milkTypes[milk],reasons=getMatchReasons();document.getElementById('result-container').innerHTML=`<div class="result-icon">${result.icon}</div><h2>${result.name}</h2><p class="result-desc">${result.description}</p><div class="why-section"><h3>Why we matched you:</h3><ul>${reasons.map(r=>`<li>${r}</li>`).join('')}</ul></div><div class="affiliate-section"><h3>🛒 Shop ${result.name} on Amazon:</h3><a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener"><div class="product-name">Browse ${result.name} Options →</div><div class="product-desc">See current prices, ratings, and availability on Amazon</div></a></div><div class="share-buttons"><button class="share-btn" onclick="shareResult('${result.name}')">Share on X</button><button class="share-btn" onclick="restartQuiz()">Take Again</button></div>`;showScreen('result-screen')}
         
-        function calculateMatch(){const sc={oat:0,almond:0,soy:0,coconut:0,cashew:0},v=Object.values(answers);if(v[0]==='coffee'){sc.oat+=3;sc.soy+=2;sc.cashew+=1}else if(v[0]==='cereal'){sc.cashew+=3;sc.oat+=2;sc.almond+=1}else if(v[0]==='cooking'){sc.soy+=3;sc.almond+=2;sc.oat+=1}else if(v[0]==='drinking'){sc.cashew+=3;sc.coconut+=2;sc.oat+=1}if(v[1]==='creamy'){sc.cashew+=3;sc.oat+=2;sc.coconut+=1}else if(v[1]==='neutral'){sc.almond+=3;sc.soy+=2;sc.oat+=1}else if(v[1]==='sweet'){sc.coconut+=3;sc.oat+=2;sc.cashew+=1}else if(v[1]==='nutty'){sc.almond+=3;sc.cashew+=2;sc.coconut+=1}if(v[2]==='eco'){sc.oat+=3;sc.soy+=2;sc.almond+=1}else if(v[2]==='nutrition'){sc.soy+=3;sc.oat+=2;sc.almond+=1}else if(v[2]==='budget'){sc.almond+=3;sc.soy+=2;sc.oat+=1}else if(v[2]==='allergen'){sc.oat+=3;sc.coconut+=2;sc.soy+=1}if(v[3]==='smooth'){sc.cashew+=3;sc.almond+=2;sc.soy+=1}else if(v[3]==='thick'){sc.cashew+=3;sc.oat+=2;sc.coconut+=1}else if(v[3]==='light'){sc.almond+=3;sc.coconut+=2;sc.soy+=1}else if(v[3]==='any'){sc.oat++;sc.almond++;sc.soy++;sc.coconut++;sc.cashew++}if(v[4]==='mainstream'){sc.almond+=2;sc.soy+=2;sc.oat+=1}else if(v[4]==='specialty'){sc.cashew+=2;sc.oat+=2;sc.coconut+=1}else if(v[4]==='diy'){sc.oat+=2;sc.almond+=2;sc.cashew+=1}else if(v[4]==='flexible'){sc.oat++;sc.almond++;sc.soy++;sc.coconut++;sc.cashew++}let max=0,best='oat';for(const[m,s]of Object.entries(sc)){if(s>max){max=s;best=m}}return best}
-        
+        function calculateMatch() {
+    const scores = {
+        oat: 0,
+        almond: 0,
+        soy: 0,
+        coconut: 0,
+        cashew: 0
+    };
+    
+    // Question 0: Main use (now multiple selection)
+    const uses = Array.isArray(answers[0]) ? answers[0] : [answers[0]];
+    uses.forEach(use => {
+        if (use === 'coffee') {
+            scores.oat += 3;
+            scores.soy += 2;
+            scores.cashew += 1;
+        } else if (use === 'cereal') {
+            scores.cashew += 3;
+            scores.oat += 2;
+            scores.almond += 1;
+        } else if (use === 'cooking') {
+            scores.soy += 3;
+            scores.almond += 2;
+            scores.oat += 1;
+        } else if (use === 'drinking') {
+            scores.cashew += 3;
+            scores.coconut += 2;
+            scores.oat += 1;
+        }
+    });
+    
+    // Question 1: Flavor preference
+    const flavor = answers[1];
+    if (flavor === 'creamy') {
+        scores.cashew += 3;
+        scores.oat += 2;
+        scores.coconut += 1;
+    } else if (flavor === 'neutral') {
+        scores.almond += 3;
+        scores.soy += 2;
+        scores.oat += 1;
+    } else if (flavor === 'sweet') {
+        scores.coconut += 3;
+        scores.oat += 2;
+        scores.cashew += 1;
+    } else if (flavor === 'nutty') {
+        scores.almond += 3;
+        scores.cashew += 2;
+        scores.coconut += 1;
+    }
+    
+    // Question 2: What matters most
+    const priority = answers[2];
+    if (priority === 'eco') {
+        scores.oat += 3;
+        scores.soy += 2;
+        scores.almond += 1;
+    } else if (priority === 'nutrition') {
+        scores.soy += 3;
+        scores.oat += 2;
+        scores.almond += 1;
+    } else if (priority === 'budget') {
+        scores.almond += 3;
+        scores.soy += 2;
+        scores.oat += 1;
+    } else if (priority === 'flexible') {
+        // No strong preference - give everyone a point
+        scores.oat += 1;
+        scores.almond += 1;
+        scores.soy += 1;
+        scores.coconut += 1;
+        scores.cashew += 1;
+    }
+    
+    // Question 3: Allergens (now multiple selection with elimination logic)
+    const allergens = Array.isArray(answers[3]) ? answers[3] : [answers[3]];
+    
+    if (!allergens.includes('none')) {
+        // Eliminate milks based on allergens
+        if (allergens.includes('nuts')) {
+            scores.almond = -999;
+            scores.cashew = -999;
+        }
+        if (allergens.includes('soy')) {
+            scores.soy = -999;
+        }
+        if (allergens.includes('oats')) {
+            scores.oat = -999;
+        }
+        if (allergens.includes('coconut')) {
+            scores.coconut = -999;
+        }
+    }
+    
+    // Question 4: Texture preference
+    const texture = answers[4];
+    if (texture === 'smooth') {
+        scores.cashew += 3;
+        scores.almond += 2;
+        scores.soy += 1;
+    } else if (texture === 'thick') {
+        scores.cashew += 3;
+        scores.oat += 2;
+        scores.coconut += 1;
+    } else if (texture === 'light') {
+        scores.almond += 3;
+        scores.coconut += 2;
+        scores.soy += 1;
+    } else if (texture === 'any') {
+        scores.oat += 1;
+        scores.almond += 1;
+        scores.soy += 1;
+        scores.coconut += 1;
+        scores.cashew += 1;
+    }
+    
+    // Question 5: Shopping style
+    const shopping = answers[5];
+    if (shopping === 'mainstream') {
+        scores.almond += 2;
+        scores.soy += 2;
+        scores.oat += 1;
+    } else if (shopping === 'specialty') {
+        scores.cashew += 2;
+        scores.oat += 2;
+        scores.coconut += 1;
+    } else if (shopping === 'diy') {
+        scores.oat += 2;
+        scores.almond += 2;
+        scores.cashew += 1;
+    } else if (shopping === 'flexible') {
+        scores.oat += 1;
+        scores.almond += 1;
+        scores.soy += 1;
+        scores.coconut += 1;
+        scores.cashew += 1;
+    }
+    
+    // Find the milk type with highest score
+    let maxScore = -1000;
+    let bestMilk = 'oat';
+    
+    for (const [milk, score] of Object.entries(scores)) {
+        if (score > maxScore) {
+            maxScore = score;
+            bestMilk = milk;
+        }
+    }
+    
+    return bestMilk;
+}
         function getMatchReasons(){const r=[],v=Object.values(answers),use={'coffee':'You need something that froths well for your coffee','cereal':'You want a versatile option for cereal and smoothies','cooking':'You need a neutral flavor that works in recipes','drinking':'You want something delicious to drink on its own'},flav={'creamy':'You prefer rich, creamy textures','neutral':'You like subtle, neutral flavors','sweet':'You enjoy a hint of natural sweetness','nutty':'You appreciate distinctive, nutty flavors'},pri={'eco':'Sustainability and environmental impact matter to you','nutrition':'You prioritize protein and nutritional content','budget':'You want an affordable, budget-friendly option','allergen':'You need an allergen-free alternative'};if(use[v[0]])r.push(use[v[0]]);if(flav[v[1]])r.push(flav[v[1]]);if(pri[v[2]])r.push(pri[v[2]]);return r}
         
         function shareResult(name){const txt=`I'm a ${name} person! 🥛 What's yours? Find out at noncow.com`,url=`https://twitter.com/intent/tweet?text=${encodeURIComponent(txt)}`;window.open(url,'_blank')}
