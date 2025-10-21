@@ -1,0 +1,377 @@
+================================================================================
+NONCOW.COM - REUSABLE COMPONENTS REFERENCE FILE
+================================================================================
+This file contains all reusable code blocks for the NonCow website.
+Copy/paste these into new pages to maintain consistency.
+Last updated: October 21, 2025
+================================================================================
+
+
+================================================================================
+1. FULL HEADER WITH LOGO & NAVIGATION
+================================================================================
+Usage: Place inside <body> tag at the top of every page
+Adjust the href="../style.css" path depending on page location:
+  - Root pages: href="style.css"
+  - Blog pages: href="../style.css"
+
+<!-- Header Card with Logo & Navigation -->
+<div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 30px;">
+    <div style="text-align: center; margin-bottom: 25px;">
+        <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
+        <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
+    </div>
+    
+    <!-- Navigation -->
+    <nav style="text-align:center; padding-top:25px; border-top:2px solid #e0e0e0; display: flex; justify-content: center; align-items: center; gap: 15px;">
+        <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
+        <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
+        <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
+    </nav>
+</div>
+
+
+================================================================================
+2. COOKIE CONSENT BANNER - HTML
+================================================================================
+Usage: Place right after opening <body> tag on EVERY page
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+        </div>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+            <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
+</div>
+
+
+================================================================================
+3. COOKIE CONSENT BANNER - CSS STYLES
+================================================================================
+Usage: Place inside <style> tag in <head> section
+
+/* Cookie Consent Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1000;
+    animation: slideUp 0.5s;
+}
+
+.cookie-banner.show {
+    display: block;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.cookie-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-text p {
+    margin: 0;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.cookie-accept {
+    background: #4e9f3d;
+    color: white;
+}
+
+.cookie-accept:hover {
+    background: #3d7a2e;
+}
+
+.cookie-decline {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.cookie-decline:hover {
+    background: #d0d0d0;
+}
+
+@media (max-width: 600px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .cookie-btn {
+        width: 100%;
+    }
+}
+
+
+================================================================================
+4. COOKIE CONSENT & GOOGLE ANALYTICS - JAVASCRIPT
+================================================================================
+Usage: Place before closing </body> tag on EVERY page
+NOTE: Google Analytics ID is G-B4ZDS9NB49
+
+<script>
+    // Cookie Consent Management
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+    }
+    
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    
+    function loadGoogleAnalytics() {
+        // Load Google Analytics
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-B4ZDS9NB49');
+    }
+    
+    function acceptCookies() {
+        setCookie('cookieConsent', 'accepted', 365);
+        document.getElementById('cookie-banner').classList.remove('show');
+        loadGoogleAnalytics();
+    }
+    
+    function declineCookies() {
+        setCookie('cookieConsent', 'declined', 365);
+        document.getElementById('cookie-banner').classList.remove('show');
+    }
+    
+    // Check cookie consent on page load
+    window.addEventListener('DOMContentLoaded', function() {
+        const consent = getCookie('cookieConsent');
+        if (!consent) {
+            document.getElementById('cookie-banner').classList.add('show');
+        } else if (consent === 'accepted') {
+            loadGoogleAnalytics();
+        }
+    });
+</script>
+
+
+================================================================================
+5. BASIC HTML PAGE TEMPLATE WITH ALL COMPONENTS
+================================================================================
+Usage: Copy this entire template when creating new pages
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YOUR PAGE DESCRIPTION HERE">
+    <title>YOUR PAGE TITLE | NonCow</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- For blog pages use: href="../style.css" -->
+    
+    <style>
+        /* Cookie Consent Banner Styles - PASTE SECTION 3 HERE */
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner - PASTE SECTION 2 HERE -->
+    
+    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+        <!-- Header - PASTE SECTION 1 HERE -->
+        
+        <!-- YOUR PAGE CONTENT HERE -->
+        
+    </div>
+
+    <!-- Analytics & Cookie Consent JavaScript - PASTE SECTION 4 HERE -->
+</body>
+</html>
+
+
+================================================================================
+6. AMAZON AFFILIATE LINK FORMAT
+================================================================================
+Usage: Use this format for all Amazon links
+Amazon Associate Tag: e12nni-20
+
+<!-- Generic search link (preferred for most cases) -->
+<a href="https://www.amazon.com/s?k=SEARCH+TERMS&tag=e12nni-20" target="_blank" rel="noopener">
+
+<!-- Direct product link (use sparingly) -->
+<a href="https://www.amazon.com/dp/PRODUCT_ASIN?tag=e12nni-20" target="_blank" rel="noopener">
+
+Examples:
+- Oat milk: https://www.amazon.com/s?k=oat+milk+unsweetened&tag=e12nni-20
+- Soy milk: https://www.amazon.com/s?k=soy+milk+organic&tag=e12nni-20
+- Almond milk: https://www.amazon.com/s?k=almond+milk+unsweetened&tag=e12nni-20
+
+
+================================================================================
+7. CALL-TO-ACTION BUTTON (Link to Quiz)
+================================================================================
+Usage: Place at bottom of blog posts to drive traffic to quiz
+
+<div style="text-align: center; margin: 50px 0 30px;">
+    <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
+</div>
+
+<p style="text-align: center; color: #999; font-size: 0.9em;">Want to find the perfect plant milk for your needs? Take our 2-minute quiz for personalized recommendations!</p>
+
+
+================================================================================
+8. BLOG POST CARD (for blog index page)
+================================================================================
+Usage: Add to blog/index.html when creating new blog posts
+
+<a href="/blog/YOUR-POST-SLUG.html" class="blog-card">
+    <h2>EMOJI TITLE OF YOUR POST</h2>
+    <div class="blog-meta">Month DD, YYYY • XX min read</div>
+    <p>Brief description of your blog post that entices readers to click.</p>
+</a>
+
+
+================================================================================
+9. SITEMAP ENTRY
+================================================================================
+Usage: Add to sitemap.xml for each new page/blog post
+
+<url>
+    <loc>https://noncow.com/blog/YOUR-POST-SLUG.html</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+</url>
+
+
+================================================================================
+10. BLOG POST ARTICLE CONTAINER
+================================================================================
+Usage: Wrap blog post content in this structure
+
+<div class="container">
+    <article style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <h1>YOUR ARTICLE TITLE</h1>
+        
+        <!-- Your content here -->
+        
+        <!-- Amazon affiliate section -->
+        <div class="affiliate-section">
+            <h3>🛒 Shop on Amazon:</h3>
+            <a href="https://www.amazon.com/s?k=YOUR+SEARCH&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+                <div class="product-name">Product Name →</div>
+                <div class="product-desc">Brief product description</div>
+            </a>
+        </div>
+        
+        <!-- CTA to quiz -->
+        <div style="text-align: center; margin: 50px 0 30px;">
+            <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
+        </div>
+        
+    </article>
+</div>
+
+
+================================================================================
+QUICK CHECKLIST FOR NEW PAGES
+================================================================================
+When adding a new page, make sure to:
+
+☐ Copy basic HTML template (Section 5)
+☐ Add cookie consent CSS (Section 3)
+☐ Add cookie consent HTML banner (Section 2)
+☐ Add header with navigation (Section 1)
+☐ Add analytics JavaScript (Section 4)
+☐ Link to stylesheet (style.css or ../style.css)
+☐ Add proper meta description and title
+☐ Include CTA to quiz at bottom (Section 7)
+☐ Use Amazon affiliate tag in all links (Section 6)
+☐ Add page to sitemap.xml (Section 9)
+☐ Update blog/index.html if it's a blog post (Section 8)
+☐ Test on mobile and desktop
+☐ Submit updated sitemap to Google Search Console
+
+
+================================================================================
+FILE STRUCTURE REFERENCE
+================================================================================
+noncow.com/
+├── index.html (homepage)
+├── quiz.html (interactive quiz)
+├── style.css (global stylesheet)
+├── sitemap.xml (for Google)
+├── components.txt (this file)
+└── blog/
+    ├── index.html (blog listing)
+    ├── best-plant-milk-for-keto.html
+    ├── oat-milk-vs-almond-milk.html
+    ├── best-plant-milk-for-coffee.html
+    └── soy-milk-benefits-healthy.html
+
+
+================================================================================
+CONTACT & NOTES
+================================================================================
+Google Analytics ID: G-B4ZDS9NB49
+Amazon Associate Tag: e12nni-20
+Domain: noncow.com
+GitHub Pages: Enabled
+
+This file is for reference only and is NOT linked from any page.
+Update this file whenever you make changes to standard components.
