@@ -3,36 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find the best plant milk for coffee. Compare frothing ability, taste, and texture of oat, almond, soy, and other dairy alternatives for lattes and cappuccinos.">
+    <meta name="description" content="Which plant milk froths best for lattes? Our barista guide tests oat, almond, soy, and coconut milk for coffee drinks. Plus how to froth at home.">
     <title>Best Plant Milk for Coffee: Barista's Guide (2025) | NonCow</title>
     <link rel="stylesheet" href="../style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": "https://noncow.com/blog/best-plant-milk-for-coffee.html",
-      "headline": "Best Plant Milk for Coffee: Barista's Guide (2025)",
-      "description": "Complete guide to choosing the best plant-based milk for coffee drinks, including frothing tips and barista recommendations",
-      "datePublished": "2025-10-19",
-      "author": {
-        "@type": "Organization",
-        "name": "NonCow"
-      }
-    }
-    </script>
+    
+    <!-- Cookie Consent & Analytics Styles -->
+    <style>
+        /* Cookie Consent Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+            animation: slideUp 0.5s;
+        }
+        
+        .cookie-banner.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+        
+        .cookie-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .cookie-text p {
+            margin: 0;
+            color: #333;
+            font-size: 0.95em;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        
+        .cookie-accept {
+            background: #4e9f3d;
+            color: white;
+        }
+        
+        .cookie-accept:hover {
+            background: #3d7a2e;
+        }
+        
+        .cookie-decline {
+            background: #e0e0e0;
+            color: #333;
+        }
+        
+        .cookie-decline:hover {
+            background: #d0d0d0;
+        }
+        
+        @media (max-width: 600px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+            
+            .cookie-btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container wide">
-        <div class="logo">
-            <h1>🥛 NonCow</h1>
-            <p>Find Your Perfect Plant Milk</p>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+            </div>
         </div>
-        
-        <nav>
-            <a href="/">🏠 Home</a>
-            <a href="/quiz">🥛 Take Quiz</a>
-            <a href="/blog">📚 Blog</a>
-        </nav>
+    </div>
+    
+    <!-- Single white container for header + article -->
+    <div style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
+        <div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px 40px;">
+            
+            <!-- Header inside the white box -->
+            <div style="text-align: center; margin-bottom: 25px;">
+                <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
+                <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
+            </div>
+            
+            <!-- Navigation -->
+            <nav style="text-align:center; padding: 25px 0; border-top:2px solid #e0e0e0; border-bottom:2px solid #e0e0e0; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px;">
+                <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
+                <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
+                <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
+            </nav>
+            
+            <!-- Article content starts here -->
         
         <article>
             <h1>Best Plant Milk for Coffee: Barista's Guide (2025)</h1>
@@ -318,6 +419,61 @@
             
             <p style="text-align: center; color: #999; font-size: 0.9em;">Not sure which plant milk is right for you overall? Take our 2-minute quiz for personalized recommendations beyond just coffee!</p>
         </article>
+        </div>
     </div>
+    
+    <script>
+        // Cookie Consent Management
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        function loadGoogleAnalytics() {
+            // Load Google Analytics
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B4ZDS9NB49');
+        }
+        
+        function acceptCookies() {
+            setCookie('cookieConsent', 'accepted', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+            loadGoogleAnalytics();
+        }
+        
+        function declineCookies() {
+            setCookie('cookieConsent', 'declined', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+        
+        // Check cookie consent on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            } else if (consent === 'accepted') {
+                loadGoogleAnalytics();
+            }
+        });
+    </script>
 </body>
 </html>
