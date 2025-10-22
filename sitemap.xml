@@ -24,10 +24,18 @@
     <priority>0.8</priority>
   </url>
   
+  <!-- Disclosure Page -->
+  <url>
+    <loc>https://noncow.com/disclosure</loc>
+    <lastmod>2025-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
   <!-- Blog Post 1: Keto -->
   <url>
     <loc>https://noncow.com/blog/best-plant-milk-for-keto.html</loc>
-    <lastmod>2025-10-15</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -35,7 +43,7 @@
   <!-- Blog Post 2: Oat vs Almond -->
   <url>
     <loc>https://noncow.com/blog/oat-milk-vs-almond-milk.html</loc>
-    <lastmod>2025-10-17</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -43,7 +51,7 @@
   <!-- Blog Post 3: Coffee -->
   <url>
     <loc>https://noncow.com/blog/best-plant-milk-for-coffee.html</loc>
-    <lastmod>2025-10-19</lastmod>
+    <lastmod>2025-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
