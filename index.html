@@ -139,11 +139,14 @@
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
         }
         
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            color: white;
         }
         
         /* Blog Preview Section */
@@ -608,8 +611,8 @@
         <div class="screen active" id="start-screen">
             <div class="start-screen">
                 <h2>Discover Your Dairy Alternative Match</h2>
-                <p>Answer 5 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
-                <button class="btn" onclick="startQuiz()">Start Quiz</button>
+                <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
+                <a href="/quiz" class="btn">Start Quiz</a>
             </div>
             
             <!-- Latest Blog Posts Section -->
@@ -643,23 +646,6 @@
                 
                 <a href="/blog/" class="view-all-link">View All Articles →</a>
             </div>
-        </div>
-        
-        <!-- Quiz Screen -->
-        <div class="screen" id="quiz-screen">
-            <div class="progress">
-                <div class="progress-bar" id="progress-bar"></div>
-            </div>
-            <div class="question" id="question-container"></div>
-            <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="prevQuestion()" id="prev-btn" style="display: none;">Back</button>
-                <button class="btn" onclick="nextQuestion()" id="next-btn">Next</button>
-            </div>
-        </div>
-        
-        <!-- Result Screen -->
-        <div class="screen" id="result-screen">
-            <div class="result" id="result-container"></div>
         </div>
     </div>
 
@@ -716,327 +702,6 @@
             }
         });
         
-        const questions = [
-            {
-                question: "What's your main use for milk?",
-                options: [
-                    { text: "Coffee & Tea", desc: "I need something that froths well", value: "coffee" },
-                    { text: "Cereal & Smoothies", desc: "I want a creamy, versatile option", value: "cereal" },
-                    { text: "Cooking & Baking", desc: "I need a neutral flavor for recipes", value: "cooking" },
-                    { text: "Drinking Straight", desc: "I want something delicious on its own", value: "drinking" }
-                ]
-            },
-            {
-                question: "What's your flavor preference?",
-                options: [
-                    { text: "Creamy & Rich", desc: "I love a full-bodied taste", value: "creamy" },
-                    { text: "Light & Neutral", desc: "I prefer subtle flavors", value: "neutral" },
-                    { text: "Naturally Sweet", desc: "A hint of sweetness is nice", value: "sweet" },
-                    { text: "Nutty & Unique", desc: "I enjoy distinctive flavors", value: "nutty" }
-                ]
-            },
-            {
-                question: "What matters most to you?",
-                options: [
-                    { text: "Sustainability", desc: "Low environmental impact is key", value: "eco" },
-                    { text: "Nutrition", desc: "High protein and vitamins", value: "nutrition" },
-                    { text: "Price", desc: "Budget-friendly options", value: "budget" },
-                    { text: "Allergen-Free", desc: "No nuts or common allergens", value: "allergen" }
-                ]
-            },
-            {
-                question: "How do you feel about texture?",
-                options: [
-                    { text: "Super Smooth", desc: "No graininess whatsoever", value: "smooth" },
-                    { text: "Thick & Velvety", desc: "I want richness", value: "thick" },
-                    { text: "Light & Watery", desc: "I prefer less dense", value: "light" },
-                    { text: "Don't Mind", desc: "Texture isn't a big deal", value: "any" }
-                ]
-            },
-            {
-                question: "What's your grocery shopping style?",
-                options: [
-                    { text: "Mainstream Brands", desc: "Available everywhere", value: "mainstream" },
-                    { text: "Specialty Stores", desc: "I seek out unique options", value: "specialty" },
-                    { text: "DIY Enthusiast", desc: "I might make my own", value: "diy" },
-                    { text: "Whatever's On Sale", desc: "I'm flexible with brands", value: "flexible" }
-                ]
-            }
-        ];
-
-        const milkTypes = {
-            oat: {
-                name: "Oat Milk",
-                icon: "🌾",
-                searchTerm: "oat+milk+unsweetened",
-                description: "You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."
-            },
-            almond: {
-                name: "Almond Milk",
-                icon: "🌰",
-                searchTerm: "almond+milk+unsweetened",
-                description: "You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."
-            },
-            soy: {
-                name: "Soy Milk",
-                icon: "🫘",
-                searchTerm: "soy+milk+organic",
-                description: "You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."
-            },
-            coconut: {
-                name: "Coconut Milk",
-                icon: "🥥",
-                searchTerm: "coconut+milk+beverage",
-                description: "You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."
-            },
-            cashew: {
-                name: "Cashew Milk",
-                icon: "🥜",
-                searchTerm: "cashew+milk+unsweetened",
-                description: "You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."
-            }
-        };
-
-        let currentQuestion = 0;
-        let answers = {};
-
-        function startQuiz() {
-            showScreen('quiz-screen');
-            showQuestion();
-        }
-
-        function showScreen(screenId) {
-            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(screenId).classList.add('active');
-        }
-
-        function showQuestion() {
-            const q = questions[currentQuestion];
-            const container = document.getElementById('question-container');
-            
-            let html = `<h3>Question ${currentQuestion + 1} of ${questions.length}</h3>
-                        <p style="color: #666; margin-bottom: 20px;">${q.question}</p>
-                        <div class="options">`;
-            
-            q.options.forEach((opt, idx) => {
-                const selected = answers[currentQuestion] === opt.value ? 'selected' : '';
-                html += `<div class="option ${selected}" onclick="selectOption(${currentQuestion}, '${opt.value}', this)">
-                            <div class="option-title">${opt.text}</div>
-                            <div class="option-desc">${opt.desc}</div>
-                        </div>`;
-            });
-            
-            html += '</div>';
-            container.innerHTML = html;
-            
-            updateProgress();
-            updateButtons();
-        }
-
-        function selectOption(questionIdx, value, element) {
-            answers[questionIdx] = value;
-            document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
-            element.classList.add('selected');
-        }
-
-        function updateProgress() {
-            const progress = ((currentQuestion + 1) / questions.length) * 100;
-            document.getElementById('progress-bar').style.width = progress + '%';
-        }
-
-        function updateButtons() {
-            document.getElementById('prev-btn').style.display = currentQuestion > 0 ? 'block' : 'none';
-            document.getElementById('next-btn').textContent = 
-                currentQuestion === questions.length - 1 ? 'See Results' : 'Next';
-        }
-
-        function nextQuestion() {
-            if (!answers[currentQuestion]) {
-                alert('Please select an option before continuing!');
-                return;
-            }
-            
-            if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                showQuestion();
-            } else {
-                showResults();
-            }
-        }
-
-        function prevQuestion() {
-            if (currentQuestion > 0) {
-                currentQuestion--;
-                showQuestion();
-            }
-        }
-
-        function showResults() {
-            // Simple matching logic
-            const milk = calculateMatch();
-            const result = milkTypes[milk];
-            
-            let html = `
-                <div class="result-icon">${result.icon}</div>
-                <h2>${result.name}</h2>
-                <p class="result-desc">${result.description}</p>
-                
-                <div class="affiliate-section">
-                    <h3>🛒 Shop ${result.name} on Amazon:</h3>
-                    <a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
-                        <div class="product-name">Browse ${result.name} Options →</div>
-                        <div class="product-desc">See current prices, ratings, and availability on Amazon</div>
-                    </a>
-                </div>
-                
-                <div class="share-buttons">
-                    <button class="share-btn" onclick="shareResult('${result.name}')">Share Result</button>
-                    <button class="share-btn" onclick="restartQuiz()">Take Again</button>
-                </div>
-            `;
-            
-            document.getElementById('result-container').innerHTML = html;
-            showScreen('result-screen');
-        }
-
-        function calculateMatch() {
-            // Scoring system based on milk characteristics
-            const scores = {
-                oat: 0,
-                almond: 0,
-                soy: 0,
-                coconut: 0,
-                cashew: 0
-            };
-            
-            const values = Object.values(answers);
-            
-            // Question 0: Main use
-            if (values[0] === 'coffee') {
-                scores.oat += 3;
-                scores.soy += 2;
-                scores.cashew += 1;
-            } else if (values[0] === 'cereal') {
-                scores.cashew += 3;
-                scores.oat += 2;
-                scores.almond += 1;
-            } else if (values[0] === 'cooking') {
-                scores.soy += 3;
-                scores.almond += 2;
-                scores.oat += 1;
-            } else if (values[0] === 'drinking') {
-                scores.cashew += 3;
-                scores.coconut += 2;
-                scores.oat += 1;
-            }
-            
-            // Question 1: Flavor preference
-            if (values[1] === 'creamy') {
-                scores.cashew += 3;
-                scores.oat += 2;
-                scores.coconut += 1;
-            } else if (values[1] === 'neutral') {
-                scores.almond += 3;
-                scores.soy += 2;
-                scores.oat += 1;
-            } else if (values[1] === 'sweet') {
-                scores.coconut += 3;
-                scores.oat += 2;
-                scores.cashew += 1;
-            } else if (values[1] === 'nutty') {
-                scores.almond += 3;
-                scores.cashew += 2;
-                scores.coconut += 1;
-            }
-            
-            // Question 2: What matters most
-            if (values[2] === 'eco') {
-                scores.oat += 3;
-                scores.soy += 2;
-                scores.almond += 1;
-            } else if (values[2] === 'nutrition') {
-                scores.soy += 3;
-                scores.oat += 2;
-                scores.almond += 1;
-            } else if (values[2] === 'budget') {
-                scores.almond += 3;
-                scores.soy += 2;
-                scores.oat += 1;
-            } else if (values[2] === 'allergen') {
-                scores.oat += 3;
-                scores.coconut += 2;
-                scores.soy += 1;
-            }
-            
-            // Question 3: Texture preference
-            if (values[3] === 'smooth') {
-                scores.cashew += 3;
-                scores.almond += 2;
-                scores.soy += 1;
-            } else if (values[3] === 'thick') {
-                scores.cashew += 3;
-                scores.oat += 2;
-                scores.coconut += 1;
-            } else if (values[3] === 'light') {
-                scores.almond += 3;
-                scores.coconut += 2;
-                scores.soy += 1;
-            } else if (values[3] === 'any') {
-                scores.oat += 1;
-                scores.almond += 1;
-                scores.soy += 1;
-                scores.coconut += 1;
-                scores.cashew += 1;
-            }
-            
-            // Question 4: Shopping style
-            if (values[4] === 'mainstream') {
-                scores.almond += 2;
-                scores.soy += 2;
-                scores.oat += 1;
-            } else if (values[4] === 'specialty') {
-                scores.cashew += 2;
-                scores.oat += 2;
-                scores.coconut += 1;
-            } else if (values[4] === 'diy') {
-                scores.oat += 2;
-                scores.almond += 2;
-                scores.cashew += 1;
-            } else if (values[4] === 'flexible') {
-                scores.oat += 1;
-                scores.almond += 1;
-                scores.soy += 1;
-                scores.coconut += 1;
-                scores.cashew += 1;
-            }
-            
-            // Find the milk type with highest score
-            let maxScore = 0;
-            let bestMilk = 'oat';
-            
-            for (const [milk, score] of Object.entries(scores)) {
-                if (score > maxScore) {
-                    maxScore = score;
-                    bestMilk = milk;
-                }
-            }
-            
-            return bestMilk;
-        }
-
-        function shareResult(milkName) {
-            const text = `I'm a ${milkName} person! Find your perfect dairy alternative at noncow.com`;
-            if (navigator.share) {
-                navigator.share({ text: text, url: window.location.href });
-            } else {
-                alert('Share this: ' + text);
-            }
-        }
-
-        function restartQuiz() {
-            currentQuestion = 0;
-            answers = {};
-            showScreen('start-screen');
         }
     </script>
 </body>
