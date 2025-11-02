@@ -86,6 +86,35 @@
             border-color: #667eea;
         }
         
+        .blog-card-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .blog-thumbnail {
+            width: 250px;
+            height: 167px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        
+        .blog-text {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-card-content {
+                flex-direction: column;
+            }
+            
+            .blog-thumbnail {
+                width: 100%;
+                height: 200px;
+            }
+        }
+        
         .blog-card-new {
             background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
             border: 2px solid #4caf50;
@@ -326,10 +355,15 @@
             <!-- Latest Post - Baking -->
             <article class="blog-card blog-card-new">
                 <span class="new-badge">NEW</span>
-                <h2><a href="/blog/best-plant-milk-for-baking.html">Best Plant Milk for Baking: Complete Guide (2025)</a></h2>
-                <p class="blog-meta">📅 November 1, 2025 | ⏱️ 9 min read</p>
-                <p class="blog-excerpt">Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more. Includes substitution ratios and troubleshooting tips for perfect dairy-free baking.</p>
-                <a href="/blog/best-plant-milk-for-baking.html" class="read-more">Read Full Guide →</a>
+                <div class="blog-card-content">
+                    <img src="/images/plant-milk-bread-dough-kneading.jpg" alt="Hands kneading bread dough on floured wooden surface" class="blog-thumbnail">
+                    <div class="blog-text">
+                        <h2><a href="/blog/best-plant-milk-for-baking.html">Best Plant Milk for Baking: Complete Guide (2025)</a></h2>
+                        <p class="blog-meta">📅 November 1, 2025 | ⏱️ 9 min read</p>
+                        <p class="blog-excerpt">Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more. Includes substitution ratios and troubleshooting tips for perfect dairy-free baking.</p>
+                        <a href="/blog/best-plant-milk-for-baking.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </div>
             </article>
             
             <!-- Protein Post -->
@@ -390,10 +424,15 @@
             
             <!-- Coffee Post -->
             <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-coffee.html">Best Plant Milk for Coffee: 5 Options Tested & Ranked</a></h2>
-                <p class="blog-meta">📅 October 15, 2025 | ⏱️ 8 min read</p>
-                <p class="blog-excerpt">Find the perfect plant-based milk for your morning coffee. We tested and ranked oat, soy, almond, cashew, and coconut milk for taste, frothability, and performance in hot beverages. Includes barista tips and recommendations.</p>
-                <a href="/blog/best-plant-milk-for-coffee.html" class="read-more">Read Full Guide →</a>
+                <div class="blog-card-content">
+                    <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed milk creating latte art in white cup" class="blog-thumbnail">
+                    <div class="blog-text">
+                        <h2><a href="/blog/best-plant-milk-for-coffee.html">Best Plant Milk for Coffee: 5 Options Tested & Ranked</a></h2>
+                        <p class="blog-meta">📅 October 15, 2025 | ⏱️ 8 min read</p>
+                        <p class="blog-excerpt">Find the perfect plant-based milk for your morning coffee. We tested and ranked oat, soy, almond, cashew, and coconut milk for taste, frothability, and performance in hot beverages. Includes barista tips and recommendations.</p>
+                        <a href="/blog/best-plant-milk-for-coffee.html" class="read-more">Read Full Guide →</a>
+                    </div>
+                </div>
             </article>
             
         </div>
