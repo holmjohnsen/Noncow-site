@@ -4,16 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
-    <title>Plant Milk Guides & Comparisons | NonCow Blog</title>
+    <title>Plant Milk Blog - Expert Guides & Reviews | NonCow</title>
     <link rel="canonical" href="https://noncow.com/blog/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://noncow.com/blog/">
+    <meta property="og:title" content="Plant Milk Blog - Expert Guides & Reviews | NonCow">
+    <meta property="og:description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
+    <meta property="og:image" content="https://noncow.com/images/plant-milk-earth-hands.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://noncow.com/blog/">
+    <meta property="twitter:title" content="Plant Milk Blog - Expert Guides & Reviews | NonCow">
+    <meta property="twitter:description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
+    <meta property="twitter:image" content="https://noncow.com/images/plant-milk-earth-hands.jpg">
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "NonCow Blog",
-      "description": "Expert guides and comparisons about plant-based milk alternatives",
+      "name": "NonCow Plant Milk Blog",
+      "description": "Expert guides and comparisons to help you choose the perfect plant-based milk",
       "url": "https://noncow.com/blog/",
       "publisher": {
         "@type": "Organization",
@@ -35,20 +49,66 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
             line-height: 1.6;
             color: #333;
+            background: #f5f5f5;
         }
         
         .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 2em;
+            color: #667eea;
+            margin: 0;
+        }
+        
+        .logo p {
+            color: #666;
+            font-size: 0.9em;
+            margin: 5px 0 0 0;
+        }
+        
+        nav {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            white-space: nowrap;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        .content {
+            padding: 40px 30px;
         }
         
         .page-title {
@@ -59,63 +119,38 @@
         }
         
         .page-subtitle {
+            font-size: 1.2em;
             color: #666;
-            font-size: 1.1em;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .blog-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
         
         .blog-card {
-            background: #f8f9ff;
+            background: white;
+            border: 2px solid #e0e0e0;
             border-radius: 15px;
-            padding: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid transparent;
+            padding: 30px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            display: block;
+            position: relative;
         }
         
         .blog-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border-color: #667eea;
         }
         
-        .blog-card-content {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-        }
-        
-        .blog-thumbnail {
-            width: 250px;
-            height: 167px;
-            object-fit: cover;
-            border-radius: 10px;
-            flex-shrink: 0;
-        }
-        
-        .blog-text {
-            flex: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .blog-card-content {
-                flex-direction: column;
-            }
-            
-            .blog-thumbnail {
-                width: 100%;
-                height: 200px;
-            }
-        }
-        
-        .blog-card-new {
+        .blog-card.featured {
             background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
             border: 2px solid #4caf50;
         }
@@ -131,26 +166,16 @@
             margin-bottom: 10px;
         }
         
-        .blog-card h2 {
-            color: #333;
+        .blog-card h3 {
             font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        .blog-card h2 a {
+            margin-bottom: 15px;
             color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .blog-card h2 a:hover {
-            color: #667eea;
         }
         
         .blog-meta {
-            color: #999;
+            color: #666;
             font-size: 0.9em;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
         
         .blog-excerpt {
@@ -160,73 +185,67 @@
         }
         
         .read-more {
-            display: inline-block;
             color: #667eea;
             font-weight: 600;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .read-more:hover {
-            color: #764ba2;
-            text-decoration: underline;
+            display: inline-block;
         }
         
         .cta-box {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
         
-        .cta-box h2 {
-            color: white;
-            margin: 0 0 15px 0;
+        .cta-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
         }
         
-        .cta-box p {
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        .cta-box a {
+        .cta-button {
             display: inline-block;
             background: white;
             color: #667eea;
             padding: 15px 40px;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 30px;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: transform 0.2s;
         }
         
-        .cta-box a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .cta-button:hover {
+            transform: scale(1.05);
         }
         
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                padding: 25px 20px;
-                border-radius: 15px;
+        .footer {
+            background: #f5f5f5;
+            padding: 30px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
             }
             
             .page-title {
-                font-size: 1.8em;
-            }
-            
-            .blog-card h2 {
-                font-size: 1.3em;
+                font-size: 2em;
             }
         }
         
-        /* Cookie Consent Banner */
+        /* Cookie Consent Banner Styles */
         .cookie-banner {
             position: fixed;
             bottom: 0;
@@ -334,126 +353,107 @@
     </div>
 
     <div class="container">
-        <!-- Header inside the white box -->
-        <div style="text-align: center; margin-bottom: 25px;">
-            <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
-            <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
+        <div class="header">
+            <div class="logo">
+                <h1>🥛 NonCow</h1>
+                <p>Find Your Perfect Plant Milk</p>
+            </div>
+            <nav>
+                <a href="/">🏠 Home</a>
+                <a href="/quiz">🥛 Take Quiz</a>
+                <a href="/blog">📚 Blog</a>
+            </nav>
         </div>
-        
-        <!-- Navigation -->
-        <nav style="text-align:center; padding: 25px 0; border-top:2px solid #e0e0e0; border-bottom:2px solid #e0e0e0; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
-            <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
-            <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
-        </nav>
-        
-        <h1 class="page-title">Plant Milk Guides</h1>
-        <p class="page-subtitle">Expert comparisons and in-depth guides to help you choose the perfect dairy alternative</p>
-        
-        <div class="blog-grid">
-            
-            <!-- Latest Post - Baking -->
-            <article class="blog-card blog-card-new">
-                <span class="new-badge">NEW</span>
-                <div class="blog-card-content">
-                    <img src="/images/plant-milk-bread-dough-kneading.jpg" alt="Hands kneading bread dough on floured wooden surface" class="blog-thumbnail">
-                    <div class="blog-text">
-                        <h2><a href="/blog/best-plant-milk-for-baking.html">Best Plant Milk for Baking: Complete Guide (2025)</a></h2>
-                        <p class="blog-meta">📅 November 1, 2025 | ⏱️ 9 min read</p>
-                        <p class="blog-excerpt">Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more. Includes substitution ratios and troubleshooting tips for perfect dairy-free baking.</p>
-                        <a href="/blog/best-plant-milk-for-baking.html" class="read-more">Read Full Guide →</a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Protein Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-protein.html">Best Plant Milk for Protein: Complete Ranking (2025)</a></h2>
-                <p class="blog-meta">📅 October 30, 2025 | ⏱️ 10 min read</p>
-                <p class="blog-excerpt">Find the highest protein plant milk. Complete ranking of soy, pea, oat, almond, and all other dairy alternatives by protein content. Plus bonus guide to other high-protein plant foods.</p>
-                <a href="/blog/best-plant-milk-for-protein.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Smoothies Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-smoothies.html">Best Plant Milk for Smoothies: Complete Guide (2025)</a></h2>
-                <p class="blog-meta">📅 October 28, 2025 | ⏱️ 9 min read</p>
-                <p class="blog-excerpt">Find the best plant-based milk for smoothies. Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time. Expert tips for blending and flavor pairing included.</p>
-                <a href="/blog/best-plant-milk-for-smoothies.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Weight Loss Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-weight-loss.html">Best Plant Milk for Weight Loss: Low-Calorie Options Ranked</a></h2>
-                <p class="blog-meta">📅 October 26, 2025 | ⏱️ 9 min read</p>
-                <p class="blog-excerpt">Discover the best plant-based milk for weight loss. Compare calories, protein, and sugar content across all major plant milks. We rank them by weight loss potential and show you exactly how many calories you can save by making the right choice.</p>
-                <a href="/blog/best-plant-milk-for-weight-loss.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Kids Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-kids.html">Best Plant Milk for Kids: A Parent's Guide (2025)</a></h2>
-                <p class="blog-meta">📅 October 23, 2025 | ⏱️ 10 min read</p>
-                <p class="blog-excerpt">Find the best plant-based milk for your children. Expert guide covering nutrition, safety, taste, and age-appropriate dairy alternatives. Learn which plant milks provide the calcium, protein, and vitamins growing kids need.</p>
-                <a href="/blog/best-plant-milk-for-kids.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Soy Milk Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/soy-milk-benefits-healthy.html">Is Soy Milk Healthy? Benefits, Nutrition & What to Know</a></h2>
-                <p class="blog-meta">📅 October 21, 2025 | ⏱️ 8 min read</p>
-                <p class="blog-excerpt">Get the facts about soy milk's health benefits. Discover the truth about protein, hormones, and nutrition. We break down the science and debunk common myths about this popular dairy alternative.</p>
-                <a href="/blog/soy-milk-benefits-healthy.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Keto Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/best-plant-milk-for-keto.html">Best Plant Milk for Keto: Low-Carb Options Compared</a></h2>
-                <p class="blog-meta">📅 October 19, 2025 | ⏱️ 8 min read</p>
-                <p class="blog-excerpt">Following a keto diet? Find the best low-carb plant milks that won't kick you out of ketosis. Compare net carbs, fat content, and taste across all major dairy alternatives to find your perfect keto-friendly milk.</p>
-                <a href="/blog/best-plant-milk-for-keto.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Oat vs Almond Post -->
-            <article class="blog-card">
-                <h2><a href="/blog/oat-milk-vs-almond-milk.html">Oat Milk vs Almond Milk: Complete Comparison</a></h2>
-                <p class="blog-meta">📅 October 17, 2025 | ⏱️ 9 min read</p>
-                <p class="blog-excerpt">Can't decide between oat and almond milk? We compare taste, nutrition, sustainability, price, and performance in coffee. See which one wins for your needs and lifestyle.</p>
-                <a href="/blog/oat-milk-vs-almond-milk.html" class="read-more">Read Full Guide →</a>
-            </article>
-            
-            <!-- Coffee Post -->
-            <article class="blog-card">
-                <div class="blog-card-content">
-                    <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed milk creating latte art in white cup" class="blog-thumbnail">
-                    <div class="blog-text">
-                        <h2><a href="/blog/best-plant-milk-for-coffee.html">Best Plant Milk for Coffee: 5 Options Tested & Ranked</a></h2>
-                        <p class="blog-meta">📅 October 15, 2025 | ⏱️ 8 min read</p>
-                        <p class="blog-excerpt">Find the perfect plant-based milk for your morning coffee. We tested and ranked oat, soy, almond, cashew, and coconut milk for taste, frothability, and performance in hot beverages. Includes barista tips and recommendations.</p>
-                        <a href="/blog/best-plant-milk-for-coffee.html" class="read-more">Read Full Guide →</a>
-                    </div>
-                </div>
-            </article>
-            
+
+        <div class="content">
+            <h1 class="page-title">Plant Milk Blog</h1>
+            <p class="page-subtitle">Expert guides and comparisons to help you find your perfect dairy alternative</p>
+
+            <div class="blog-grid">
+                <!-- Featured NEW Post -->
+                <a href="/blog/best-plant-milk-for-environment.html" class="blog-card featured">
+                    <span class="new-badge">NEW</span>
+                    <h3>🌍 Best Plant Milk for the Environment (2025)</h3>
+                    <div class="blog-meta">📅 November 4, 2025 • ⏱️ 8 min read</div>
+                    <p class="blog-excerpt">Discover which plant milk is best for the environment. Compare water usage, carbon emissions, and land use across oat, almond, soy, and coconut milk to make the most sustainable choice.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <!-- Regular Posts -->
+                <a href="/blog/best-plant-milk-for-smoothies.html" class="blog-card">
+                    <h3>🥤 Best Plant Milk for Smoothies (2025)</h3>
+                    <div class="blog-meta">📅 November 2, 2025 • ⏱️ 7 min read</div>
+                    <p class="blog-excerpt">Find the best plant-based milk for smoothies. Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-protein.html" class="blog-card">
+                    <h3>💪 Best Plant Milk for Protein (2025)</h3>
+                    <div class="blog-meta">📅 November 1, 2025 • ⏱️ 8 min read</div>
+                    <p class="blog-excerpt">Looking for high-protein plant milk? Compare protein content, amino acid profiles, and taste across soy, pea, oat, and almond milk to fuel your fitness goals.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-baking.html" class="blog-card">
+                    <h3>🧁 Best Plant Milk for Baking (2025)</h3>
+                    <div class="blog-meta">📅 October 31, 2025 • ⏱️ 9 min read</div>
+                    <p class="blog-excerpt">Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more. Includes substitution ratios and troubleshooting tips.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-weight-loss.html" class="blog-card">
+                    <h3>⚖️ Best Plant Milk for Weight Loss (2025)</h3>
+                    <div class="blog-meta">📅 October 26, 2025 • ⏱️ 7 min read</div>
+                    <p class="blog-excerpt">Discover which plant milks have the lowest calories and best nutrition for weight loss. Complete calorie comparison table plus tips for sustainable results.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-kids.html" class="blog-card">
+                    <h3>👶 Best Plant Milk for Kids (2025)</h3>
+                    <div class="blog-meta">📅 October 23, 2025 • ⏱️ 7 min read</div>
+                    <p class="blog-excerpt">Find the best plant milk for kids with our complete nutrition guide. Compare calcium, vitamin D, protein, and taste to ensure healthy growth and development.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/soy-milk-benefits-healthy.html" class="blog-card">
+                    <h3>🫘 Soy Milk Benefits: Is It Healthy? (2025)</h3>
+                    <div class="blog-meta">📅 October 21, 2025 • ⏱️ 8 min read</div>
+                    <p class="blog-excerpt">Get the facts about soy milk's health benefits and debunk common myths about hormones, GMOs, and thyroid concerns. Evidence-based answers from nutrition science.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-keto.html" class="blog-card">
+                    <h3>🥥 Best Plant Milk for Keto Diet (2025)</h3>
+                    <div class="blog-meta">📅 October 19, 2025 • ⏱️ 6 min read</div>
+                    <p class="blog-excerpt">Following keto and need a dairy-free milk? We break down carb counts, fat content, and taste to help you choose the best low-carb dairy alternative.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/oat-milk-vs-almond-milk.html" class="blog-card">
+                    <h3>🌾 Oat Milk vs Almond Milk (2025)</h3>
+                    <div class="blog-meta">📅 October 17, 2025 • ⏱️ 7 min read</div>
+                    <p class="blog-excerpt">Oat milk or almond milk? Compare taste, nutrition, price, environmental impact, and uses to decide which plant milk is right for you.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+
+                <a href="/blog/best-plant-milk-for-coffee.html" class="blog-card">
+                    <h3>☕ Best Plant Milk for Coffee (2025)</h3>
+                    <div class="blog-meta">📅 October 15, 2025 • ⏱️ 6 min read</div>
+                    <p class="blog-excerpt">Find the perfect plant-based milk for your morning coffee. We tested and ranked oat, soy, almond, cashew, and coconut milk for taste and frothability.</p>
+                    <span class="read-more">Read More →</span>
+                </a>
+            </div>
+
+            <div class="cta-box">
+                <h3>🥛 Not Sure Which Plant Milk Is Right for You?</h3>
+                <p>Take our free quiz to find your perfect match based on your taste preferences, values, and lifestyle!</p>
+                <a href="/quiz" class="cta-button">Take the Quiz →</a>
+            </div>
         </div>
-        
-        <div class="cta-box">
-            <h2>Not Sure Which Plant Milk is Right for You?</h2>
-            <p>Take our 2-minute quiz to get a personalized recommendation based on your taste preferences and lifestyle.</p>
-            <a href="/quiz">🥛 Take the Quiz</a>
+
+        <div class="footer">
+            <p>&copy; 2025 NonCow.com | <a href="/disclosure">Affiliate Disclosure</a> | We are a participant in the Amazon Services LLC Associates Program.</p>
         </div>
-        
-        <!-- Footer -->
-        <footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin-top: 60px;">
-            <p style="color: #666; font-size: 0.9em; margin: 0;">
-                © 2025 NonCow | 
-                <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
-            </p>
-            <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">
-                As an Amazon Associate, I earn from qualifying purchases.
-            </p>
-        </footer>
-        
     </div>
 
     <script>
@@ -476,7 +476,6 @@
         }
         
         function loadGoogleAnalytics() {
-            // Load Google Analytics
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
@@ -499,7 +498,6 @@
             document.getElementById('cookie-banner').classList.remove('show');
         }
         
-        // Check cookie consent on page load
         window.addEventListener('DOMContentLoaded', function() {
             const consent = getCookie('cookieConsent');
             if (!consent) {
