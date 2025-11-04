@@ -6,6 +6,20 @@
     <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
     <title>Find Your Perfect Non-Cow Milk | noncow.com</title>
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://noncow.com/">
+    <meta property="og:title" content="Find Your Perfect Non-Cow Milk | NonCow">
+    <meta property="og:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
+    <meta property="og:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://noncow.com/">
+    <meta property="twitter:title" content="Find Your Perfect Non-Cow Milk | NonCow">
+    <meta property="twitter:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
+    <meta property="twitter:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
+    
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
@@ -45,7 +59,7 @@
           },
           "featureList": [
             "Personalized milk recommendations",
-            "5-question interactive quiz",
+            "6-question interactive quiz",
             "Product recommendations",
             "Shareable results"
           ]
@@ -98,18 +112,28 @@
             font-size: 1.1em;
         }
         
-        .screen {
-            display: none;
+        nav {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 2px solid #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
         }
         
-        .screen.active {
-            display: block;
-            animation: fadeIn 0.5s;
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            white-space: nowrap;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        nav a:hover {
+            color: #764ba2;
         }
         
         .start-screen {
@@ -201,6 +225,7 @@
             display: flex;
             gap: 15px;
             align-items: flex-start;
+            position: relative;
         }
         
         .blog-mini-thumbnail {
@@ -209,6 +234,7 @@
             object-fit: cover;
             border-radius: 8px;
             flex-shrink: 0;
+            position: relative;
         }
         
         @media (max-width: 600px) {
@@ -222,8 +248,8 @@
             }
             
             .new-badge-mini {
-                top: 10px;
-                right: 10px;
+                top: 15px;
+                left: 15px;
             }
         }
         
@@ -271,166 +297,6 @@
             text-decoration: underline;
         }
         
-        .question {
-            margin-bottom: 30px;
-        }
-        
-        .question h3 {
-            color: #333;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        
-        .progress {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100%;
-            transition: width 0.3s;
-        }
-        
-        .options {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .option {
-            background: #f5f5f5;
-            border: 2px solid transparent;
-            padding: 20px;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-align: left;
-        }
-        
-        .option:hover {
-            background: #e8e8e8;
-            transform: translateX(5px);
-        }
-        
-        .option.selected {
-            background: #e8f5e9;
-            border-color: #4e9f3d;
-        }
-        
-        .option-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .option-desc {
-            color: #666;
-            font-size: 0.9em;
-        }
-        
-        .result {
-            text-align: center;
-        }
-        
-        .result-icon {
-            font-size: 5em;
-            margin-bottom: 20px;
-        }
-        
-        .result h2 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .result-desc {
-            color: #666;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-        
-        .affiliate-section {
-            background: #f8f9ff;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 30px 0;
-        }
-        
-        .affiliate-section h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .product-link {
-            display: block;
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: #333;
-            border: 2px solid #e0e0e0;
-            transition: all 0.3s;
-        }
-        
-        .product-link:hover {
-            border-color: #4e9f3d;
-            transform: translateX(5px);
-        }
-        
-        .product-name {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .product-desc {
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        .share-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .share-btn {
-            padding: 12px 25px;
-            border-radius: 25px;
-            border: 2px solid #4e9f3d;
-            background: white;
-            color: #4e9f3d;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .share-btn:hover {
-            background: #4e9f3d;
-            color: white;
-        }
-        
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .btn-secondary {
-            background: #e0e0e0;
-            color: #333;
-        }
-        
-        .btn-secondary:hover {
-            background: #d0d0d0;
-        }
-        
         @media (max-width: 600px) {
             body {
                 padding: 10px;
@@ -447,50 +313,6 @@
             
             .logo {
                 margin-bottom: 20px;
-            }
-            
-            .share-buttons {
-                flex-direction: column;
-            }
-            
-            /* Tighter spacing on result page for mobile */
-            .result-icon {
-                font-size: 3.5em;
-                margin-bottom: 10px;
-            }
-            
-            .result h2 {
-                font-size: 1.8em;
-                margin-bottom: 10px;
-            }
-            
-            .result-desc {
-                font-size: 0.95em;
-                line-height: 1.4;
-                margin-bottom: 20px;
-            }
-            
-            .affiliate-section {
-                padding: 15px;
-                margin: 20px 0;
-            }
-            
-            .affiliate-section h3 {
-                font-size: 1em;
-                margin-bottom: 10px;
-            }
-            
-            .product-link {
-                padding: 12px;
-            }
-            
-            .share-buttons {
-                margin-top: 20px;
-                gap: 8px;
-            }
-            
-            .share-btn {
-                padding: 10px 20px;
             }
         }
         
@@ -607,45 +429,47 @@
             <p>Find Your Perfect Plant Milk</p>
         </div>
         
-        <!-- Start Screen -->
-        <div class="screen active" id="start-screen">
-            <div class="start-screen">
-                <h2>Discover Your Dairy Alternative Match</h2>
-                <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
-                <a href="/quiz" class="btn">Start Quiz</a>
-            </div>
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
+        
+        <div class="start-screen">
+            <h2>Discover Your Dairy Alternative Match</h2>
+            <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
+            <a href="/quiz" class="btn">Start Quiz</a>
+        </div>
+        
+        <!-- Latest Blog Posts Section -->
+        <div class="blog-preview">
+            <h3>📚 Latest from the Blog</h3>
             
-            <!-- Latest Blog Posts Section -->
-            <div class="blog-preview">
-                <h3>📚 Latest from the Blog</h3>
-                
-                <div class="blog-mini-card blog-mini-card-featured">
-                    <span class="new-badge-mini">NEW</span>
-                    <div class="blog-mini-content">
-                        <img src="/images/plant-milk-bread-dough-kneading.jpg" alt="Hands kneading bread dough" class="blog-mini-thumbnail">
-                        <div>
-                            <h4><a href="/blog/best-plant-milk-for-baking.html">Best Plant Milk for Baking: Complete Guide</a></h4>
-                            <p class="blog-mini-meta">📅 November 1, 2025 | ⏱️ 9 min read</p>
-                            <p class="blog-mini-excerpt">Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more.</p>
-                        </div>
+            <div class="blog-mini-card blog-mini-card-featured">
+                <span class="new-badge-mini">NEW</span>
+                <div class="blog-mini-content">
+                    <img src="/images/plant-milk-earth-hands.jpg" alt="Hands holding soil and young plant seedling representing environmental sustainability" class="blog-mini-thumbnail">
+                    <div>
+                        <h4><a href="/blog/best-plant-milk-for-environment.html">Best Plant Milk for the Environment: Sustainability Compared</a></h4>
+                        <p class="blog-mini-meta">📅 November 4, 2025 | ⏱️ 8 min read</p>
+                        <p class="blog-mini-excerpt">Discover which plant milk is best for the environment. Compare water usage, carbon emissions, and land use.</p>
                     </div>
                 </div>
-                
-                <div class="blog-mini-card">
-                    <h4><a href="/blog/best-plant-milk-for-protein.html">Best Plant Milk for Protein: Complete Ranking</a></h4>
-                    <p class="blog-mini-meta">📅 October 30, 2025 | ⏱️ 10 min read</p>
-                    <p class="blog-mini-excerpt">Find the highest protein plant milk. Complete ranking of soy, pea, oat, almond, and all other dairy alternatives by protein content.</p>
-                </div>
-                
-                <div class="blog-mini-card">
-                    <h4><a href="/blog/best-plant-milk-for-smoothies.html">Best Plant Milk for Smoothies: Complete Guide</a></h4>
-                    <p class="blog-mini-meta">📅 October 28, 2025 | ⏱️ 9 min read</p>
-                    <p class="blog-mini-excerpt">Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time.</p>
-                </div>
-                </div>
-                
-                <a href="/blog/" class="view-all-link">View All Articles →</a>
             </div>
+            
+            <div class="blog-mini-card">
+                <h4><a href="/blog/best-plant-milk-for-smoothies.html">Best Plant Milk for Smoothies: Complete Guide</a></h4>
+                <p class="blog-mini-meta">📅 November 2, 2025 | ⏱️ 7 min read</p>
+                <p class="blog-mini-excerpt">Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time.</p>
+            </div>
+            
+            <div class="blog-mini-card">
+                <h4><a href="/blog/best-plant-milk-for-protein.html">Best Plant Milk for Protein: Complete Ranking</a></h4>
+                <p class="blog-mini-meta">📅 October 30, 2025 | ⏱️ 8 min read</p>
+                <p class="blog-mini-excerpt">Looking for high-protein plant milk? Complete ranking of soy, pea, oat, almond, and all other dairy alternatives.</p>
+            </div>
+            
+            <a href="/blog/" class="view-all-link">View All Articles →</a>
         </div>
     </div>
 
@@ -701,8 +525,6 @@
                 loadGoogleAnalytics();
             }
         });
-        
-        }
     </script>
 </body>
 </html>
