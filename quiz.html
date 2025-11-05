@@ -36,110 +36,13 @@
     </script>
     
     <link rel="stylesheet" href="style.css">
-
-        <!-- Cookie Consent & Analytics Styles -->
-        <style>
-            /* Cookie Consent Banner */
-            .cookie-banner {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: white;
-                padding: 20px;
-                box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-                display: none;
-                z-index: 1000;
-                animation: slideUp 0.5s;
-            }
-            
-            .cookie-banner.show {
-                display: block;
-            }
-            
-            @keyframes slideUp {
-                from { transform: translateY(100%); }
-                to { transform: translateY(0); }
-            }
-            
-            .cookie-content {
-                max-width: 1000px;
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-            
-            .cookie-text {
-                flex: 1;
-                min-width: 250px;
-            }
-            
-            .cookie-text p {
-                margin: 0;
-                color: #333;
-                font-size: 0.95em;
-            }
-            
-            .cookie-buttons {
-                display: flex;
-                gap: 10px;
-            }
-            
-            .cookie-btn {
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-weight: 600;
-                font-size: 0.9em;
-                transition: all 0.3s;
-            }
-            
-            .cookie-accept {
-                background: #4e9f3d;
-                color: white;
-            }
-            
-            .cookie-accept:hover {
-                background: #3d7a2e;
-            }
-            
-            .cookie-decline {
-                background: #e0e0e0;
-                color: #333;
-            }
-            
-            .cookie-decline:hover {
-                background: #d0d0d0;
-            }
-            
-            @media (max-width: 600px) {
-                .cookie-content {
-                    flex-direction: column;
-                    text-align: center;
-                }
-                
-                .cookie-buttons {
-                    width: 100%;
-                    flex-direction: column;
-                }
-                
-                .cookie-btn {
-                    width: 100%;
-                }
-            }
-        </style>
-        
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://noncow.com/#website","url":"https://noncow.com","name":"NonCow","description":"Find your perfect dairy alternative with our interactive plant milk matcher quiz","publisher":{"@id":"https://noncow.com/#organization"}},{"@type":"Organization","@id":"https://noncow.com/#organization","name":"NonCow","url":"https://noncow.com","logo":{"@type":"ImageObject","url":"https://noncow.com/logo.png"}},{"@type":"WebApplication","@id":"https://noncow.com/#webapp","url":"https://noncow.com","name":"Dairy Alternative Matcher","description":"Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Personalized milk recommendations","6-question interactive quiz","Product recommendations","Shareable results"]}]}
-    </script>
 </head>
 <body>
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-text"><p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p></div>
+            <div class="cookie-text">
+                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
                 <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
@@ -178,6 +81,17 @@
         
         <div class="screen" id="result-screen">
             <div class="result" id="result-container"></div>
+        </div>
+
+        <footer>
+            <p>
+                © 2025 NonCow | 
+                <a href="/disclosure">Affiliate Disclosure</a>
+            </p>
+            <p>
+                As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+        </footer>
     </div>
     
     <script>
@@ -238,16 +152,5 @@
         function shareResult(milkName){const text=`I'm a ${milkName} person! Find your perfect dairy alternative at noncow.com`;if(navigator.share){navigator.share({text:text,url:window.location.href})}else{alert('Share this: '+text)}}
         function restartQuiz(){currentQuestion=0;answers={};showScreen('start-screen')}
     </script>
-
-        <!-- ADD FOOTER HERE -->
-        <footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin: 60px 20px 20px;">
-        <p style="color: #666; font-size: 0.9em; margin: 0;">
-            © 2025 NonCow | 
-            <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
-        </p>
-        <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">
-            As an Amazon Associate, I earn from qualifying purchases.
-        </p>
-    </footer>
 </body>
 </html>
