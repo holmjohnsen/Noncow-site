@@ -30,101 +30,6 @@
     </script>
 
     <link rel="stylesheet" href="../style.css">
-    
-    <!-- Cookie Consent & Analytics Styles -->
-    <style>
-        /* Cookie Consent Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 1000;
-            animation: slideUp 0.5s;
-        }
-        
-        .cookie-banner.show {
-            display: block;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-        
-        .cookie-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .cookie-text {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .cookie-text p {
-            margin: 0;
-            color: #333;
-            font-size: 0.95em;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .cookie-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: all 0.3s;
-        }
-        
-        .cookie-accept {
-            background: #4e9f3d;
-            color: white;
-        }
-        
-        .cookie-accept:hover {
-            background: #3d7a2e;
-        }
-        
-        .cookie-decline {
-            background: #e0e0e0;
-            color: #333;
-        }
-        
-        .cookie-decline:hover {
-            background: #d0d0d0;
-        }
-        
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                width: 100%;
-                flex-direction: column;
-            }
-            
-            .cookie-btn {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Cookie Consent Banner -->
@@ -139,51 +44,47 @@
             </div>
         </div>
     </div>
-    
-    <!-- Single white container for header + article -->
-    <div style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
-        <div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px 40px;">
-            
-            <!-- Header inside the white box -->
-            <div style="text-align: center; margin-bottom: 25px;">
-                <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
-                <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
-            </div>
-            
-            <!-- Navigation -->
-            <nav style="text-align:center; padding: 25px 0; border-top:2px solid #e0e0e0; border-bottom:2px solid #e0e0e0; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px;">
-                <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
-                <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
-                <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
-            </nav>
-            
-            <!-- Article content starts here -->
+
+    <div class="container">
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
+        </div>
+        
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
         
         <article>
             <h1>Best Plant Milk for Coffee: Barista's Guide (2025)</h1>
             
             <img src="/images/barista-pouring-plant-milk-latte-art.jpg" 
                  alt="Barista pouring steamed milk creating latte art in white cup" 
-                 style="width: 100%; height: auto; border-radius: 15px; margin: 20px 0 30px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                 style="width: 100%; height: auto; border-radius: 15px; margin: 20px 0;">
+            
+            <div class="meta">
+                📅 Published: October 15, 2025 | ⏱️ 6 min read
+            </div>
 
-            <div style="background: #f8f9ff; padding: 20px; border-radius: 12px; margin: 25px 0; border-left: 4px solid #667eea;">
-                <p style="margin: 0; font-size: 0.95em; color: #555; line-height: 1.6;">
-                    <strong>📢 Affiliate Disclosure:</strong> This post contains affiliate links to products on Amazon. 
-                    If you click through and make a purchase, I may earn a small commission at no additional cost to you. 
-                    This helps support the site. As an Amazon Associate, I earn from qualifying purchases. 
-                    Read our full <a href="/disclosure" style="color: #667eea; text-decoration: underline;">disclosure policy</a>.
-                </p>
+            <div class="disclosure">
+                <p><strong>Affiliate Disclosure:</strong> This post contains affiliate links to products on Amazon. 
+                If you click through and make a purchase, I may earn a small commission at no additional cost to you. 
+                This helps support the site. As an Amazon Associate, I earn from qualifying purchases. 
+                Read our full <a href="/disclosure">disclosure policy</a>.</p>
             </div>
             
-            <p class="intro">Ask any barista: not all plant milks work equally well in coffee. Some froth beautifully for lattes, others curdle in hot espresso, and a few taste downright weird with your favorite roast. This guide reveals which dairy alternatives actually deliver café-quality results at home.</p>
+            <p>Ask any barista: not all plant milks work equally well in coffee. Some froth beautifully for lattes, others curdle in hot espresso, and a few taste downright weird with your favorite roast. This guide reveals which dairy alternatives actually deliver café-quality results at home.</p>
             
             <h2>Quick Answer: Best Plant Milk for Coffee</h2>
             
-            <p><strong>Overall Winner: Oat Milk</strong> - Specifically barista editions like Oatly or Califia Farms. Froths like whole milk, doesn't curdle, and has a neutral-sweet taste that complements coffee perfectly.</p>
-            
-            <p><strong>Runner-Up: Soy Milk</strong> - High protein content creates good foam. Choose barista blends for best results.</p>
-            
-            <p><strong>Budget Option: Almond Milk</strong> - Works fine but doesn't froth as well. Get barista editions if possible.</p>
+            <div class="quick-answer">
+                <h3>🏆 Winner: Oat Milk</h3>
+                <p><strong>Specifically barista editions like Oatly or Califia Farms.</strong> Froths like whole milk, doesn't curdle, and has a neutral-sweet taste that complements coffee perfectly.</p>
+                <p><strong>Runner-Up: Soy Milk</strong> - High protein content creates good foam. Choose barista blends for best results.</p>
+                <p><strong>Budget Option: Almond Milk</strong> - Works fine but doesn't froth as well. Get barista editions if possible.</p>
+            </div>
             
             <h2>What Makes Plant Milk Good for Coffee?</h2>
             
@@ -203,7 +104,7 @@
             
             <img src="/images/plant-milk-latte-art-coffee.jpg" 
                  alt="Latte with latte art in black cup on dark background" 
-                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0; box-shadow: 0 3px 15px rgba(0,0,0,0.12);">
+                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0;">
             
             <p><strong>Why it wins:</strong> Oat milk has become the default plant milk at specialty coffee shops for good reason. It steams beautifully, creates microfoam for latte art, and has a naturally sweet, creamy taste that enhances coffee without overpowering it.</p>
             
@@ -213,7 +114,7 @@
             
             <p><strong>Top Pick:</strong> Oatly Barista Edition is the gold standard. It's specifically formulated with added oils and stabilizers for optimal frothing.</p>
             
-            <div class="affiliate-section">
+            <div class="affiliate-box">
                 <h3>🛒 Best Oat Milk for Coffee:</h3>
                 <a href="https://www.amazon.com/s?k=oatly+barista+edition&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
                     <div class="product-name">Oatly Barista Edition →</div>
@@ -233,9 +134,11 @@
             <p><strong>Best for:</strong> Lattes, cappuccinos, macchiatos</p>
             <p><strong>Taste pairing:</strong> Neutral flavor works with any roast</p>
             
-            <p><strong>Pro tip:</strong> Choose unsweetened and look for "barista blend" versions. Regular soy milk can taste slightly beany, but barista versions are formulated to be more neutral.</p>
+            <div class="tip-box">
+                <p><strong>💡 Pro Tip:</strong> Choose unsweetened and look for "barista blend" versions. Regular soy milk can taste slightly beany, but barista versions are formulated to be more neutral.</p>
+            </div>
             
-            <div class="affiliate-section">
+            <div class="affiliate-box">
                 <h3>🛒 Best Soy Milk for Coffee:</h3>
                 <a href="https://www.amazon.com/s?k=silk+organic+soy+milk+unsweetened&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
                     <div class="product-name">Silk Organic Unsweetened Soy Milk →</div>
@@ -257,15 +160,13 @@
             
             <p><strong>The catch:</strong> Regular almond milk is too thin and won't froth properly. You MUST use barista editions. Even then, the foam is more bubbly than creamy.</p>
             
-            <div class="affiliate-section">
+            <p>Curious about how almond milk compares overall? Read: <a href="/blog/oat-milk-vs-almond-milk.html" class="internal-link">Oat Milk vs Almond Milk</a></p>
+            
+            <div class="affiliate-box">
                 <h3>🛒 Best Almond Milk for Coffee:</h3>
                 <a href="https://www.amazon.com/s?k=califia+farms+barista+almond&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
                     <div class="product-name">Califia Farms Barista Blend Almond Milk →</div>
                     <div class="product-desc">Best-performing almond milk for lattes</div>
-                </a>
-                <a href="https://www.amazon.com/s?k=barista+almond+milk&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
-                    <div class="product-name">Browse Barista Almond Milk →</div>
-                    <div class="product-desc">Compare different brands</div>
                 </a>
             </div>
             
@@ -309,7 +210,7 @@
             
             <img src="/images/espresso-machine-brewing-coffee.jpg" 
                  alt="Espresso machine brewing fresh espresso shot into white cup" 
-                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0; box-shadow: 0 3px 15px rgba(0,0,0,0.12);">
+                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0;">
             
             <h3>Using a Steam Wand (Espresso Machine)</h3>
             <ol>
@@ -330,7 +231,9 @@
                 <li>Tap container to settle large bubbles</li>
             </ol>
             
-            <p><strong>Pro tip:</strong> Oat and soy milk froth best at slightly lower temperatures than dairy. Aim for 140°F instead of 160°F to avoid separation.</p>
+            <div class="tip-box">
+                <p><strong>💡 Pro Tip:</strong> Oat and soy milk froth best at slightly lower temperatures than dairy. Aim for 140°F instead of 160°F to avoid separation.</p>
+            </div>
             
             <h2>Common Problems & Solutions</h2>
             
@@ -366,75 +269,6 @@
                 <li>Froth immediately before pouring</li>
             </ul>
             
-            <h3>Problem: Foam is Too Bubbly, Not Creamy</h3>
-            <p><strong>Solution:</strong> You're incorporating too much air too quickly. Keep the steam wand or frother closer to the surface and work more slowly. For handheld frothers, pulse instead of continuous frothing.</p>
-            
-            <h2>Best Coffee Roasts for Each Plant Milk</h2>
-            
-            <h3>Oat Milk</h3>
-            <p><strong>Best with:</strong> Medium to dark roasts</p>
-            <p><strong>Why:</strong> Natural sweetness complements chocolatey, caramel notes in darker coffees</p>
-            
-            <h3>Soy Milk</h3>
-            <p><strong>Best with:</strong> Any roast (most versatile)</p>
-            <p><strong>Why:</strong> Neutral flavor doesn't interfere with coffee's natural characteristics</p>
-            
-            <h3>Almond Milk</h3>
-            <p><strong>Best with:</strong> Light to medium roasts</p>
-            <p><strong>Why:</strong> Nutty notes pair well with fruity, bright coffees</p>
-            
-            <h3>Coconut Milk</h3>
-            <p><strong>Best with:</strong> Dark roasts, flavored coffees</p>
-            <p><strong>Why:</strong> Tropical sweetness works with bold, chocolatey flavors</p>
-            
-            <h2>Iced Coffee vs Hot Coffee</h2>
-            
-            <p>Different rules apply for cold drinks:</p>
-            
-            <h3>For Iced Coffee & Cold Brew:</h3>
-            <p><strong>Best choices:</strong> Almond milk, coconut milk, regular oat milk</p>
-            <p><strong>Why:</strong> Frothing doesn't matter. Focus on taste and how it looks in the glass. Almond and coconut are lighter and won't make iced coffee too heavy.</p>
-            
-            <p><strong>Skip:</strong> Don't waste money on barista editions for cold coffee. Regular versions work perfectly fine.</p>
-            
-            <h3>For Hot Lattes & Cappuccinos:</h3>
-            <p><strong>Best choices:</strong> Oat milk barista edition, soy milk barista blend</p>
-            <p><strong>Why:</strong> You need that foam quality and temperature stability</p>
-            
-            <h2>Cost Comparison</h2>
-            
-            <p>Here's what you can expect to pay (per half-gallon):</p>
-            
-            <ul>
-                <li><strong>Oat Milk Barista:</strong> $4.50-$6.00</li>
-                <li><strong>Soy Milk Barista:</strong> $3.50-$5.00</li>
-                <li><strong>Almond Milk Barista:</strong> $3.50-$5.00</li>
-                <li><strong>Coconut Milk:</strong> $3.00-$4.50</li>
-                <li><strong>Cashew Milk:</strong> $4.00-$6.00</li>
-            </ul>
-            
-            <p><strong>Cost per latte:</strong> About $0.30-$0.50 per drink, compared to $5-7 at a coffee shop. Even premium plant milk pays for itself quickly if you make coffee at home.</p>
-            
-            <h2>Frequently Asked Questions</h2>
-            
-            <h3>Why does my plant milk separate in coffee?</h3>
-            <p>This happens when the coffee is too acidic or too hot when the cold milk is added. The temperature and pH shock causes proteins to coagulate. Solution: Use barista editions (formulated to resist this), warm your milk first, or choose a darker roast coffee (less acidic).</p>
-            
-            <h3>Can you make latte art with plant milk?</h3>
-            <p>Yes! Oat milk barista editions and soy milk create microfoam suitable for latte art. The technique is identical to dairy milk. Almond and coconut milk produce larger bubbles that make latte art difficult or impossible.</p>
-            
-            <h3>Does plant milk taste different in coffee than dairy?</h3>
-            <p>Yes, but subtly. Oat milk is slightly sweeter and more neutral than dairy. Soy is comparable to skim milk. Almond adds a nutty hint. Most people adapt quickly and many prefer the taste of plant milk in coffee.</p>
-            
-            <h3>Why is barista plant milk more expensive?</h3>
-            <p>Barista editions contain added oils and stabilizers that regular versions don't have. The formulation process and additional ingredients increase production costs. However, the price difference is usually only $1-2 per carton.</p>
-            
-            <h3>Can I use the same plant milk for both hot and iced coffee?</h3>
-            <p>Yes, but it's not optimal. Barista editions are overkill for iced coffee where you don't need frothing ability. Save money by using regular versions for cold drinks and barista editions for hot drinks.</p>
-            
-            <h3>Which plant milk is closest to whole milk in coffee?</h3>
-            <p>Oat milk, specifically barista editions. The creaminess, neutral-sweet taste, and frothing ability most closely match whole dairy milk. Cashew milk is a close second for richness but doesn't froth as well.</p>
-            
             <h2>The Bottom Line</h2>
             
             <p>For most coffee lovers, <strong>oat milk barista edition is the clear winner</strong>. It froths beautifully, tastes great, and works in any coffee drink you'd make at home or order at a café.</p>
@@ -448,33 +282,50 @@
                 <li><strong>If you just add a splash to black coffee:</strong> Any plant milk works; skip the expensive barista versions</li>
             </ul>
             
-            <p>The best approach? Try a few and see what you prefer. Everyone's taste is different, and what works in your favorite coffee shop might not be your favorite at home.</p>
-            
-            <div class="affiliate-section">
+            <div class="affiliate-box">
                 <h3>🛒 Ready to Upgrade Your Coffee?</h3>
                 <a href="https://www.amazon.com/s?k=plant+milk+barista+edition&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
                     <div class="product-name">Shop All Barista Plant Milks →</div>
                     <div class="product-desc">Compare brands, prices, and find your perfect match</div>
                 </a>
             </div>
-            
-            <div style="text-align: center; margin: 50px 0 30px;">
-                <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
-            </div>
-            
-            <p style="text-align: center; color: #999; font-size: 0.9em;">Not sure which plant milk is right for you overall? Take our 2-minute quiz for personalized recommendations beyond just coffee!</p>
         </article>
-        
-        <footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin-top: 40px;">
-            <p style="color: #666; font-size: 0.9em; margin: 0;">
+
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h2>📚 Related Articles</h2>
+            <div class="related-articles-grid">
+                <a href="/blog/oat-milk-vs-almond-milk.html" class="related-article-card">
+                    <h3>🌾 Oat Milk vs Almond Milk</h3>
+                    <p>Complete comparison of the two most popular plant milks for coffee and beyond</p>
+                </a>
+                <a href="/blog/best-plant-milk-for-baking.html" class="related-article-card">
+                    <h3>🧁 Best Plant Milk for Baking</h3>
+                    <p>Complete guide to substituting dairy in cakes, cookies, and bread</p>
+                </a>
+                <a href="/blog/best-plant-milk-for-smoothies.html" class="related-article-card">
+                    <h3>🥤 Best Plant Milk for Smoothies</h3>
+                    <p>Find the perfect base for your protein shakes and fruit smoothies</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quiz CTA -->
+        <div class="quiz-cta">
+            <h3>🥛 Not Sure Which Plant Milk Is Right for You?</h3>
+            <p>Take our free 2-minute quiz to get a personalized recommendation based on your taste preferences, dietary needs, and lifestyle!</p>
+            <a href="/quiz" class="btn">Take the Quiz →</a>
+        </div>
+
+        <footer>
+            <p>
                 © 2025 NonCow | 
-                <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
+                <a href="/disclosure">Affiliate Disclosure</a>
             </p>
-            <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">
+            <p>
                 As an Amazon Associate, I earn from qualifying purchases.
             </p>
         </footer>
-    </div>
     </div>
     
     <script>
@@ -497,7 +348,6 @@
         }
         
         function loadGoogleAnalytics() {
-            // Load Google Analytics
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
@@ -520,7 +370,6 @@
             document.getElementById('cookie-banner').classList.remove('show');
         }
         
-        // Check cookie consent on page load
         window.addEventListener('DOMContentLoaded', function() {
             const consent = getCookie('cookieConsent');
             if (!consent) {
