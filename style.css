@@ -726,6 +726,213 @@ article .intro {
 }
 
 /* ============================================
+   BLOG ARTICLE STYLES
+   ============================================ */
+article h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+article .meta {
+    color: #999;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+article .disclosure {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+article .disclosure p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+article .quick-answer {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f5e9 100%);
+    border: 2px solid #4caf50;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+article .quick-answer h3 {
+    color: #2e7d32;
+    margin-top: 0;
+}
+
+article .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+article .comparison-table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+article .comparison-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+article .comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+article .comparison-table tr:hover {
+    background: #f5f5f5;
+}
+
+article .affiliate-box {
+    background: #f8f9ff;
+    border: 2px solid #667eea;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+article .affiliate-box h3 {
+    color: #667eea;
+    margin-top: 0;
+}
+
+article .tip-box {
+    background: #fff9e6;
+    border-left: 4px solid #ffc107;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+article .tip-box strong {
+    color: #f57c00;
+}
+
+article .internal-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+article .internal-link:hover {
+    border-bottom-color: #667eea;
+}
+
+article .ratio-box {
+    background: #f0f7ff;
+    border: 2px solid #2196f3;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+article .ratio-box h4 {
+    color: #1976d2;
+    margin: 0 0 15px 0;
+}
+
+/* Related Articles Section */
+.related-articles {
+    background: #f8f9ff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 50px 0 30px;
+}
+
+.related-articles h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+.related-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.related-article-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    display: block;
+}
+
+.related-article-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+}
+
+.related-article-card h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.related-article-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Quiz CTA in Articles */
+.quiz-cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 35px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.quiz-cta h3 {
+    color: white;
+    font-size: 1.6em;
+    margin: 0 0 15px 0;
+}
+
+.quiz-cta p {
+    color: white;
+    margin: 0 0 20px 0;
+    font-size: 1.05em;
+}
+
+.quiz-cta .btn {
+    background: white;
+    color: #667eea;
+}
+
+.quiz-cta .btn:hover {
+    background: #f0f0f0;
+    color: #764ba2;
+}
+
+/* ============================================
    MOBILE RESPONSIVE
    ============================================ */
 @media (max-width: 600px) {
