@@ -1,4 +1,4 @@
-/* NonCow Global Styles - Consolidated */
+/* NonCow Global Styles */
 
 * {
     margin: 0;
@@ -13,13 +13,10 @@ body {
     padding: 20px;
 }
 
-/* ============================================
-   NAVIGATION - WITH TOP AND BOTTOM BORDERS
-   ============================================ */
+/* Navigation */
 nav {
     text-align: center;
     padding: 20px 0;
-    border-top: 2px solid #e0e0e0;
     border-bottom: 2px solid #e0e0e0;
     margin-bottom: 30px;
 }
@@ -36,9 +33,7 @@ nav a:hover {
     color: #764ba2;
 }
 
-/* ============================================
-   CONTAINER - STANDARDIZED 900PX WIDTH
-   ============================================ */
+/* Container */
 .container {
     background: white;
     border-radius: 20px;
@@ -51,9 +46,11 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* ============================================
-   LOGO
-   ============================================ */
+.container.wide {
+    max-width: 800px;
+}
+
+/* Logo */
 .logo {
     text-align: center;
     margin-bottom: 30px;
@@ -70,43 +67,7 @@ nav a:hover {
     font-size: 1.1em;
 }
 
-/* ============================================
-   FOOTER - STANDARDIZED STYLING
-   ============================================ */
-footer {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
-}
-
-footer p {
-    color: #666;
-    font-size: 0.9em;
-    margin: 0;
-}
-
-footer p:last-child {
-    color: #999;
-    font-size: 0.85em;
-    margin: 10px 0 0;
-}
-
-footer a {
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* ============================================
-   QUIZ SCREENS
-   ============================================ */
+/* Screens */
 .screen {
     display: none;
 }
@@ -121,9 +82,7 @@ footer a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================================
-   START SCREEN
-   ============================================ */
+/* Start Screen */
 .start-screen {
     text-align: center;
 }
@@ -141,9 +100,7 @@ footer a:hover {
     margin-bottom: 30px;
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* Buttons */
 .btn {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
@@ -154,14 +111,11 @@ footer a:hover {
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     font-weight: 600;
-    text-decoration: none;
-    display: inline-block;
 }
 
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-    color: white;
 }
 
 .btn-secondary {
@@ -173,9 +127,7 @@ footer a:hover {
     background: #d0d0d0;
 }
 
-/* ============================================
-   QUIZ QUESTION STYLES
-   ============================================ */
+/* Question Styles */
 .question {
     margin-bottom: 30px;
 }
@@ -200,9 +152,7 @@ footer a:hover {
     transition: width 0.3s;
 }
 
-/* ============================================
-   OPTIONS
-   ============================================ */
+/* Options */
 .options {
     display: flex;
     flex-direction: column;
@@ -242,9 +192,7 @@ footer a:hover {
     font-size: 0.9em;
 }
 
-/* ============================================
-   RESULTS
-   ============================================ */
+/* Results */
 .result {
     text-align: center;
 }
@@ -267,9 +215,7 @@ footer a:hover {
     margin-bottom: 30px;
 }
 
-/* ============================================
-   AFFILIATE SECTION
-   ============================================ */
+/* Affiliate Section */
 .affiliate-section {
     background: #f8f9ff;
     padding: 25px;
@@ -309,9 +255,7 @@ footer a:hover {
     color: #666;
 }
 
-/* ============================================
-   SHARE BUTTONS
-   ============================================ */
+/* Share Buttons */
 .share-buttons {
     display: flex;
     gap: 10px;
@@ -335,253 +279,14 @@ footer a:hover {
     color: white;
 }
 
-/* ============================================
-   NAVIGATION BUTTONS
-   ============================================ */
+/* Navigation Buttons */
 .nav-buttons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
 }
 
-/* ============================================
-   BLOG PREVIEW ON HOMEPAGE
-   ============================================ */
-.blog-preview {
-    margin-top: 50px;
-    padding-top: 40px;
-    border-top: 2px solid #e0e0e0;
-}
-
-.blog-preview h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.blog-mini-card {
-    background: #f8f9ff;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    transition: all 0.3s;
-    border: 2px solid transparent;
-}
-
-.blog-mini-card:hover {
-    border-color: #667eea;
-    transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
-}
-
-.blog-mini-card-featured {
-    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-    border: 2px solid #4caf50;
-    position: relative;
-}
-
-.new-badge-mini {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #4caf50;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.75em;
-    font-weight: 700;
-    z-index: 10;
-}
-
-.blog-mini-content {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    position: relative;
-}
-
-.blog-mini-thumbnail {
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.blog-mini-card h4 {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.blog-mini-card h4 a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.blog-mini-card h4 a:hover {
-    color: #667eea;
-}
-
-.blog-mini-meta {
-    color: #999;
-    font-size: 0.85em;
-    margin-bottom: 8px;
-}
-
-.blog-mini-excerpt {
-    color: #666;
-    font-size: 0.95em;
-    line-height: 1.5;
-}
-
-.view-all-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05em;
-    transition: color 0.3s;
-}
-
-.view-all-link:hover {
-    color: #764ba2;
-    text-decoration: underline;
-}
-
-/* ============================================
-   BLOG INDEX PAGE
-   ============================================ */
-.page-title {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.page-subtitle {
-    font-size: 1.2em;
-    color: #666;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.blog-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.blog-card {
-    background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 15px;
-    padding: 30px;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s;
-    display: block;
-    position: relative;
-}
-
-.blog-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-color: #667eea;
-}
-
-.blog-card.featured {
-    background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-    border: 2px solid #4caf50;
-}
-
-.new-badge {
-    display: inline-block;
-    background: #4caf50;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.8em;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.blog-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.blog-meta {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
-}
-
-.blog-excerpt {
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.read-more {
-    color: #667eea;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.cta-box {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    margin: 50px 0;
-}
-
-.cta-box h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.cta-box p {
-    margin-bottom: 0;
-}
-
-.cta-button {
-    display: inline-block;
-    background: white;
-    color: #667eea;
-    padding: 15px 40px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 1.1em;
-    margin-top: 20px;
-    transition: transform 0.2s;
-}
-
-.cta-button:hover {
-    transform: scale(1.05);
-}
-
-/* ============================================
-   BLOG ARTICLE STYLES
-   ============================================ */
+/* Blog Styles */
 .blog-header {
     text-align: center;
     margin-bottom: 40px;
@@ -598,6 +303,47 @@ footer a:hover {
     font-size: 1.1em;
 }
 
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.blog-card {
+    background: #f8f9ff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-card:hover {
+    border-color: #667eea;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.blog-card h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.blog-card .blog-meta {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.blog-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Article Styles */
 article {
     line-height: 1.8;
 }
@@ -647,9 +393,145 @@ article .intro {
     margin-bottom: 30px;
 }
 
-/* ============================================
-   COOKIE BANNER
-   ============================================ */
+/* Blog Article Components */
+.article-title {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.article-meta {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+
+.disclosure-box {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 15px 20px;
+    margin: 20px 0 30px 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.disclosure-box p {
+    margin: 0;
+    color: #555;
+}
+
+.amazon-link {
+    display: inline-block;
+    background: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+
+.amazon-link:hover {
+    background: #e68900;
+}
+
+.tip-box {
+    background: #f8f9ff;
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+.tip-box strong {
+    color: #667eea;
+}
+
+.internal-link-box {
+    background: #f8f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.internal-link-box a {
+    color: #667eea;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.internal-link-box a:hover {
+    text-decoration: underline;
+}
+
+.warning-box {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.success-box {
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.related-articles {
+    background: #f8f9ff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+}
+
+.related-articles h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.related-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #e0e0e0;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+}
+
+.related-card h3 {
+    color: #667eea;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+.related-card p {
+    color: #666;
+    font-size: 0.95em;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Cookie Banner */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -725,283 +607,7 @@ article .intro {
     background: #d0d0d0;
 }
 
-/* ============================================
-   BLOG ARTICLE STYLES
-   ============================================ */
-article h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-article .meta {
-    color: #999;
-    margin-bottom: 30px;
-    font-size: 0.95em;
-}
-
-article .disclosure {
-    background: #e3f2fd;
-    border-left: 4px solid #2196f3;
-    padding: 20px;
-    margin: 30px 0;
-    border-radius: 5px;
-}
-
-article .disclosure p {
-    margin: 0;
-    color: #555;
-    font-size: 0.95em;
-}
-
-article .quick-answer {
-    background: linear-gradient(135deg, #f8f9ff 0%, #e8f5e9 100%);
-    border: 2px solid #4caf50;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 30px 0;
-}
-
-article .quick-answer h3 {
-    color: #2e7d32;
-    margin-top: 0;
-}
-
-article .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-article .comparison-table th {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 15px;
-    text-align: left;
-    font-weight: 600;
-}
-
-article .comparison-table td {
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-article .comparison-table tr:last-child td {
-    border-bottom: none;
-}
-
-article .comparison-table tr:hover {
-    background: #f5f5f5;
-}
-
-article .affiliate-box {
-    background: #f8f9ff;
-    border: 2px solid #667eea;
-    border-radius: 15px;
-    padding: 25px;
-    margin: 30px 0;
-}
-
-article .affiliate-box h3 {
-    color: #667eea;
-    margin-top: 0;
-}
-
-article .tip-box {
-    background: #fff9e6;
-    border-left: 4px solid #ffc107;
-    padding: 20px;
-    margin: 25px 0;
-    border-radius: 5px;
-}
-
-article .tip-box strong {
-    color: #f57c00;
-}
-
-article .internal-link {
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s;
-}
-
-article .internal-link:hover {
-    border-bottom-color: #667eea;
-}
-
-article .ratio-box {
-    background: #f0f7ff;
-    border: 2px solid #2196f3;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 25px 0;
-}
-
-article .ratio-box h4 {
-    color: #1976d2;
-    margin: 0 0 15px 0;
-}
-
-/* Related Articles Section */
-.related-articles {
-    background: #f8f9ff;
-    border-radius: 15px;
-    padding: 30px;
-    margin: 50px 0 30px;
-}
-
-.related-articles h2 {
-    color: #333;
-    font-size: 1.8em;
-    margin: 0 0 25px 0;
-    text-align: center;
-}
-
-.related-articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.related-article-card {
-    background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
-    padding: 20px;
-    text-decoration: none;
-    color: #333;
-    transition: all 0.3s;
-    display: block;
-}
-
-.related-article-card:hover {
-    border-color: #667eea;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
-}
-
-.related-article-card h3 {
-    font-size: 1.1em;
-    color: #333;
-    margin: 0 0 8px 0;
-}
-
-.related-article-card p {
-    font-size: 0.9em;
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* Quiz CTA in Articles */
-.quiz-cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 15px;
-    padding: 35px;
-    text-align: center;
-    margin: 40px 0;
-}
-
-.quiz-cta h3 {
-    color: white;
-    font-size: 1.6em;
-    margin: 0 0 15px 0;
-}
-
-.quiz-cta p {
-    color: white;
-    margin: 0 0 20px 0;
-    font-size: 1.05em;
-}
-
-.quiz-cta .btn {
-    background: white;
-    color: #667eea;
-}
-
-.quiz-cta .btn:hover {
-    background: #f0f0f0;
-    color: #764ba2;
-}
-
-/* ============================================
-   RELATED ARTICLES CARDS
-   ============================================ */
-
-.related-articles {
-    margin: 50px 0 30px;
-}
-
-.related-articles h2 {
-    margin-bottom: 25px;
-    color: #333;
-    font-size: 1.8em;
-}
-
-.related-articles-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.related-article-card {
-    display: block;
-    background: #f8f9ff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid #e0e0e0;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.related-article-card:hover {
-    border-color: #667eea;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-}
-
-.related-article-card h3 {
-    color: #667eea;
-    margin: 0 0 8px 0;
-    font-size: 1.3em;
-}
-
-.related-article-card p {
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
-    font-size: 1em;
-}
-
-@media (max-width: 600px) {
-    .related-articles h2 {
-        font-size: 1.5em;
-    }
-    
-    .related-article-card {
-        padding: 15px;
-    }
-    
-    .related-article-card h3 {
-        font-size: 1.1em;
-    }
-    
-    .related-article-card p {
-        font-size: 0.9em;
-    }
-}
-
-/* ============================================
-   MOBILE RESPONSIVE
-   ============================================ */
+/* Mobile Responsive */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -1018,11 +624,6 @@ article .ratio-box h4 {
     
     .logo {
         margin-bottom: 20px;
-    }
-    
-    nav a {
-        margin: 0 10px;
-        font-size: 0.9em;
     }
     
     .share-buttons {
@@ -1082,6 +683,11 @@ article .ratio-box h4 {
         width: 100%;
     }
     
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+    
     article h1 {
         font-size: 1.8em;
     }
@@ -1089,28 +695,12 @@ article .ratio-box h4 {
     article h2 {
         font-size: 1.4em;
     }
-    
-    .page-title {
-        font-size: 2em;
-    }
-    
-    .blog-mini-content {
-        flex-direction: column;
-    }
-    
-    .blog-mini-thumbnail {
-        width: 100%;
-        height: 150px;
-    }
-    
-    .new-badge-mini {
-        top: 15px;
-        left: 15px;
-    }
-}
 
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 2em;
+    .article-title {
+        font-size: 1.6em;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
     }
 }
