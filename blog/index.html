@@ -52,14 +52,12 @@
       {
         "@type": "BlogPosting",
         "headline": "Best Plant Milk for Kids",
-        "url": "https://noncow.com/blog/best-plant-milk-for-kids.html",
-        "image": "https://noncow.com/images/plant-milk-for-kids.jpg"
+        "url": "https://noncow.com/blog/best-plant-milk-for-kids.html"
       },
       {
         "@type": "BlogPosting",
         "headline": "Best Plant Milk for Smoothies",
-        "url": "https://noncow.com/blog/best-plant-milk-for-smoothies.html",
-        "image": "https://noncow.com/images/plant-milk-smoothies.jpg"
+        "url": "https://noncow.com/blog/best-plant-milk-for-smoothies.html"
       }
     ],
     "publisher": {
@@ -72,13 +70,10 @@
 </head>
 
 <body>
-  <!-- Cookie Banner -->
   <div class="cookie-banner" id="cookie-banner">
     <div class="cookie-content">
       <div class="cookie-text">
-        <p>
-          We use cookies to analyze site traffic with Google Analytics. By clicking 'Accept', you consent to our use of cookies.
-        </p>
+        <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
       </div>
       <div class="cookie-buttons">
         <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
@@ -87,7 +82,6 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT CONTAINER -->
   <div class="container">
     <div class="logo">
       <h1>📚 NonCow Blog</h1>
@@ -100,12 +94,10 @@
       <a href="/blog" class="active">📚 Blog</a>
     </nav>
 
-    <!-- BLOG FEED -->
     <section class="blog-feed">
-
       <article class="blog-item new">
         <a href="/blog/best-plant-milk-for-cereal.html">
-          <img src="/images/plant-milk-cereal-bowl-topview.jpg" alt="Bowl of puffed cereal with plant milk and spoon in morning light" />
+          <img src="/images/plant-milk-cereal-bowl-topview.jpg" alt="Bowl of puffed cereal with plant milk and spoon" class="thumbnail" />
           <div class="blog-item-content">
             <span class="badge">NEW</span>
             <h3>🥣 Best Plant Milk for Cereal</h3>
@@ -116,7 +108,7 @@
 
       <article class="blog-item">
         <a href="/blog/best-plant-milk-for-coffee.html">
-          <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed plant milk into coffee cup for latte art" />
+          <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed plant milk into coffee cup for latte art" class="thumbnail" />
           <div class="blog-item-content">
             <h3>☕ Best Plant Milk for Coffee</h3>
             <p>Barista-tested favorites for lattes, cappuccinos, and iced coffee.</p>
@@ -126,34 +118,13 @@
 
       <article class="blog-item">
         <a href="/blog/best-plant-milk-for-baking.html">
-          <img src="/images/plant-milk-chocolate-cake-baking.jpg" alt="Chocolate cake being dusted with powdered sugar through sieve" />
+          <img src="/images/plant-milk-chocolate-cake-baking.jpg" alt="Chocolate cake being dusted with powdered sugar" class="thumbnail" />
           <div class="blog-item-content">
             <h3>🧁 Best Plant Milk for Baking</h3>
             <p>The ultimate guide to substituting dairy milk in cakes, cookies, and bread.</p>
           </div>
         </a>
       </article>
-
-      <article class="blog-item">
-        <a href="/blog/best-plant-milk-for-kids.html">
-          <img src="/images/plant-milk-for-kids.jpg" alt="Child drinking a glass of plant milk at breakfast table" />
-          <div class="blog-item-content">
-            <h3>👶 Best Plant Milk for Kids</h3>
-            <p>Safe, nutritious, and tasty plant milk options for growing kids.</p>
-          </div>
-        </a>
-      </article>
-
-      <article class="blog-item">
-        <a href="/blog/best-plant-milk-for-smoothies.html">
-          <img src="/images/plant-milk-smoothies.jpg" alt="Pouring plant milk into blender with fruit for smoothie" />
-          <div class="blog-item-content">
-            <h3>🥤 Best Plant Milk for Smoothies</h3>
-            <p>The perfect bases for creamy, protein-rich smoothie blends.</p>
-          </div>
-        </a>
-      </article>
-
     </section>
 
     <footer>
@@ -162,7 +133,6 @@
     </footer>
   </div>
 
-  <!-- COOKIE + ANALYTICS SCRIPT -->
   <script>
     function setCookie(n,v,d){const t=new Date();t.setTime(t.getTime()+d*24*60*60*1000);document.cookie=n+"="+v+";expires="+t.toUTCString()+";path=/";}
     function getCookie(n){const e=n+"=";const a=document.cookie.split(";");for(let i=0;i<a.length;i++){let c=a[i];while(c.charAt(0)==" ")c=c.substring(1);if(c.indexOf(e)==0)return c.substring(e.length);}return null;}
