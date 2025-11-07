@@ -85,20 +85,7 @@ nav a.active {
   color: #555;
 }
 
-/* --------------------------------------------------
-   Blog Preview (Compact Layout)
--------------------------------------------------- */
-.blog-preview {
-  margin-top: 50px;
-}
-
-.blog-preview h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
+/* Blog preview cards on main index */
 .blog-preview .blog-item {
   display: flex;
   align-items: center;
@@ -107,6 +94,15 @@ nav a.active {
   padding: 12px 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
+  transition: transform 0.15s ease;
+}
+
+.blog-preview .blog-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 }
 
 .blog-preview .blog-item img.thumbnail {
@@ -116,6 +112,10 @@ nav a.active {
   border-radius: 12px;
   flex-shrink: 0;
   margin-right: 16px;
+}
+
+.blog-preview .blog-item-content {
+  flex: 1;
 }
 
 .blog-preview .blog-item-content h3 {
@@ -131,14 +131,15 @@ nav a.active {
 }
 
 .blog-preview .badge {
-  background: #4caf50;
+  display: inline-block;
+  background: #22c55e;
   color: #fff;
   font-size: 0.7rem;
   padding: 2px 6px;
   border-radius: 6px;
   margin-bottom: 4px;
-  display: inline-block;
 }
+
 
 .view-all-link {
   display: block;
