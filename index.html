@@ -1,199 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <title>Find Your Perfect Non-Cow Milk | noncow.com</title>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://noncow.com/">
-    <meta property="og:title" content="Find Your Perfect Non-Cow Milk | NonCow">
-    <meta property="og:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <meta property="og:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle." />
+  <title>Find Your Perfect Non-Cow Milk | NonCow</title>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://noncow.com/">
-    <meta property="twitter:title" content="Find Your Perfect Non-Cow Milk | NonCow">
-    <meta property="twitter:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <meta property="twitter:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
-    
-    <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://noncow.com/#website",
-          "url": "https://noncow.com",
-          "name": "NonCow",
-          "description": "Find your perfect dairy alternative with our interactive plant milk matcher quiz",
-          "publisher": {
-            "@id": "https://noncow.com/#organization"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://noncow.com/#organization",
-          "name": "NonCow",
-          "url": "https://noncow.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://noncow.com/logo.png"
-          }
-        },
-        {
-          "@type": "WebApplication",
-          "@id": "https://noncow.com/#webapp",
-          "url": "https://noncow.com",
-          "name": "Dairy Alternative Matcher",
-          "description": "Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values",
-          "applicationCategory": "LifestyleApplication",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "featureList": [
-            "Personalized milk recommendations",
-            "6-question interactive quiz",
-            "Product recommendations",
-            "Shareable results"
-          ]
-        }
-      ]
-    }
-    </script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://noncow.com/" />
+  <meta property="og:title" content="Find Your Perfect Non-Cow Milk | NonCow" />
+  <meta property="og:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle." />
+  <meta property="og:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg" />
 
-    <link rel="stylesheet" href="/style.css">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Find Your Perfect Non-Cow Milk | NonCow" />
+  <meta name="twitter:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle." />
+  <meta name="twitter:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://noncow.com/#website",
+        "url": "https://noncow.com",
+        "name": "NonCow",
+        "description": "Find your perfect dairy alternative with our interactive plant milk matcher quiz.",
+        "publisher": { "@id": "https://noncow.com/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://noncow.com/#organization",
+        "name": "NonCow",
+        "url": "https://noncow.com",
+        "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://noncow.com/#webapp",
+        "url": "https://noncow.com",
+        "name": "Dairy Alternative Matcher",
+        "description": "Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values.",
+        "applicationCategory": "LifestyleApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Personalized milk recommendations",
+          "6-question interactive quiz",
+          "Product recommendations",
+          "Shareable results"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body>
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
-                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
-            </div>
-        </div>
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+      </div>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+        <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+      </div>
     </div>
-    
-    <div class="container">
-        <div class="logo">
-            <h1>🥛 NonCow</h1>
-            <p>Find Your Perfect Plant Milk</p>
-        </div>
-        
-        <nav>
-            <a href="/">🏠 Home</a>
-            <a href="/quiz">🥛 Take Quiz</a>
-            <a href="/blog">📚 Blog</a>
-        </nav>
-        
-        <div class="start-screen">
-            <h2>Discover Your Dairy Alternative Match</h2>
-            <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
-            <a href="/quiz" class="btn">Start Quiz</a>
-        </div>
-        
-        <!-- Latest Blog Posts Section -->
-        <div class="blog-preview">
-            <h3>📚 Latest from the Blog</h3>
-            
-            <div class="blog-mini-card blog-mini-card-featured">
-                <span class="new-badge-mini">NEW</span>
-                <div class="blog-mini-content">
-                    <img src="/images/plant-milk-earth-hands.jpg" alt="Hands holding soil and young plant seedling representing environmental sustainability" class="blog-mini-thumbnail">
-                    <div>
-                        <h4><a href="/blog/best-plant-milk-for-environment.html">Best Plant Milk for the Environment: Sustainability Compared</a></h4>
-                        <p class="blog-mini-meta">📅 November 4, 2025 | ⏱️ 8 min read</p>
-                        <p class="blog-mini-excerpt">Discover which plant milk is best for the environment. Compare water usage, carbon emissions, and land use.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-mini-card">
-                <h4><a href="/blog/best-plant-milk-for-smoothies.html">Best Plant Milk for Smoothies: Complete Guide</a></h4>
-                <p class="blog-mini-meta">📅 November 2, 2025 | ⏱️ 7 min read</p>
-                <p class="blog-mini-excerpt">Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time.</p>
-            </div>
-            
-            <div class="blog-mini-card">
-                <h4><a href="/blog/best-plant-milk-for-protein.html">Best Plant Milk for Protein: Complete Ranking</a></h4>
-                <p class="blog-mini-meta">📅 October 30, 2025 | ⏱️ 8 min read</p>
-                <p class="blog-mini-excerpt">Looking for high-protein plant milk? Complete ranking of soy, pea, oat, almond, and all other dairy alternatives.</p>
-            </div>
-            
-            <a href="/blog/" class="view-all-link">View All Articles →</a>
-        </div>
+  </div>
 
-        <footer>
-            <p>
-                © 2025 NonCow | 
-                <a href="/disclosure">Affiliate Disclosure</a>
-            </p>
-            <p>
-                As an Amazon Associate, I earn from qualifying purchases.
-            </p>
-        </footer>
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="logo">
+      <h1>🥛 NonCow</h1>
+      <p>Find Your Perfect Plant Milk</p>
     </div>
 
-    <script>
-        // Cookie Consent Management
-        function setCookie(name, value, days) {
-            const d = new Date();
-            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
-        }
-        
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        
-        function loadGoogleAnalytics() {
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
-            document.head.appendChild(script);
-            
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B4ZDS9NB49');
-        }
-        
-        function acceptCookies() {
-            setCookie('cookieConsent', 'accepted', 365);
-            document.getElementById('cookie-banner').classList.remove('show');
-            loadGoogleAnalytics();
-        }
-        
-        function declineCookies() {
-            setCookie('cookieConsent', 'declined', 365);
-            document.getElementById('cookie-banner').classList.remove('show');
-        }
-        
-        window.addEventListener('DOMContentLoaded', function() {
-            const consent = getCookie('cookieConsent');
-            if (!consent) {
-                document.getElementById('cookie-banner').classList.add('show');
-            } else if (consent === 'accepted') {
-                loadGoogleAnalytics();
-            }
-        });
-    </script>
+    <nav>
+      <a href="/">🏠 Home</a>
+      <a href="/quiz">🥛 Take Quiz</a>
+      <a href="/blog">📚 Blog</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="start-screen">
+      <h2>Discover Your Dairy Alternative Match</h2>
+      <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
+      <a href="/quiz" class="btn">Start Quiz</a>
+    </div>
+
+    <!-- Latest Blog Preview -->
+    <section class="blog-preview">
+      <h3>📚 Latest from the Blog</h3>
+
+      <article class="blog-item new">
+        <a href="/blog/best-plant-milk-for-cereal.html">
+          <img src="/images/plant-milk-cereal-bowl-topview.jpg" alt="Bowl of puffed cereal with plant milk and spoon in morning light" />
+          <div class="blog-item-content">
+            <span class="badge">NEW</span>
+            <h3>🥣 Best Plant Milk for Cereal</h3>
+            <p>Crunch-tested favorites: discover which non-dairy milk pairs best with cereal for taste and texture.</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="blog-item">
+        <a href="/blog/best-plant-milk-for-coffee.html">
+          <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed plant milk into coffee cup for latte art" />
+          <div class="blog-item-content">
+            <h3>☕ Best Plant Milk for Coffee</h3>
+            <p>Barista-tested favorites for lattes, cappuccinos, and iced coffee.</p>
+          </div>
+        </a>
+      </article>
+
+      <a href="/blog/" class="view-all-link">View All Articles →</a>
+    </section>
+
+    <footer>
+      <p>© 2025 NonCow | <a href="/disclosure">Affiliate Disclosure</a></p>
+      <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+    </footer>
+  </div>
+
+  <!-- Cookie + Analytics Script -->
+  <script>
+    function setCookie(n,v,d){const t=new Date();t.setTime(t.getTime()+d*24*60*60*1000);document.cookie=n+"="+v+";expires="+t.toUTCString()+";path=/";}
+    function getCookie(n){const e=n+"=";const a=document.cookie.split(";");for(let i=0;i<a.length;i++){let c=a[i];while(c.charAt(0)==" ")c=c.substring(1);if(c.indexOf(e)==0)return c.substring(e.length);}return null;}
+    function loadGoogleAnalytics(){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-B4ZDS9NB49");}
+    function acceptCookies(){setCookie("cookieConsent","accepted",365);document.getElementById("cookie-banner").classList.remove("show");loadGoogleAnalytics();}
+    function declineCookies(){setCookie("cookieConsent","declined",365);document.getElementById("cookie-banner").classList.remove("show");}
+    window.addEventListener("DOMContentLoaded",()=>{const c=getCookie("cookieConsent");if(!c){document.getElementById("cookie-banner").classList.add("show");}else if(c==="accepted"){loadGoogleAnalytics();}});
+  </script>
 </body>
 </html>
