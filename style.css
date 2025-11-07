@@ -933,6 +933,73 @@ article .ratio-box h4 {
 }
 
 /* ============================================
+   RELATED ARTICLES CARDS
+   ============================================ */
+
+.related-articles {
+    margin: 50px 0 30px;
+}
+
+.related-articles h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 1.8em;
+}
+
+.related-articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.related-article-card {
+    display: block;
+    background: #f8f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.related-article-card:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.related-article-card h3 {
+    color: #667eea;
+    margin: 0 0 8px 0;
+    font-size: 1.3em;
+}
+
+.related-article-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    .related-articles h2 {
+        font-size: 1.5em;
+    }
+    
+    .related-article-card {
+        padding: 15px;
+    }
+    
+    .related-article-card h3 {
+        font-size: 1.1em;
+    }
+    
+    .related-article-card p {
+        font-size: 0.9em;
+    }
+}
+
+/* ============================================
    MOBILE RESPONSIVE
    ============================================ */
 @media (max-width: 600px) {
