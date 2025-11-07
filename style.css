@@ -400,3 +400,54 @@ footer {
   .blog-item p { font-size: 0.9em; }
   .cookie-banner { font-size: 0.9em; }
 }
+
+/* --- Blog Preview on Main Index --- */
+.blog-preview {
+  margin-top: 40px;
+}
+
+.blog-preview h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.blog-preview .blog-item {
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blog-preview .blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  max-height: 320px; /* limit image height */
+}
+
+.blog-preview .blog-item-content {
+  padding: 15px 18px;
+}
+
+.blog-preview .badge {
+  font-size: 0.75em;
+  top: 10px;
+  left: 10px;
+}
+
+/* Make sure text doesn’t feel squashed on small screens */
+@media (max-width: 600px) {
+  .blog-preview .blog-item img {
+    max-height: 240px;
+  }
+  .blog-preview h3 {
+    font-size: 1.1em;
+  }
+}
+
+
+
+
