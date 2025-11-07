@@ -28,7 +28,7 @@
         }
       },
       "datePublished": "2025-10-26",
-      "dateModified": "2025-10-26",
+      "dateModified": "2025-11-07",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://noncow.com/blog/best-plant-milk-for-weight-loss.html"
@@ -36,61 +36,38 @@
     }
     </script>
 
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://noncow.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://noncow.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Best Plant Milk for Weight Loss",
+          "item": "https://noncow.com/blog/best-plant-milk-for-weight-loss.html"
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="../style.css">
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        .article-title {
-            font-size: 2.2em;
-            color: #333;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-        
-        .article-meta {
-            color: #999;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
-        
-        .disclosure-box {
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            padding: 15px 20px;
-            margin: 20px 0 30px 0;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-        
-        .disclosure-box p {
-            margin: 0;
-            color: #555;
-        }
-        
-        h2 {
-            color: #333;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-size: 1.6em;
-        }
-        
-        h3 {
-            color: #444;
-            margin-top: 25px;
-            margin-bottom: 12px;
-            font-size: 1.3em;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-        
+        /* Table styles - unique to this article */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -126,192 +103,13 @@
             margin-right: 8px;
         }
         
-        .amazon-link {
-            display: inline-block;
-            background: #ff9900;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            margin: 10px 0;
-            transition: background 0.3s;
-        }
-        
-        .amazon-link:hover {
-            background: #e68900;
-        }
-        
-        .tip-box {
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 25px 0;
-            border-radius: 5px;
-        }
-        
-        .tip-box strong {
-            color: #667eea;
-        }
-        
-        .internal-link-box {
-            background: #f8f9ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .internal-link-box a {
-            color: #667eea;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
-        .internal-link-box a:hover {
-            text-decoration: underline;
-        }
-        
-        ul {
-            margin: 15px 0 15px 30px;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            color: #555;
-        }
-        
-        .warning-box {
-            background: #fff3e0;
-            border-left: 4px solid #ff9800;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
-        .success-box {
-            background: #e8f5e9;
-            border-left: 4px solid #4caf50;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-        }
-        
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                padding: 25px 20px;
-                border-radius: 15px;
-            }
-            
-            .article-title {
-                font-size: 1.6em;
-            }
-            
-            h2 {
-                font-size: 1.4em;
-            }
-            
             table {
                 font-size: 0.9em;
             }
             
             th, td {
                 padding: 10px;
-            }
-        }
-        
-        /* Cookie Consent Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 1000;
-            animation: slideUp 0.5s;
-        }
-        
-        .cookie-banner.show {
-            display: block;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-        
-        .cookie-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .cookie-text {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .cookie-text p {
-            margin: 0;
-            color: #333;
-            font-size: 0.95em;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .cookie-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: all 0.3s;
-        }
-        
-        .cookie-accept {
-            background: #4e9f3d;
-            color: white;
-        }
-        
-        .cookie-accept:hover {
-            background: #3d7a2e;
-        }
-        
-        .cookie-decline {
-            background: #e0e0e0;
-            color: #333;
-        }
-        
-        .cookie-decline:hover {
-            background: #d0d0d0;
-        }
-        
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                width: 100%;
-                flex-direction: column;
-            }
-            
-            .cookie-btn {
-                width: 100%;
             }
         }
     </style>
@@ -331,23 +129,22 @@
     </div>
 
     <div class="container">
-        <!-- Header inside the white box -->
-        <div style="text-align: center; margin-bottom: 25px;">
-            <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
-            <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
+        <!-- Header with Logo & Navigation -->
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
         </div>
         
-        <!-- Navigation -->
-        <nav style="text-align:center; padding: 25px 0; border-top:2px solid #e0e0e0; border-bottom:2px solid #e0e0e0; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
-            <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
-            <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
         </nav>
         
         <article>
         
         <h1 class="article-title">Best Plant Milk for Weight Loss: Low-Calorie Options Ranked</h1>
-        <p class="article-meta">Published October 26, 2025 | 9 min read</p>
+        <p class="article-meta">Published October 26, 2025 | Updated November 7, 2025 | 9 min read</p>
         
         <div class="disclosure-box">
             <p><strong>Affiliate Disclosure:</strong> This article contains affiliate links to Amazon. If you make a purchase through these links, we may earn a small commission at no additional cost to you. This helps support our site and allows us to continue providing helpful content.</p>
@@ -653,8 +450,28 @@
 
         <p><strong>The honest truth:</strong> The best plant milk for weight loss is the unsweetened one you'll actually drink consistently. A perfect choice you hate won't help you lose weight if you can't stick with it.</p>
 
+        <!-- Related Articles Section -->
+        <div class="related-articles">
+            <h2>📚 Related Articles</h2>
+            <div class="related-grid">
+                <a href="/blog/best-plant-milk-for-protein.html" class="related-card">
+                    <h3>💪 Best Plant Milk for Protein</h3>
+                    <p>Maximize your protein intake with the highest-protein plant milk options for muscle building and recovery.</p>
+                </a>
+                <a href="/blog/best-plant-milk-for-smoothies.html" class="related-card">
+                    <h3>🥤 Best Plant Milk for Smoothies</h3>
+                    <p>Find the perfect plant milk base for nutrient-dense, delicious smoothies that support your health goals.</p>
+                </a>
+                <a href="/blog/best-plant-milk-for-keto.html" class="related-card">
+                    <h3>🥑 Best Plant Milk for Keto</h3>
+                    <p>Discover low-carb, high-fat plant milk options that fit perfectly into your ketogenic diet plan.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quiz CTA -->
         <div style="text-align: center; margin: 50px 0 30px;">
-            <a href="/quiz" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 40px; text-decoration: none; border-radius: 50px; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap;">🥛 Take Our Quiz</a>
+            <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
         </div>
         
         <p style="text-align: center; color: #999; font-size: 0.9em;">Find your perfect plant milk match based on your goals and preferences!</p>
@@ -672,7 +489,7 @@
         </article>
         
         <!-- Footer -->
-        <footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin-top: 60px;">
+        <footer style="text-align: center; padding: 25px; margin-top: 60px; border-top: 2px solid #e0e0e0;">
             <p style="color: #666; font-size: 0.9em; margin: 0;">
                 © 2025 NonCow | 
                 <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
