@@ -272,13 +272,13 @@ button:hover,
 }
 
 .blog-card-content {
-  padding: 20px 24px 24px 24px;
+  padding: 16px 24px 24px 24px;
 }
 
 .blog-card-content h2 {
   color: #333;
   font-size: 1.4em;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   line-height: 1.3;
 }
 
