@@ -231,6 +231,7 @@ button:hover,
   flex-direction: column;
   gap: 30px;
   margin-bottom: 50px;
+  max-width: 100%;
 }
 
 .blog-card {
@@ -240,6 +241,8 @@ button:hover,
   overflow: hidden;
   transition: all 0.3s;
   border: 2px solid transparent;
+  width: 100%;
+  max-width: 100%;
 }
 
 .blog-card a {
