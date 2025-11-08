@@ -416,6 +416,158 @@ button:hover,
   color: #333;
 }
 
+/* Quiz Screens */
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Progress Bar */
+.progress {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* Question Container */
+.question {
+  margin-bottom: 30px;
+}
+
+.question h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.question p {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 1.05em;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.option:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+  transform: translateX(3px);
+}
+
+.option.selected {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8f5ff 100%);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.option-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  font-size: 1.05em;
+}
+
+.option-desc {
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-secondary {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #d0d0d0;
+  color: #333;
+}
+
+/* Results */
+.result {
+  text-align: center;
+}
+
+.result-icon {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.result h2 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.result-desc {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Share Buttons */
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.share-btn {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.share-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+}
+
 /* --- Footer --- */
 footer {
   background: white;
