@@ -28,6 +28,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Narrower container for blog index */
+.blog-list .container,
+body:has(.blog-list) .container {
+  max-width: 700px;
+}
+
 /* --- Header / Logo --- */
 header,
 .logo {
@@ -226,7 +232,7 @@ button:hover,
 .blog-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 50px;
 }
 
