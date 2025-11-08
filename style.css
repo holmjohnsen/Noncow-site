@@ -140,48 +140,37 @@ button:hover,
   text-align: center;
 }
 
-/* Blog mini cards on homepage */
-.blog-mini-card {
+/* Blog items on homepage (index.html) */
+.blog-item {
   background: #fff;
   border-radius: 15px;
-  padding: 20px;
   margin-bottom: 20px;
   transition: all 0.3s;
   border: 2px solid #e0e0e0;
-  position: relative;
+  display: block;
 }
 
-.blog-mini-card:hover {
+.blog-item a {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-item:hover {
   border-color: #667eea;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
 }
 
-.blog-mini-card-featured {
+.blog-item.new {
   background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
   border: 2px solid #4caf50;
 }
 
-.new-badge-mini {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: #4caf50;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.75em;
-  font-weight: 700;
-  z-index: 10;
-}
-
-.blog-mini-content {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.blog-mini-thumbnail {
+.blog-item .thumbnail {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -189,30 +178,30 @@ button:hover,
   flex-shrink: 0;
 }
 
-.blog-mini-card h4 {
+.blog-item-content {
+  flex: 1;
+  position: relative;
+}
+
+.blog-item-content .badge {
+  display: inline-block;
+  background: #4caf50;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.blog-item-content h3 {
   font-size: 1.1em;
   color: #333;
   margin: 0 0 8px 0;
   line-height: 1.3;
 }
 
-.blog-mini-card h4 a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.blog-mini-card h4 a:hover {
-  color: #667eea;
-}
-
-.blog-mini-meta {
-  color: #999;
-  font-size: 0.85em;
-  margin-bottom: 8px;
-}
-
-.blog-mini-excerpt {
+.blog-item-content p {
   color: #666;
   font-size: 0.95em;
   line-height: 1.5;
@@ -808,18 +797,13 @@ article strong {
     font-size: 2em;
   }
 
-  .blog-mini-content {
+  .blog-item a {
     flex-direction: column;
   }
 
-  .blog-mini-thumbnail {
+  .blog-item .thumbnail {
     width: 100%;
     height: 200px;
-  }
-
-  .new-badge-mini {
-    top: 15px;
-    left: 15px;
   }
 
   .blog-card {
