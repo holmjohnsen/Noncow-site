@@ -1,145 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore NonCow's best plant milk guides — from coffee to baking, cereal, and more. Find your perfect dairy-free match." />
-  <title>NonCow Blog | Best Plant Milk Guides</title>
-  <link rel="canonical" href="https://noncow.com/blog/" />
-  <link rel="stylesheet" href="../style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
+    <title>Plant Milk Blog - Expert Guides & Reviews | NonCow</title>
+    <link rel="canonical" href="https://noncow.com/blog/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://noncow.com/blog/">
+    <meta property="og:title" content="Plant Milk Blog - Expert Guides & Reviews | NonCow">
+    <meta property="og:description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
+    <meta property="og:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="NonCow Blog — Best Plant Milk Guides" />
-  <meta property="og:description" content="Browse NonCow's guides to the best plant milks for coffee, cereal, baking, and more." />
-  <meta property="og:url" content="https://noncow.com/blog/" />
-  <meta property="og:image" content="https://noncow.com/images/plant-milk-cereal-bowl-topview.jpg" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NonCow Blog — Best Plant Milk Guides" />
-  <meta name="twitter:description" content="Find your perfect plant milk for cereal, coffee, baking, smoothies, and more." />
-  <meta name="twitter:image" content="https://noncow.com/images/plant-milk-cereal-bowl-topview.jpg" />
-
-  <!-- JSON-LD Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "NonCow Blog — Best Plant Milk Guides",
-    "description": "Explore NonCow's best plant milk guides — from coffee to baking, cereal, and more.",
-    "url": "https://noncow.com/blog/",
-    "mainEntity": [
-      {
-        "@type": "BlogPosting",
-        "headline": "Best Plant Milk for Cereal",
-        "url": "https://noncow.com/blog/best-plant-milk-for-cereal.html",
-        "image": "https://noncow.com/images/plant-milk-cereal-bowl-topview.jpg",
-        "datePublished": "2025-11-07"
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Best Plant Milk for Coffee",
-        "url": "https://noncow.com/blog/best-plant-milk-for-coffee.html",
-        "image": "https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg"
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Best Plant Milk for Baking",
-        "url": "https://noncow.com/blog/best-plant-milk-for-baking.html",
-        "image": "https://noncow.com/images/plant-milk-chocolate-cake-baking.jpg"
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Best Plant Milk for Kids",
-        "url": "https://noncow.com/blog/best-plant-milk-for-kids.html"
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Best Plant Milk for Smoothies",
-        "url": "https://noncow.com/blog/best-plant-milk-for-smoothies.html"
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://noncow.com/blog/">
+    <meta property="twitter:title" content="Plant Milk Blog - Expert Guides & Reviews | NonCow">
+    <meta property="twitter:description" content="Expert guides and comparisons to help you choose the perfect plant-based milk. Browse our collection of in-depth articles about dairy alternatives.">
+    <meta property="twitter:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "NonCow Plant Milk Blog",
+      "description": "Expert guides and comparisons to help you choose the perfect plant-based milk",
+      "url": "https://noncow.com/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NonCow",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://noncow.com/logo.png"
+        }
       }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "NonCow",
-      "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" }
     }
-  }
-  </script>
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
-  <div class="cookie-banner" id="cookie-banner">
-    <div class="cookie-content">
-      <div class="cookie-text">
-        <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
-      </div>
-      <div class="cookie-buttons">
-        <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
-        <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="logo">
-      <h1>📚 NonCow Blog</h1>
-      <p>Browse our in-depth guides to the best plant milks for every use — coffee, baking, smoothies, cereal, and more.</p>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
     </div>
 
-    <nav>
-      <a href="/">🏠 Home</a>
-      <a href="/quiz">🥛 Take Quiz</a>
-      <a href="/blog" class="active">📚 Blog</a>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
+        </header>
+        
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
 
-    <section class="blog-feed">
-      <article class="blog-item new">
-        <a href="/blog/best-plant-milk-for-cereal.html">
-          <img src="/images/plant-milk-cereal-bowl-topview.jpg" alt="Bowl of puffed cereal with plant milk and spoon" class="thumbnail" />
-          <div class="blog-item-content">
-            <span class="badge">NEW</span>
-            <h3>🥣 Best Plant Milk for Cereal</h3>
-            <p>Crunch-tested favorites: discover which non-dairy milk pairs best with cereal for taste and texture.</p>
-          </div>
-        </a>
-      </article>
+        <h1 class="page-title">Plant Milk Blog</h1>
+        <p class="page-subtitle">Expert guides and comparisons to help you find your perfect dairy alternative</p>
 
-      <article class="blog-item">
-        <a href="/blog/best-plant-milk-for-coffee.html">
-          <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring steamed plant milk into coffee cup for latte art" class="thumbnail" />
-          <div class="blog-item-content">
-            <h3>☕ Best Plant Milk for Coffee</h3>
-            <p>Barista-tested favorites for lattes, cappuccinos, and iced coffee.</p>
-          </div>
-        </a>
-      </article>
+        <div class="blog-list">
+            <!-- Featured NEW Post -->
+            <article class="blog-card featured">
+                <a href="/blog/best-plant-milk-for-environment.html">
+                    <span class="new-badge">NEW</span>
+                    <img src="/images/plant-milk-earth-hands.jpg" alt="Hands holding soil and plant seedling">
+                    <div class="blog-card-content">
+                        <h2>🌍 Best Plant Milk for the Environment (2025)</h2>
+                        <p class="blog-meta">📅 November 4, 2025 • ⏱️ 8 min read</p>
+                        <p>Discover which plant milk is best for the environment. Compare water usage, carbon emissions, and land use across oat, almond, soy, and coconut milk to make the most sustainable choice.</p>
+                    </div>
+                </a>
+            </article>
 
-      <article class="blog-item">
-        <a href="/blog/best-plant-milk-for-baking.html">
-          <img src="/images/plant-milk-chocolate-cake-baking.jpg" alt="Chocolate cake being dusted with powdered sugar" class="thumbnail" />
-          <div class="blog-item-content">
-            <h3>🧁 Best Plant Milk for Baking</h3>
-            <p>The ultimate guide to substituting dairy milk in cakes, cookies, and bread.</p>
-          </div>
-        </a>
-      </article>
-    </section>
+            <!-- Regular Posts -->
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-baking.html">
+                    <img src="/images/plant-milk-bread-dough-kneading.jpg" alt="Hands kneading bread dough">
+                    <div class="blog-card-content">
+                        <h2>🧁 Best Plant Milk for Baking (2025)</h2>
+                        <p class="blog-meta">📅 November 2, 2025 • ⏱️ 9 min read</p>
+                        <p>Find the best plant milk for baking. Complete guide to substituting dairy in cakes, cookies, bread, and more. Includes substitution ratios and troubleshooting tips.</p>
+                    </div>
+                </a>
+            </article>
 
-    <footer>
-      <p>© 2025 NonCow | <a href="/disclosure">Affiliate Disclosure</a></p>
-      <p class="small-text">As an Amazon Associate, I earn from qualifying purchases.</p>
-    </footer>
-  </div>
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-protein.html">
+                    <div class="blog-card-content">
+                        <h2>💪 Best Plant Milk for Protein (2025)</h2>
+                        <p class="blog-meta">📅 October 30, 2025 • ⏱️ 8 min read</p>
+                        <p>Looking for high-protein plant milk? Compare protein content, amino acid profiles, and taste across soy, pea, oat, and almond milk to fuel your fitness goals.</p>
+                    </div>
+                </a>
+            </article>
 
-  <script>
-    function setCookie(n,v,d){const t=new Date();t.setTime(t.getTime()+d*24*60*60*1000);document.cookie=n+"="+v+";expires="+t.toUTCString()+";path=/";}
-    function getCookie(n){const e=n+"=";const a=document.cookie.split(";");for(let i=0;i<a.length;i++){let c=a[i];while(c.charAt(0)==" ")c=c.substring(1);if(c.indexOf(e)==0)return c.substring(e.length);}return null;}
-    function loadGoogleAnalytics(){const s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49";document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-B4ZDS9NB49");}
-    function acceptCookies(){setCookie("cookieConsent","accepted",365);document.getElementById("cookie-banner").classList.remove("show");loadGoogleAnalytics();}
-    function declineCookies(){setCookie("cookieConsent","declined",365);document.getElementById("cookie-banner").classList.remove("show");}
-    window.addEventListener("DOMContentLoaded",()=>{const c=getCookie("cookieConsent");if(!c){document.getElementById("cookie-banner").classList.add("show");}else if(c==="accepted"){loadGoogleAnalytics();}});
-  </script>
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-smoothies.html">
+                    <div class="blog-card-content">
+                        <h2>🥤 Best Plant Milk for Smoothies (2025)</h2>
+                        <p class="blog-meta">📅 October 27, 2025 • ⏱️ 7 min read</p>
+                        <p>Find the best plant-based milk for smoothies. Compare texture, protein, taste, and price to make perfect protein shakes and fruit smoothies every time.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-weight-loss.html">
+                    <div class="blog-card-content">
+                        <h2>⚖️ Best Plant Milk for Weight Loss (2025)</h2>
+                        <p class="blog-meta">📅 October 26, 2025 • ⏱️ 7 min read</p>
+                        <p>Discover which plant milks have the lowest calories and best nutrition for weight loss. Complete calorie comparison table plus tips for sustainable results.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-kids.html">
+                    <div class="blog-card-content">
+                        <h2>👶 Best Plant Milk for Kids (2025)</h2>
+                        <p class="blog-meta">📅 October 23, 2025 • ⏱️ 7 min read</p>
+                        <p>Find the best plant milk for kids with our complete nutrition guide. Compare calcium, vitamin D, protein, and taste to ensure healthy growth and development.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/soy-milk-benefits-healthy.html">
+                    <div class="blog-card-content">
+                        <h2>🫘 Soy Milk Benefits: Is It Healthy? (2025)</h2>
+                        <p class="blog-meta">📅 October 21, 2025 • ⏱️ 8 min read</p>
+                        <p>Get the facts about soy milk's health benefits and debunk common myths about hormones, GMOs, and thyroid concerns. Evidence-based answers from nutrition science.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-keto.html">
+                    <div class="blog-card-content">
+                        <h2>🥥 Best Plant Milk for Keto Diet (2025)</h2>
+                        <p class="blog-meta">📅 October 19, 2025 • ⏱️ 6 min read</p>
+                        <p>Following keto and need a dairy-free milk? We break down carb counts, fat content, and taste to help you choose the best low-carb dairy alternative.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/oat-milk-vs-almond-milk.html">
+                    <div class="blog-card-content">
+                        <h2>🌾 Oat Milk vs Almond Milk (2025)</h2>
+                        <p class="blog-meta">📅 October 17, 2025 • ⏱️ 7 min read</p>
+                        <p>Oat milk or almond milk? Compare taste, nutrition, price, environmental impact, and uses to decide which plant milk is right for you.</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="/blog/best-plant-milk-for-coffee.html">
+                    <img src="/images/barista-pouring-plant-milk-latte-art.jpg" alt="Barista pouring plant milk with latte art">
+                    <div class="blog-card-content">
+                        <h2>☕ Best Plant Milk for Coffee (2025)</h2>
+                        <p class="blog-meta">📅 October 15, 2025 • ⏱️ 6 min read</p>
+                        <p>Find the perfect plant-based milk for your morning coffee. We tested and ranked oat, soy, almond, cashew, and coconut milk for taste and frothability.</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <div class="cta-box">
+            <h3>🥛 Not Sure Which Plant Milk Is Right for You?</h3>
+            <p>Take our free quiz to find your perfect match based on your taste preferences, values, and lifestyle!</p>
+            <a href="/quiz" class="cta-button">Take the Quiz →</a>
+        </div>
+
+        <footer>
+            <p>© 2025 NonCow | <a href="/disclosure">Affiliate Disclosure</a></p>
+            <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">As an Amazon Associate, I earn from qualifying purchases.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Cookie Consent Management
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B4ZDS9NB49');
+        }
+        
+        function acceptCookies() {
+            setCookie('cookieConsent', 'accepted', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+            loadGoogleAnalytics();
+        }
+        
+        function declineCookies() {
+            setCookie('cookieConsent', 'declined', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            } else if (consent === 'accepted') {
+                loadGoogleAnalytics();
+            }
+        });
+    </script>
 </body>
 </html>
