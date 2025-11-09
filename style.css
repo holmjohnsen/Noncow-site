@@ -50,25 +50,25 @@ header p,
 
 /* --- Navigation --- */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 20px 0;
-  padding: 20px 0;
-  border-top: 2px solid #e0e0e0;
-  border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: row;  /* Changed from column to row */
+    gap: 30px;  /* Space between menu items */
+    align-items: center;
+    margin: 20px 0;
 }
 
 nav a {
-  color: #4a3fc8;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
-  white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* Space between emoji and text */
+    color: #4A5BDC;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 nav a:hover {
-  text-decoration: underline;
+    color: #3644A8;
 }
 
 /* --- Buttons --- */
