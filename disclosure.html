@@ -7,104 +7,9 @@
     <title>Affiliate Disclosure | NonCow</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Cookie Consent & Analytics Styles -->
-    <style>
-        /* Cookie Consent Banner */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-            display: none;
-            z-index: 1000;
-            animation: slideUp 0.5s;
-        }
-        
-        .cookie-banner.show {
-            display: block;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-        
-        .cookie-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .cookie-text {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .cookie-text p {
-            margin: 0;
-            color: #333;
-            font-size: 0.95em;
-        }
-        
-        .cookie-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .cookie-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: all 0.3s;
-        }
-        
-        .cookie-accept {
-            background: #4e9f3d;
-            color: white;
-        }
-        
-        .cookie-accept:hover {
-            background: #3d7a2e;
-        }
-        
-        .cookie-decline {
-            background: #e0e0e0;
-            color: #333;
-        }
-        
-        .cookie-decline:hover {
-            background: #d0d0d0;
-        }
-        
-        @media (max-width: 600px) {
-            .cookie-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .cookie-buttons {
-                width: 100%;
-                flex-direction: column;
-            }
-            
-            .cookie-btn {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 <body>
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
                 <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
@@ -115,23 +20,18 @@
             </div>
         </div>
     </div>
-    
-    <!-- Single white container for header + content -->
-    <div style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
-        <div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px 40px;">
-            
-            <!-- Header inside the white box -->
-            <div style="text-align: center; margin-bottom: 25px;">
-                <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
-                <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
-            </div>
-            
-            <!-- Navigation -->
-            <nav style="text-align:center; padding: 25px 0; border-top:2px solid #e0e0e0; border-bottom:2px solid #e0e0e0; margin-bottom: 40px; display: flex; justify-content: center; align-items: center; gap: 15px;">
-                <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
-                <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
-                <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
-            </nav>
+
+    <div class="container">
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
+        </div>
+        
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
             
             <!-- Disclosure Content -->
             <article>
