@@ -1079,4 +1079,11 @@ article strong {
   .start-screen p {
     font-size: 1em;
   }
+nav {
+    gap: 15px;
+}
+
+nav a {
+    font-size: 0.95em;
+    gap: 5px;  
 }
