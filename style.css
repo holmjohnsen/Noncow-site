@@ -48,7 +48,6 @@ header p,
   color: #666;
 }
 
-/* --- Navigation --- */
 /* Navigation */
 nav {
     display: flex;
@@ -1007,8 +1006,15 @@ article strong {
   }
 
   nav {
-    flex-direction: column;
-    gap: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+  }
+  
+   nav a {
+    font-size: 0.9em;
   }
 
   .page-title {
