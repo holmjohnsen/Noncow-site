@@ -36,13 +36,15 @@
     </script>
     
     <link rel="stylesheet" href="style.css">
+    
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://noncow.com/#website","url":"https://noncow.com","name":"NonCow","description":"Find your perfect dairy alternative with our interactive plant milk matcher quiz","publisher":{"@id":"https://noncow.com/#organization"}},{"@type":"Organization","@id":"https://noncow.com/#organization","name":"NonCow","url":"https://noncow.com","logo":{"@type":"ImageObject","url":"https://noncow.com/logo.png"}},{"@type":"WebApplication","@id":"https://noncow.com/#webapp","url":"https://noncow.com","name":"Dairy Alternative Matcher","description":"Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Personalized milk recommendations","6-question interactive quiz","Product recommendations","Shareable results"]}]}
+    </script>
 </head>
 <body>
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-text">
-                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
-            </div>
+            <div class="cookie-text"><p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p></div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
                 <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
@@ -50,11 +52,13 @@
         </div>
     </div>
     
-       <div class="container">
-        <div class="logo">
-            <h1>🥛 NonCow</h1>
-            <p>Find Your Perfect Plant Milk</p>
-        </div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h2>🥛 NonCow</h2>
+                <p>Find Your Perfect Plant Milk</p>
+            </div>
+        </header>
         
         <nav>
             <a href="/">🏠 Home</a>
@@ -64,7 +68,7 @@
         
         <div class="screen active" id="start-screen">
             <div class="start-screen">
-                <h1>Discover Your Dairy Alternative Match</h1>
+                <h2>Discover Your Dairy Alternative Match</h2>
                 <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
                 <button class="btn" onclick="startQuiz()">Start Quiz</button>
             </div>
@@ -82,15 +86,10 @@
         <div class="screen" id="result-screen">
             <div class="result" id="result-container"></div>
         </div>
-
-         <footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin-top: 40px;">
-            <p style="color: #666; font-size: 0.9em; margin: 0;">
-                © 2025 NonCow | 
-                <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
-            </p>
-            <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">
-                As an Amazon Associate, I earn from qualifying purchases.
-            </p>
+        
+        <footer>
+            <p>© 2025 NonCow | <a href="/disclosure">Affiliate Disclosure</a></p>
+            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
         </footer>
     </div>
     
