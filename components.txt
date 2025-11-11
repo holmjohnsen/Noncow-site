@@ -3,40 +3,34 @@ NONCOW.COM - REUSABLE COMPONENTS REFERENCE FILE
 ================================================================================
 This file contains all reusable code blocks for the NonCow website.
 Copy/paste these into new pages to maintain consistency.
-Last updated: October 21, 2025
+Last updated: November 11, 2025
 ================================================================================
 
 
 ================================================================================
-1. FULL HEADER WITH LOGO & NAVIGATION
+1. HEADER WITH LOGO & NAVIGATION (Clean - No Inline Styles)
 ================================================================================
 Usage: Place inside <body> tag at the top of every page
-Adjust the href="../style.css" path depending on page location:
-  - Root pages: href="style.css"
-  - Blog pages: href="../style.css"
+All styling comes from style.css - no inline styles needed!
 
-<!-- Header Card with Logo & Navigation -->
-<div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 30px;">
-    <div style="text-align: center; margin-bottom: 25px;">
-        <h1 style="font-size: 2.5em; color: #667eea; margin: 0 0 10px 0;">🥛 NonCow</h1>
-        <p style="color: #666; font-size: 1.1em; margin: 0;">Find Your Perfect Plant Milk</p>
-    </div>
-    
-    <!-- Navigation -->
-    <nav style="text-align:center; padding-top:25px; border-top:2px solid #e0e0e0; display: flex; justify-content: center; align-items: center; gap: 15px;">
-        <a href="/" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🏠 Home</a>
-        <a href="/quiz" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">🥛 Take Quiz</a>
-        <a href="/blog" style="color:#667eea; text-decoration:none; font-weight:600; font-size: 1em; white-space: nowrap;">📚 Blog</a>
-    </nav>
+<div class="logo">
+    <h1>🥛 NonCow</h1>
+    <p>Find Your Perfect Plant Milk</p>
 </div>
+
+<nav>
+    <a href="/">🏠 Home</a>
+    <a href="/quiz">🥛 Take Quiz</a>
+    <a href="/blog">📚 Blog</a>
+</nav>
 
 
 ================================================================================
 2. COOKIE CONSENT BANNER - HTML
 ================================================================================
 Usage: Place right after opening <body> tag on EVERY page
+Styling is in style.css
 
-<!-- Cookie Consent Banner -->
 <div class="cookie-banner" id="cookie-banner">
     <div class="cookie-content">
         <div class="cookie-text">
@@ -51,111 +45,12 @@ Usage: Place right after opening <body> tag on EVERY page
 
 
 ================================================================================
-3. COOKIE CONSENT BANNER - CSS STYLES
-================================================================================
-Usage: Place inside <style> tag in <head> section
-
-/* Cookie Consent Banner */
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
-    display: none;
-    z-index: 1000;
-    animation: slideUp 0.5s;
-}
-
-.cookie-banner.show {
-    display: block;
-}
-
-@keyframes slideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
-}
-
-.cookie-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.cookie-text {
-    flex: 1;
-    min-width: 250px;
-}
-
-.cookie-text p {
-    margin: 0;
-    color: #333;
-    font-size: 0.95em;
-}
-
-.cookie-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.cookie-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9em;
-    transition: all 0.3s;
-}
-
-.cookie-accept {
-    background: #4e9f3d;
-    color: white;
-}
-
-.cookie-accept:hover {
-    background: #3d7a2e;
-}
-
-.cookie-decline {
-    background: #e0e0e0;
-    color: #333;
-}
-
-.cookie-decline:hover {
-    background: #d0d0d0;
-}
-
-@media (max-width: 600px) {
-    .cookie-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .cookie-buttons {
-        width: 100%;
-        flex-direction: column;
-    }
-    
-    .cookie-btn {
-        width: 100%;
-    }
-}
-
-
-================================================================================
-4. COOKIE CONSENT & GOOGLE ANALYTICS - JAVASCRIPT
+3. COOKIE CONSENT & GOOGLE ANALYTICS - JAVASCRIPT
 ================================================================================
 Usage: Place before closing </body> tag on EVERY page
 NOTE: Google Analytics ID is G-B4ZDS9NB49
 
 <script>
-    // Cookie Consent Management
     function setCookie(name, value, days) {
         const d = new Date();
         d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -174,7 +69,6 @@ NOTE: Google Analytics ID is G-B4ZDS9NB49
     }
     
     function loadGoogleAnalytics() {
-        // Load Google Analytics
         const script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
@@ -197,7 +91,6 @@ NOTE: Google Analytics ID is G-B4ZDS9NB49
         document.getElementById('cookie-banner').classList.remove('show');
     }
     
-    // Check cookie consent on page load
     window.addEventListener('DOMContentLoaded', function() {
         const consent = getCookie('cookieConsent');
         if (!consent) {
@@ -210,9 +103,10 @@ NOTE: Google Analytics ID is G-B4ZDS9NB49
 
 
 ================================================================================
-5. BASIC HTML PAGE TEMPLATE WITH ALL COMPONENTS
+4. BASIC HTML PAGE TEMPLATE (Clean Version)
 ================================================================================
-Usage: Copy this entire template when creating new pages
+Usage: Copy this template when creating new blog articles
+All styling comes from style.css
 
 <!DOCTYPE html>
 <html lang="en">
@@ -221,39 +115,79 @@ Usage: Copy this entire template when creating new pages
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="YOUR PAGE DESCRIPTION HERE">
     <title>YOUR PAGE TITLE | NonCow</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- For blog pages use: href="../style.css" -->
+    <link rel="canonical" href="https://noncow.com/blog/YOUR-SLUG.html">
     
-    <style>
-        /* Cookie Consent Banner Styles - PASTE SECTION 3 HERE */
-    </style>
+    <!-- Schema.org JSON-LD for Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "YOUR ARTICLE TITLE",
+      "description": "YOUR DESCRIPTION",
+      "image": "https://noncow.com/images/YOUR-IMAGE.jpg",
+      "author": { "@type": "Organization", "name": "NonCow" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "NonCow",
+        "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" }
+      },
+      "datePublished": "YYYY-MM-DD",
+      "dateModified": "YYYY-MM-DD",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://noncow.com/blog/YOUR-SLUG.html"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- Cookie Consent Banner - PASTE SECTION 2 HERE -->
+    <!-- Cookie Banner (Section 2) -->
     
-    <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 20px;">
-        <!-- Header - PASTE SECTION 1 HERE -->
-        
-        <!-- YOUR PAGE CONTENT HERE -->
-        
+    <div style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
+        <div style="background: white; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px 40px;">
+            
+            <!-- Header (Section 1) -->
+            
+            <article>
+                <h1>YOUR ARTICLE TITLE</h1>
+                
+                <!-- Affiliate Disclosure -->
+                <div style="background:#f8f9ff; padding:20px; border-radius:12px; margin:25px 0; border-left:4px solid #667eea;">
+                    <p style="margin:0; font-size:0.95em; color:#555; line-height:1.6;">
+                        <strong>📢 Affiliate Disclosure:</strong> This post contains affiliate links to products on Amazon. 
+                        If you click through and make a purchase, I may earn a small commission at no additional cost to you. 
+                        As an Amazon Associate, I earn from qualifying purchases. 
+                        Read our full <a href="/disclosure" style="color:#667eea; text-decoration:underline;">disclosure policy</a>.
+                    </p>
+                </div>
+                
+                <!-- Your content here -->
+                
+            </article>
+            
+            <!-- Footer (Section 6) -->
+            
+        </div>
     </div>
 
-    <!-- Analytics & Cookie Consent JavaScript - PASTE SECTION 4 HERE -->
+    <!-- Analytics Script (Section 3) -->
 </body>
 </html>
 
 
 ================================================================================
-6. AMAZON AFFILIATE LINK FORMAT
+5. AMAZON AFFILIATE LINK FORMAT
 ================================================================================
 Usage: Use this format for all Amazon links
 Amazon Associate Tag: e12nni-20
 
 <!-- Generic search link (preferred for most cases) -->
-<a href="https://www.amazon.com/s?k=SEARCH+TERMS&tag=e12nni-20" target="_blank" rel="noopener">
-
-<!-- Direct product link (use sparingly) -->
-<a href="https://www.amazon.com/dp/PRODUCT_ASIN?tag=e12nni-20" target="_blank" rel="noopener">
+<a href="https://www.amazon.com/s?k=SEARCH+TERMS&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+    <div class="product-name">Product Name →</div>
+    <div class="product-desc">Brief product description</div>
+</a>
 
 Examples:
 - Oat milk: https://www.amazon.com/s?k=oat+milk+unsweetened&tag=e12nni-20
@@ -262,31 +196,129 @@ Examples:
 
 
 ================================================================================
-7. CALL-TO-ACTION BUTTON (Link to Quiz)
+6. FOOTER
 ================================================================================
-Usage: Place at bottom of blog posts to drive traffic to quiz
+Usage: Place at bottom of every page before closing container
 
-<div style="text-align: center; margin: 50px 0 30px;">
+<footer style="background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; padding: 25px; margin-top: 60px;">
+    <p style="color: #666; font-size: 0.9em; margin: 0;">
+        © 2025 NonCow | 
+        <a href="/disclosure" style="color: #667eea; text-decoration: none; font-weight: 600;">Affiliate Disclosure</a>
+    </p>
+    <p style="color: #999; font-size: 0.85em; margin: 10px 0 0;">
+        As an Amazon Associate, I earn from qualifying purchases.
+    </p>
+</footer>
+
+
+================================================================================
+7. AFFILIATE SECTION (In Articles)
+================================================================================
+Usage: Add after each plant milk section in blog posts
+
+<div class="affiliate-section">
+    <h3>🛒 Shop [PRODUCT NAME]</h3>
+    <a href="https://www.amazon.com/s?k=YOUR+SEARCH&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+        <div class="product-name">Product Name →</div>
+        <div class="product-desc">Brief description of why this product is good</div>
+    </a>
+</div>
+
+
+================================================================================
+8. QUIZ CTA (Call-To-Action)
+================================================================================
+Usage: Place near bottom of blog posts to drive traffic to quiz
+
+<div style="text-align:center; margin:50px 0 30px;">
     <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
 </div>
 
-<p style="text-align: center; color: #999; font-size: 0.9em;">Want to find the perfect plant milk for your needs? Take our 2-minute quiz for personalized recommendations!</p>
+<p style="text-align:center; color:#999; font-size:0.9em;">Not sure which plant milk is right for you? Take our 2-minute quiz for personalized recommendations!</p>
 
 
 ================================================================================
-8. BLOG POST CARD (for blog index page)
+9. RELATED ARTICLES SECTION
+================================================================================
+Usage: Add near end of blog posts (before final paragraph)
+
+<div class="related-articles">
+    <h2>📚 Related Articles</h2>
+    <div class="related-articles-grid">
+        <a href="/blog/article-1.html" class="related-article-card">
+            <h3>🥛 Article Title 1</h3>
+            <p>Brief description of the article</p>
+        </a>
+        <a href="/blog/article-2.html" class="related-article-card">
+            <h3>☕ Article Title 2</h3>
+            <p>Brief description of the article</p>
+        </a>
+        <a href="/blog/article-3.html" class="related-article-card">
+            <h3>🌾 Article Title 3</h3>
+            <p>Brief description of the article</p>
+        </a>
+        <a href="/blog/article-4.html" class="related-article-card">
+            <h3>🫘 Article Title 4</h3>
+            <p>Brief description of the article</p>
+        </a>
+    </div>
+</div>
+
+
+================================================================================
+10. COMPARISON TABLE
+================================================================================
+Usage: Use for comparing plant milks across different attributes
+
+<table class="comparison-table">
+    <tr>
+        <th>Attribute</th>
+        <th>Option 1</th>
+        <th>Option 2</th>
+        <th>Option 3</th>
+    </tr>
+    <tr>
+        <td>Row 1</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+    <tr>
+        <td>Row 2</td>
+        <td>Data</td>
+        <td>Data</td>
+        <td>Data</td>
+    </tr>
+</table>
+
+
+================================================================================
+11. BLOG CARD (For Blog Index)
 ================================================================================
 Usage: Add to blog/index.html when creating new blog posts
 
+<!-- Featured NEW Post (First card only) -->
+<a href="/blog/YOUR-POST-SLUG.html" class="blog-card featured">
+    <span class="new-badge">NEW</span>
+    <img src="/images/YOUR-IMAGE.jpg" alt="Image description">
+    <h3>🥛 Your Article Title (2025)</h3>
+    <div class="blog-meta">📅 November 11, 2025 • ⏱️ 9 min read</div>
+    <p class="blog-excerpt">Brief excerpt that entices readers to click and read more.</p>
+    <span class="read-more">Read More →</span>
+</a>
+
+<!-- Regular Post -->
 <a href="/blog/YOUR-POST-SLUG.html" class="blog-card">
-    <h2>EMOJI TITLE OF YOUR POST</h2>
-    <div class="blog-meta">Month DD, YYYY • XX min read</div>
-    <p>Brief description of your blog post that entices readers to click.</p>
+    <img src="/images/YOUR-IMAGE.jpg" alt="Image description">
+    <h3>🥛 Your Article Title (2025)</h3>
+    <div class="blog-meta">📅 November 11, 2025 • ⏱️ 9 min read</div>
+    <p class="blog-excerpt">Brief excerpt that entices readers to click and read more.</p>
+    <span class="read-more">Read More →</span>
 </a>
 
 
 ================================================================================
-9. SITEMAP ENTRY
+12. SITEMAP ENTRY
 ================================================================================
 Usage: Add to sitemap.xml for each new page/blog post
 
@@ -299,51 +331,38 @@ Usage: Add to sitemap.xml for each new page/blog post
 
 
 ================================================================================
-10. BLOG POST ARTICLE CONTAINER
+13. IMAGE FORMATTING
 ================================================================================
-Usage: Wrap blog post content in this structure
+Usage: Standard image formatting for blog articles
 
-<div class="container">
-    <article style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-        
-        <h1>YOUR ARTICLE TITLE</h1>
-        
-        <!-- Your content here -->
-        
-        <!-- Amazon affiliate section -->
-        <div class="affiliate-section">
-            <h3>🛒 Shop on Amazon:</h3>
-            <a href="https://www.amazon.com/s?k=YOUR+SEARCH&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
-                <div class="product-name">Product Name →</div>
-                <div class="product-desc">Brief product description</div>
-            </a>
-        </div>
-        
-        <!-- CTA to quiz -->
-        <div style="text-align: center; margin: 50px 0 30px;">
-            <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
-        </div>
-        
-    </article>
-</div>
+<img src="/images/YOUR-IMAGE.jpg" 
+     alt="Descriptive alt text for SEO and accessibility" 
+     loading="lazy"
+     style="width:100%; height:auto; border-radius:15px; margin:20px 0 30px 0; box-shadow:0 4px 20px rgba(0,0,0,0.15);">
 
 
 ================================================================================
-QUICK CHECKLIST FOR NEW PAGES
+QUICK CHECKLIST FOR NEW BLOG ARTICLES
 ================================================================================
-When adding a new page, make sure to:
+When adding a new blog article, make sure to:
 
-☐ Copy basic HTML template (Section 5)
-☐ Add cookie consent CSS (Section 3)
-☐ Add cookie consent HTML banner (Section 2)
-☐ Add header with navigation (Section 1)
-☐ Add analytics JavaScript (Section 4)
-☐ Link to stylesheet (style.css or ../style.css)
+☐ Use the clean HTML template (Section 4)
 ☐ Add proper meta description and title
-☐ Include CTA to quiz at bottom (Section 7)
-☐ Use Amazon affiliate tag in all links (Section 6)
-☐ Add page to sitemap.xml (Section 9)
-☐ Update blog/index.html if it's a blog post (Section 8)
+☐ Include canonical URL
+☐ Add Schema.org JSON-LD
+☐ Link to stylesheet: href="../style.css"
+☐ Add cookie banner HTML (Section 2)
+☐ Add header with logo and navigation (Section 1)
+☐ Include affiliate disclosure at top
+☐ Use .affiliate-section for product links (Section 7)
+☐ Add comparison table if needed (Section 10)
+☐ Add related articles section (Section 9)
+☐ Include quiz CTA near end (Section 8)
+☐ Add footer (Section 6)
+☐ Add analytics JavaScript (Section 3)
+☐ Update blog/index.html with new card (Section 11)
+☐ Add entry to sitemap.xml (Section 12)
+☐ Use proper image formatting (Section 13)
 ☐ Test on mobile and desktop
 ☐ Submit updated sitemap to Google Search Console
 
@@ -354,24 +373,66 @@ FILE STRUCTURE REFERENCE
 noncow.com/
 ├── index.html (homepage)
 ├── quiz.html (interactive quiz)
-├── style.css (global stylesheet)
+├── style.css (CENTRAL STYLESHEET - all styling here!)
 ├── sitemap.xml (for Google)
 ├── components.txt (this file)
+├── disclosure.html (affiliate disclosure page)
 └── blog/
-    ├── index.html (blog listing)
-    ├── best-plant-milk-for-keto.html
-    ├── oat-milk-vs-almond-milk.html
-    ├── best-plant-milk-for-coffee.html
-    └── soy-milk-benefits-healthy.html
+    ├── index.html (blog listing - 12 articles)
+    ├── best-plant-milk-for-tea.html (NEW - Nov 11)
+    ├── best-plant-milk-for-cereal.html (Nov 7)
+    ├── best-plant-milk-for-environment.html (Nov 4)
+    ├── best-plant-milk-for-baking.html (Nov 2)
+    ├── best-plant-milk-for-protein.html (Oct 30)
+    ├── best-plant-milk-for-smoothies.html (Oct 27)
+    ├── best-plant-milk-for-weight-loss.html (Oct 26)
+    ├── best-plant-milk-for-kids.html (Oct 23)
+    ├── soy-milk-benefits-healthy.html (Oct 21)
+    ├── best-plant-milk-for-keto.html (Oct 19)
+    ├── oat-milk-vs-almond-milk.html (Oct 17)
+    └── best-plant-milk-for-coffee.html (Oct 15)
 
 
 ================================================================================
-CONTACT & NOTES
+IMPORTANT NOTES
+================================================================================
+✅ ALL STYLING IS NOW IN style.css
+   - No more inline styles (except minimal layout wrappers)
+   - Easier to maintain
+   - Consistent across all pages
+
+✅ CLEAN HTML STRUCTURE
+   - Use semantic classes from stylesheet
+   - Logo uses: <div class="logo">
+   - Navigation uses: <nav> with <a> tags
+   - Blog cards use: .blog-card, .blog-card.featured
+   - Tables use: .comparison-table
+   - Related articles use: .related-articles
+
+✅ MOBILE RESPONSIVE
+   - All styles include mobile breakpoints
+   - Navigation stacks properly on small screens
+   - Tables and grids adapt to mobile
+
+✅ SEO OPTIMIZED
+   - Schema.org markup on all articles
+   - Canonical URLs
+   - Proper meta descriptions
+   - Alt text on all images
+   - Internal linking via related articles
+
+
+================================================================================
+CONTACT & SETTINGS
 ================================================================================
 Google Analytics ID: G-B4ZDS9NB49
 Amazon Associate Tag: e12nni-20
 Domain: noncow.com
 GitHub Pages: Enabled
+Container Max Width: 900px
+Blog Index: 12 published articles
 
 This file is for reference only and is NOT linked from any page.
 Update this file whenever you make changes to standard components.
+
+Last updated: November 11, 2025
