@@ -109,7 +109,50 @@
             {question:"How do you feel about texture?",type:"single",options:[{text:"Super Smooth",desc:"No graininess whatsoever",value:"smooth"},{text:"Thick & Velvety",desc:"I want richness",value:"thick"},{text:"Light & Watery",desc:"I prefer less dense",value:"light"},{text:"Don't Mind",desc:"Texture isn't a big deal",value:"any"}]},
             {question:"What's your grocery shopping style?",type:"single",options:[{text:"Mainstream Brands",desc:"Available everywhere",value:"mainstream"},{text:"Specialty Stores",desc:"I seek out unique options",value:"specialty"},{text:"DIY Enthusiast",desc:"I might make my own",value:"diy"},{text:"Whatever's On Sale",desc:"I'm flexible with brands",value:"flexible"}]}
         ];
-        const milkTypes={oat:{name:"Oat Milk",icon:"🌾",searchTerm:"oat+milk+unsweetened",description:"You're an Oat Milk person! Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."},almond:{name:"Almond Milk",icon:"🌰",searchTerm:"almond+milk+unsweetened",description:"You're an Almond Milk person! Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."},soy:{name:"Soy Milk",icon:"🫘",searchTerm:"soy+milk+organic",description:"You're a Soy Milk person! The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."},coconut:{name:"Coconut Milk",icon:"🥥",searchTerm:"coconut+milk+beverage",description:"You're a Coconut Milk person! Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."},cashew:{name:"Cashew Milk",icon:"🥜",searchTerm:"cashew+milk+unsweetened",description:"You're a Cashew Milk person! Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."}};
+        
+        const milkTypes={
+            oat:{
+                name:"Oat Milk",
+                icon:"🌾",
+                searchTerm:"oat+milk+unsweetened",
+                topProduct:"Oatly Barista Edition",
+                productSearch:"oatly+barista",
+                description:"Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."
+            },
+            almond:{
+                name:"Almond Milk",
+                icon:"🌰",
+                searchTerm:"almond+milk+unsweetened",
+                topProduct:"Califia Farms Unsweetened",
+                productSearch:"califia+farms+almond+milk+unsweetened",
+                description:"Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."
+            },
+            soy:{
+                name:"Soy Milk",
+                icon:"🫘",
+                searchTerm:"soy+milk+organic",
+                topProduct:"Silk Organic Soymilk",
+                productSearch:"silk+organic+soy+milk+unsweetened",
+                description:"The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."
+            },
+            coconut:{
+                name:"Coconut Milk",
+                icon:"🥥",
+                searchTerm:"coconut+milk+beverage",
+                topProduct:"So Delicious Coconutmilk",
+                productSearch:"so+delicious+coconut+milk+beverage",
+                description:"Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."
+            },
+            cashew:{
+                name:"Cashew Milk",
+                icon:"🥜",
+                searchTerm:"cashew+milk+unsweetened",
+                topProduct:"Silk Cashew Milk",
+                productSearch:"silk+cashew+milk+unsweetened",
+                description:"Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."
+            }
+        };
+        
         let currentQuestion=0;let answers={};
         function startQuiz(){showScreen('quiz-screen');showQuestion()}
         function showScreen(screenId){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(screenId).classList.add('active')}
@@ -124,25 +167,28 @@
             const result=milkTypes[milk];
             let html=`
                 <div class="result-icon">${result.icon}</div>
-                <h2>${result.name}</h2>
+                <h2>Your Perfect Match: ${result.name}</h2>
                 <p class="result-desc">${result.description}</p>
                 
-                <p style="text-align: center; color: #666; font-size: 0.9em; margin: 25px 0 15px; font-style: italic;">
-                    <strong>Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases.
-                </p>
-                
                 <div class="affiliate-section">
-                    <h3>🛒 Shop ${result.name} on Amazon:</h3>
-                    <a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
-                        <div class="product-name">Browse ${result.name} Options →</div>
-                        <div class="product-desc">See current prices, ratings, and availability on Amazon</div>
+                    <h3 style="font-size: 1.3em; margin-bottom: 15px; color: #333;">🏆 Our Top Pick</h3>
+                    <a href="https://www.amazon.com/s?k=${result.productSearch}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; text-decoration: none; border-radius: 12px; margin-bottom: 15px; transition: transform 0.2s;">
+                        <div class="product-name" style="font-size: 1.3em; font-weight: 600; margin-bottom: 5px;">${result.topProduct}</div>
+                        <div class="product-desc" style="font-size: 1em; opacity: 0.95;">🛒 See prices & reviews on Amazon →</div>
+                    </a>
+                    <a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: block; text-align: center; color: #667eea; text-decoration: none; font-size: 0.95em; margin-top: 10px;">
+                        Or browse all ${result.name} options
                     </a>
                 </div>
                 
-                <div class="share-buttons">
-                    <button class="share-btn" onclick="shareResult('${result.name}')">Share Result</button>
-                    <button class="share-btn" onclick="restartQuiz()">Take Again</button>
+                <div class="share-buttons" style="margin-top: 30px;">
+                    <button class="share-btn" onclick="shareResult('${result.name}')" style="margin: 0 10px;">Share Result</button>
+                    <button class="share-btn" onclick="restartQuiz()" style="margin: 0 10px;">Retake Quiz</button>
                 </div>
+                
+                <p style="text-align: center; color: #999; font-size: 0.85em; margin-top: 25px; font-style: italic;">
+                    As an Amazon Associate, I earn from qualifying purchases.
+                </p>
             `;
             document.getElementById('result-container').innerHTML=html;
             showScreen('result-screen');
