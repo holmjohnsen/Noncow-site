@@ -398,7 +398,7 @@ article .intro {
     margin-bottom: 30px;
 }
 
-* Related Articles */
+/* Related Articles */
 .related-articles {
     margin-top: 50px;
     padding-top: 40px;
@@ -648,5 +648,176 @@ footer a {
 
     .related-articles-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Article Styles - Added Nov 2025 */
+
+/* Affiliate Disclosure */
+.affiliate-disclosure {
+    background: #fff9e6;
+    border-left: 4px solid #ffc107;
+    padding: 15px 20px;
+    margin: 20px 0 30px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.affiliate-disclosure a {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+/* Quick Answer Box */
+.quick-answer {
+    background: #e8f5e9;
+    border-left: 4px solid #4e9f3d;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+.quick-answer h2 {
+    color: #2e7d32;
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+}
+
+.quick-answer p {
+    margin-bottom: 10px;
+}
+
+.quick-answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Pro Tip Box */
+.pro-tip {
+    background: #f3e5f5;
+    border-left: 4px solid #9c27b0;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-size: 0.98em;
+}
+
+.pro-tip strong {
+    color: #7b1fa2;
+}
+
+/* CTA (Call-to-Action) Box */
+.cta-box {
+    background: #f8f9ff;
+    border: 2px solid #667eea;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.cta-box h3 {
+    color: #333;
+    font-size: 1.3em;
+    margin: 0 0 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    color: white;
+}
+
+.cta-subtext {
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Verdict Box */
+.verdict-box {
+    background: #fff3e0;
+    border: 2px solid #ff9800;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 15px;
+}
+
+.verdict-box h3 {
+    color: #e65100;
+    font-size: 1.3em;
+    margin: 0 0 15px 0;
+}
+
+.verdict-box ul {
+    margin: 10px 0 25px 20px;
+}
+
+.verdict-box ul:last-child {
+    margin-bottom: 0;
+}
+
+/* Final CTA */
+.final-cta {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 40px 0 20px;
+    padding: 20px;
+    background: #f8f9ff;
+    border-radius: 10px;
+}
+
+.final-cta a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid #667eea;
+    transition: all 0.3s;
+}
+
+.final-cta a:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+}
+
+/* Mobile adjustments for new styles */
+@media (max-width: 600px) {
+    .quick-answer,
+    .pro-tip,
+    .cta-box,
+    .verdict-box {
+        padding: 15px;
+        margin: 20px 0;
+    }
+    
+    .quick-answer h2,
+    .cta-box h3,
+    .verdict-box h3 {
+        font-size: 1.2em;
+    }
+    
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    
+    .affiliate-disclosure {
+        padding: 12px 15px;
+        font-size: 0.9em;
     }
 }
