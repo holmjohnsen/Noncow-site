@@ -21,6 +21,12 @@
 
   <!-- Blog Articles -->
   <url>
+    <loc>https://noncow.com/blog/best-plant-milk-for-cooking.html</loc>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://noncow.com/blog/best-plant-milk-for-protein-shakes.html</loc>
     <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
