@@ -3,261 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle, taste preferences, and values. Compare oat, soy, almond, and more.">
-    <title>Find Your Perfect Plant Milk | NonCow - Interactive Dairy Alternative Quiz</title>
-    <link rel="canonical" href="https://noncow.com/">
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
+    <title>Find Your Perfect Non-Cow Milk | NonCow</title>
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://noncow.com/">
-    <meta property="og:title" content="Find Your Perfect Plant Milk | NonCow">
+    <meta property="og:title" content="Find Your Perfect Non-Cow Milk | NonCow">
     <meta property="og:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <meta property="og:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
+    <meta property="og:image" content="https://noncow.com/images/iced-coffee-plant-milk-pour.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://noncow.com/">
-    <meta property="twitter:title" content="Find Your Perfect Plant Milk | NonCow">
-    <meta property="twitter:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
-    <meta property="twitter:image" content="https://noncow.com/images/barista-pouring-plant-milk-latte-art.jpg">
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Find Your Perfect Non-Cow Milk | NonCow">
+    <meta name="twitter:description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
+    <meta name="twitter:image" content="https://noncow.com/images/iced-coffee-plant-milk-pour.jpg">
+
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": "https://noncow.com/#website",
-          "url": "https://noncow.com",
-          "name": "NonCow",
-          "description": "Find your perfect dairy alternative with our interactive plant milk matcher quiz",
-          "publisher": {
-            "@id": "https://noncow.com/#organization"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": "https://noncow.com/blog/?s={search_term_string}"
-            },
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://noncow.com/#organization",
-          "name": "NonCow",
-          "url": "https://noncow.com",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://noncow.com/logo.png"
-          },
-          "sameAs": [
-            "https://www.reddit.com/user/oyvindotto"
-          ]
-        },
-        {
-          "@type": "WebApplication",
-          "@id": "https://noncow.com/#webapp",
-          "url": "https://noncow.com/quiz",
-          "name": "Plant Milk Matcher Quiz",
-          "description": "Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values",
-          "applicationCategory": "LifestyleApplication",
-          "operatingSystem": "Web Browser",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          },
-          "featureList": [
-            "Personalized milk recommendations",
-            "6-question interactive quiz",
-            "Product recommendations with Amazon affiliate links",
-            "Shareable results"
-          ]
-        },
-        {
-          "@type": "ItemList",
-          "@id": "https://noncow.com/#blogposts",
-          "name": "Latest Plant Milk Articles",
-          "itemListElement": [
+        "@context": "https://schema.org",
+        "@graph": [
             {
-              "@type": "ListItem",
-              "position": 1,
-              "url": "https://noncow.com/blog/best-plant-milk-for-cooking.html",
-              "name": "Best Plant Milk for Cooking: Savory Dishes Guide"
+                "@type": "WebSite",
+                "@id": "https://noncow.com/#website",
+                "url": "https://noncow.com",
+                "name": "NonCow",
+                "description": "Find your perfect dairy alternative with our interactive plant milk matcher quiz.",
+                "publisher": { "@id": "https://noncow.com/#organization" }
             },
             {
-              "@type": "ListItem",
-              "position": 2,
-              "url": "https://noncow.com/blog/best-plant-milk-for-protein-shakes.html",
-              "name": "Best Plant Milk for Protein Shakes"
+                "@type": "Organization",
+                "@id": "https://noncow.com/#organization",
+                "name": "NonCow",
+                "url": "https://noncow.com",
+                "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" }
             },
             {
-              "@type": "ListItem",
-              "position": 3,
-              "url": "https://noncow.com/blog/best-plant-milk-for-hot-chocolate.html",
-              "name": "Best Plant Milk for Hot Chocolate"
+                "@type": "WebApplication",
+                "@id": "https://noncow.com/#webapp",
+                "url": "https://noncow.com",
+                "name": "Dairy Alternative Matcher",
+                "description": "Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values.",
+                "applicationCategory": "LifestyleApplication",
+                "operatingSystem": "Any",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
             }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the best plant milk alternative to dairy?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The best plant milk depends on your needs. Oat milk is best for coffee and general use due to its creamy texture. Soy milk has the most protein (7-9g per cup). Almond milk is lowest in calories. Take our quiz to find your perfect match."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Which plant milk tastes most like regular milk?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oat milk tastes most similar to dairy milk with its naturally creamy texture and mild, slightly sweet flavor. Many people find it the easiest transition from cow's milk."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is plant milk healthier than dairy milk?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Plant milk can be healthier depending on your needs. It's naturally lactose-free, often lower in calories and saturated fat, and fortified with calcium and vitamins. Soy milk offers comparable protein to dairy, while other varieties vary in nutrition."
-              }
-            }
-          ]
-        }
-      ]
+        ]
     }
     </script>
 
     <link rel="stylesheet" href="/style.css">
-    
-    <style>
-        /* Blog Preview Section - Minimal styles, using stylesheet for most */
-        .blog-preview {
-            margin-top: 60px;
-            padding-top: 50px;
-            border-top: 2px solid #e0e0e0;
-        }
-        
-        .blog-preview h2 {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .blog-mini-card {
-            background: #f8f9ff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-        
-        .blog-mini-card:hover {
-            border-color: #667eea;
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
-        }
-        
-        .blog-mini-card-featured {
-            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
-            border: 2px solid #4caf50;
-            position: relative;
-        }
-        
-        .new-badge-mini {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: #4caf50;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.75em;
-            font-weight: 700;
-        }
-        
-        .blog-mini-content {
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-        
-        .blog-mini-thumbnail {
-            width: 150px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        
-        .blog-mini-card h4 {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 8px;
-        }
-        
-        .blog-mini-card h4 a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .blog-mini-card h4 a:hover {
-            color: #667eea;
-        }
-        
-        .blog-mini-meta {
-            color: #999;
-            font-size: 0.85em;
-            margin-bottom: 8px;
-        }
-        
-        .blog-mini-excerpt {
-            color: #666;
-            font-size: 0.95em;
-            line-height: 1.5;
-        }
-        
-        .view-all-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05em;
-            transition: color 0.3s;
-        }
-        
-        .view-all-link:hover {
-            color: #764ba2;
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 600px) {
-            .blog-mini-content {
-                flex-direction: column;
-            }
-            
-            .blog-mini-thumbnail {
-                width: 100%;
-                height: 150px;
-            }
-        }
-    </style>
+    <link rel="canonical" href="https://noncow.com/">
 </head>
 <body>
     <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner">
+    <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
                 <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
@@ -268,22 +69,20 @@
             </div>
         </div>
     </div>
-    
+
     <div class="container">
-        <header>
-            <div class="logo">
-                <h1>🥛 NonCow</h1>
-                <p>Find Your Perfect Plant Milk</p>
-            </div>
-        </header>
-        
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
+        </div>
+
         <nav>
             <a href="/">🏠 Home</a>
             <a href="/quiz">🥛 Take Quiz</a>
             <a href="/blog">📚 Blog</a>
         </nav>
-        
-        <div class="start-screen">
+
+        <div class="hero">
             <h2>Discover Your Dairy Alternative Match</h2>
             <p>Confused by all the plant milk options? Our free quiz helps you cut through the noise and find the perfect dairy alternative based on what matters most to you.</p>
             <a href="/quiz" class="btn">Start Quiz</a>
@@ -296,7 +95,18 @@
             <div class="blog-mini-card blog-mini-card-featured">
                 <span class="new-badge-mini">NEW</span>
                 <div class="blog-mini-content">
-                    <img src="/images/plant-milk-creamy-pasta-sauce.jpg" alt="Creamy pasta being stirred in pan with plant-based sauce" class="blog-mini-thumbnail">
+                    <img src="/images/iced-coffee-milk-swirls.jpg" alt="Iced coffee with beautiful milk swirls" class="blog-mini-thumbnail">
+                    <div>
+                        <h4><a href="/blog/best-plant-milk-for-iced-coffee.html">Best Plant Milk for Iced Coffee</a></h4>
+                        <p class="blog-mini-meta">📅 December 12, 2025 | ⏱️ 8 min read</p>
+                        <p class="blog-mini-excerpt">Discover the best plant milk for iced coffee. Compare oat, almond, soy, and coconut milk for taste, texture, and how well they blend.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-mini-card">
+                <div class="blog-mini-content">
+                    <img src="/images/plant-milk-creamy-pasta-sauce.jpg" alt="Creamy pasta with plant-based sauce" class="blog-mini-thumbnail">
                     <div>
                         <h4><a href="/blog/best-plant-milk-for-cooking.html">Best Plant Milk for Cooking: Savory Dishes Guide</a></h4>
                         <p class="blog-mini-meta">📅 November 26, 2025 | ⏱️ 10 min read</p>
@@ -306,26 +116,15 @@
             </div>
             
             <div class="blog-mini-card">
-                <div class="blog-mini-content">
-                    <img src="/images/protein-shake-blender-pouring.jpg" alt="Protein shake being poured from blender into glass" class="blog-mini-thumbnail">
-                    <div>
-                        <h4><a href="/blog/best-plant-milk-for-protein-shakes.html">Best Plant Milk for Protein Shakes</a></h4>
-                        <p class="blog-mini-meta">📅 November 21, 2025 | ⏱️ 8 min read</p>
-                        <p class="blog-mini-excerpt">Find the best plant milk for protein shakes and post-workout nutrition. Compare protein content across soy, oat, and pea milk.</p>
-                    </div>
-                </div>
+                <h4><a href="/blog/best-plant-milk-for-protein-shakes.html">Best Plant Milk for Protein Shakes</a></h4>
+                <p class="blog-mini-meta">📅 November 21, 2025 | ⏱️ 8 min read</p>
+                <p class="blog-mini-excerpt">Find the best plant milk for protein shakes and post-workout nutrition. Compare protein content across soy, oat, and pea milk.</p>
             </div>
             
             <div class="blog-mini-card">
                 <h4><a href="/blog/best-plant-milk-for-hot-chocolate.html">Best Plant Milk for Hot Chocolate</a></h4>
                 <p class="blog-mini-meta">📅 November 17, 2025 | ⏱️ 7 min read</p>
                 <p class="blog-mini-excerpt">Discover the best plant-based milks for making rich, creamy hot chocolate.</p>
-            </div>
-            
-            <div class="blog-mini-card">
-                <h4><a href="/blog/best-plant-milk-for-tea.html">Best Plant Milk for Tea: No-Curdle Guide</a></h4>
-                <p class="blog-mini-meta">📅 November 11, 2025 | ⏱️ 9 min read</p>
-                <p class="blog-mini-excerpt">Discover which plant milk works best in tea without curdling. Complete pairing guide for black tea, green tea, and chai.</p>
             </div>
             
             <a href="/blog/" class="view-all-link">View All Articles →</a>
