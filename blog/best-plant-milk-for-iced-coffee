@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the best plant milk for iced coffee. Compare oat, almond, soy, and coconut milk for taste, texture, and how well they blend without separating.">
+    <title>Best Plant Milk for Iced Coffee: Creamy & Delicious Options | NonCow</title>
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Best Plant Milk for Iced Coffee: Creamy & Delicious Options",
+        "description": "Discover the best plant milk for iced coffee. Compare oat, almond, soy, and coconut milk for taste, texture, and how well they blend without separating.",
+        "image": "https://noncow.com/images/iced-coffee-milk-swirls.jpg",
+        "author": {
+            "@type": "Organization",
+            "name": "NonCow"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "NonCow",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://noncow.com/logo.png"
+            }
+        },
+        "datePublished": "2025-12-14",
+        "dateModified": "2025-12-14"
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the best plant milk for iced coffee?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oat milk is the best plant milk for iced coffee. It has a creamy texture, naturally sweet taste, and blends smoothly without separating. Barista editions work especially well for the creamiest iced lattes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does plant milk separate in iced coffee?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plant milk separates in iced coffee due to temperature shock and acidity. The cold temperature combined with coffee's natural acids causes proteins to coagulate and clump together. Using barista blends, adding milk first, or letting coffee cool slightly before mixing can help prevent separation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does oat milk curdle in iced coffee?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oat milk rarely curdles in iced coffee, making it one of the best choices. Its low protein content and added stabilizers (especially in barista versions) help it blend smoothly even with cold, acidic coffee."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is almond milk good for iced coffee?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Almond milk works well for iced coffee if you prefer a lighter, lower-calorie drink. However, it's thinner than oat milk and may separate more easily. Choose barista-style almond milk for better texture and stability."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What plant milk tastes most like dairy in iced coffee?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oat milk tastes most like dairy milk in iced coffee. Its creamy texture and neutral-sweet flavor closely mimics the richness and mouthfeel of whole milk, making it the top choice for those transitioning from dairy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I make iced lattes with plant milk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Plant milk makes excellent iced lattes. Use barista-style oat or soy milk for the creamiest results. Pour espresso over ice first, then add cold plant milk for the best texture and beautiful layered presentation."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>🥛 NonCow</h1>
+            <p>Find Your Perfect Plant Milk</p>
+        </div>
+        
+        <nav>
+            <a href="/">🏠 Home</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog">📚 Blog</a>
+        </nav>
+        
+        <article>
+            <h1>🧊 Best Plant Milk for Iced Coffee</h1>
+            
+            <img src="/images/iced-coffee-milk-swirls.jpg" 
+                 alt="Iced coffee with beautiful milk swirls in a tall glass" 
+                 style="width: 100%; height: auto; border-radius: 15px; margin: 20px 0;">
+            
+            <div class="meta">
+                📅 Published: December 14, 2025 | ⏱️ 8 min read
+            </div>
+
+            <div class="affiliate-disclosure">
+                <p><strong>Affiliate Disclosure:</strong> This post contains affiliate links to products on Amazon. 
+                If you click through and make a purchase, I may earn a small commission at no additional cost to you. 
+                This helps support the site. As an Amazon Associate, I earn from qualifying purchases. 
+                Read our full <a href="/disclosure">disclosure policy</a>.</p>
+            </div>
+            
+            <p>There's something magical about a perfectly made iced coffee with plant milk — those beautiful swirls as the milk cascades through dark espresso, the creamy texture on your lips, the refreshing chill on a warm day. But not all plant milks perform equally when cold. Some separate instantly, others taste watery, and a few deliver that café-quality experience you're craving.</p>
+            
+            <p>After testing countless combinations, I've found the plant milks that actually work for iced coffee — creating smooth, creamy drinks that look as good as they taste.</p>
+
+            <div class="quick-answer">
+                <h2>🏆 Quick Answer: Best Plant Milk for Iced Coffee</h2>
+                <p><strong>Oat milk</strong> is the undisputed champion for iced coffee. Its naturally creamy texture and subtle sweetness complement cold brew and espresso beautifully, and it blends smoothly without separating.</p>
+                <p><strong>Runner-up:</strong> Soy milk for high-protein, filling iced lattes that keep you satisfied longer.</p>
+            </div>
+
+            <h2>🥇 #1: Oat Milk - The Creamy Champion</h2>
+            
+            <img src="/images/iced-coffee-layered-glass.jpg" 
+                 alt="Layered iced latte showing beautiful gradient of coffee and plant milk" 
+                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0;">
+            
+            <p><strong>Best for:</strong> Iced lattes, cold brew, aesthetic layered drinks, everyday iced coffee</p>
+
+            <p><strong>Oat milk is the undisputed champion of iced coffee.</strong> Its naturally creamy texture and subtle sweetness complement cold brew and espresso beautifully. Unlike many plant milks, oat milk blends smoothly into iced coffee without immediately separating into an unappetizing cloudy mess.</p>
+            
+            <p>The secret is oat milk's unique composition — it has just enough fat and natural starches to create body and richness, while its relatively low protein content means less curdling when it hits acidic coffee. The result? A silky-smooth iced latte that rivals any dairy version.</p>
+
+            <h3>Why it wins:</h3>
+            <ul>
+                <li><strong>Naturally creamy:</strong> Creates rich, velvety texture without additives</li>
+                <li><strong>Subtle sweetness:</strong> Complements coffee without overpowering</li>
+                <li><strong>Low separation:</strong> Stays blended longer than other plant milks</li>
+                <li><strong>Instagram-worthy:</strong> Creates beautiful layered looks when poured slowly</li>
+                <li><strong>Barista editions:</strong> Extra stabilizers for even better performance</li>
+            </ul>
+
+            <div class="pro-tip">
+                💡 <strong>Pro Tip:</strong> Pour oat milk slowly over the back of a spoon for those gorgeous layered iced lattes you see on Instagram. The slow pour prevents immediate mixing and creates beautiful visual contrast.
+            </div>
+
+            <div class="cta-box">
+                <h3>🛒 Shop Oat Milk for Iced Coffee</h3>
+                <a href="https://www.amazon.com/s?k=oatly+barista+edition&tag=e12nni-20" class="cta-button" target="_blank" rel="noopener">
+                    Barista Oat Milk on Amazon →<br>
+                    <span class="cta-subtext">Look for barista editions with extra creaminess designed specifically for coffee</span>
+                </a>
+            </div>
+
+            <h2>🥈 #2: Soy Milk - The High-Protein Hero</h2>
+            
+            <p><strong>Best for:</strong> Filling iced lattes, post-workout coffee, recipes requiring extra body</p>
+
+            <p>Soy milk has been the original plant milk for coffee since before oat milk entered the scene, and it still holds its own for iced drinks. With 7-9 grams of protein per cup, soy milk creates a substantial, filling iced coffee that keeps you satisfied longer.</p>
+            
+            <p>The texture is smooth and creamy — not quite as rich as oat milk, but definitely more body than almond or rice milk. Soy milk's neutral flavor doesn't compete with coffee, letting those roasted notes shine through while adding pleasant creaminess.</p>
+
+            <h3>Why it's great:</h3>
+            <ul>
+                <li><strong>High protein (7-9g per cup):</strong> Most filling plant milk option</li>
+                <li><strong>Neutral flavor:</strong> Won't interfere with coffee taste</li>
+                <li><strong>Good body:</strong> Creates substantial, satisfying drinks</li>
+                <li><strong>Affordable:</strong> Usually cheaper than specialty plant milks</li>
+                <li><strong>Widely available:</strong> Found in every grocery store and café</li>
+            </ul>
+
+            <p><strong>One caveat:</strong> Some soy milks can curdle slightly in very acidic light roast coffees. Stick with medium or dark roasts, or choose barista-formulated soy milk for foolproof results.</p>
+
+            <div class="cta-box">
+                <h3>🛒 Shop Soy Milk for Iced Coffee</h3>
+                <a href="https://www.amazon.com/s?k=silk+organic+soy+milk+unsweetened&tag=e12nni-20" class="cta-button" target="_blank" rel="noopener">
+                    Organic Soy Milk on Amazon →<br>
+                    <span class="cta-subtext">Choose unsweetened varieties for the most coffee-forward flavor</span>
+                </a>
+            </div>
+
+            <h2>🥉 #3: Almond Milk - The Light Option</h2>
+            
+            <img src="/images/iced-coffee-cafe-straw.jpg" 
+                 alt="Iced coffee with plant milk in a café cup with eco-friendly straw" 
+                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0;">
+            
+            <p><strong>Best for:</strong> Low-calorie iced coffee, light refreshing drinks, calorie-conscious coffee lovers</p>
+
+            <p>Almond milk is the lightest option on this list, making it perfect if you prefer a less heavy iced coffee or are watching calories. At only 30-50 calories per cup (unsweetened), it's significantly lighter than oat or soy milk.</p>
+            
+            <p>The trade-off? Almond milk is thinner and can separate more quickly in iced coffee. The subtle nutty flavor can also compete with delicate coffee notes. But for those who love that light, refreshing quality, almond milk delivers.</p>
+
+            <h3>Why it works:</h3>
+            <ul>
+                <li><strong>Very low calorie:</strong> Only 30-50 calories per cup unsweetened</li>
+                <li><strong>Light and refreshing:</strong> Perfect for hot summer days</li>
+                <li><strong>Subtle nutty flavor:</strong> Adds interesting dimension to coffee</li>
+                <li><strong>Widely available:</strong> Found everywhere, including most cafés</li>
+            </ul>
+
+            <p><strong>Best practice:</strong> Use barista-style almond milk, which has added stabilizers to prevent separation. Regular almond milk works too — just give it a quick stir before drinking.</p>
+
+            <div class="cta-box">
+                <h3>🛒 Shop Almond Milk for Iced Coffee</h3>
+                <a href="https://www.amazon.com/s?k=califia+farms+barista+almond+milk&tag=e12nni-20" class="cta-button" target="_blank" rel="noopener">
+                    Barista Almond Milk on Amazon →<br>
+                    <span class="cta-subtext">Barista blends are formulated to resist separation in coffee</span>
+                </a>
+            </div>
+
+            <h2>🥥 Honorable Mention: Coconut Milk</h2>
+            
+            <p><strong>Best for:</strong> Tropical-flavored iced coffee, Vietnamese-style drinks, coconut lovers</p>
+
+            <p>Coconut milk creates a unique iced coffee experience — tropical, creamy, and slightly exotic. It's not for everyone, but if you enjoy coconut flavor, it transforms your iced coffee into something special.</p>
+            
+            <p>Full-fat canned coconut milk is incredibly rich but can be overwhelming. Carton coconut milk beverages are lighter and blend more easily. Either way, expect a distinct coconut flavor that pairs especially well with vanilla-flavored or lightly roasted coffees.</p>
+
+            <div class="cta-box">
+                <h3>🛒 Shop Coconut Milk for Iced Coffee</h3>
+                <a href="https://www.amazon.com/s?k=so+delicious+coconut+milk+unsweetened&tag=e12nni-20" class="cta-button" target="_blank" rel="noopener">
+                    Coconut Milk Beverage on Amazon →<br>
+                    <span class="cta-subtext">Choose unsweetened carton varieties for everyday iced coffee</span>
+                </a>
+            </div>
+
+            <h2>📊 Iced Coffee Plant Milk Comparison</h2>
+            
+            <table style="width: 100%; border-collapse: collapse; margin: 25px 0; font-size: 0.95em;">
+                <thead>
+                    <tr style="background: #667eea; color: white;">
+                        <th style="padding: 12px; text-align: left;">Plant Milk</th>
+                        <th style="padding: 12px; text-align: left;">Creaminess</th>
+                        <th style="padding: 12px; text-align: left;">Separation Risk</th>
+                        <th style="padding: 12px; text-align: left;">Flavor Impact</th>
+                        <th style="padding: 12px; text-align: left;">Calories/cup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #f8f9ff;">
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;"><strong>Oat Milk</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">⭐⭐⭐⭐⭐</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Low</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Subtle sweetness</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">~120</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;"><strong>Soy Milk</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">⭐⭐⭐⭐</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Medium</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Neutral, protein-rich</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">~80</td>
+                    </tr>
+                    <tr style="background: #f8f9ff;">
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;"><strong>Almond Milk</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">⭐⭐</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">High</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Light, nutty</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">~30-50</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;"><strong>Coconut Milk</strong></td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">⭐⭐⭐⭐</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Medium</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">Distinct coconut</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e0e0e0;">~45-80</td>
+                    </tr>
+                    <tr style="background: #f8f9ff;">
+                        <td style="padding: 12px;"><strong>Cashew Milk</strong></td>
+                        <td style="padding: 12px;">⭐⭐⭐</td>
+                        <td style="padding: 12px;">Medium</td>
+                        <td style="padding: 12px;">Mild, slightly sweet</td>
+                        <td style="padding: 12px;">~25-50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>🚫 Plant Milks to Avoid for Iced Coffee</h2>
+            
+            <p><strong>Rice milk</strong> is too thin and watery for iced coffee. It lacks body, separates instantly, and has a distinctive sweet rice flavor that clashes with coffee's bitterness.</p>
+            
+            <p><strong>Hemp milk</strong> has an earthy, grassy taste that overpowers coffee. While nutritious, it's better suited for smoothies than your morning cold brew.</p>
+            
+            <p><strong>Sweetened vanilla-flavored milks</strong> can work, but the added vanilla often competes with coffee rather than complementing it. Stick with original/plain versions for iced coffee.</p>
+
+            <h2>🔥 Tips for Perfect Plant-Based Iced Coffee</h2>
+            
+            <img src="/images/iced-coffee-frothy-latte.jpg" 
+                 alt="Frothy iced latte with beautiful foam on a wooden serving board" 
+                 style="width: 100%; height: auto; border-radius: 12px; margin: 20px 0;">
+
+            <h3>Prevent Separation</h3>
+            <p>The biggest challenge with plant milk in iced coffee is separation. Here's how to prevent it:</p>
+            <ul>
+                <li><strong>Add milk first:</strong> Pour plant milk over ice, then add coffee. This tempers the temperature difference.</li>
+                <li><strong>Use barista blends:</strong> They contain stabilizers specifically designed for coffee.</li>
+                <li><strong>Let espresso cool slightly:</strong> Super hot espresso + ice cold milk = separation city.</li>
+                <li><strong>Stir or shake:</strong> If separation happens, a quick stir brings it back together.</li>
+            </ul>
+
+            <h3>Get the Ratio Right</h3>
+            <p>For iced lattes, aim for a 1:2 or 1:3 ratio of espresso to milk. Too much coffee overwhelms the milk's creaminess; too little makes it taste watered down.</p>
+            
+            <div class="pro-tip">
+                💡 <strong>Cold Brew Tip:</strong> Cold brew coffee is naturally less acidic than hot-brewed coffee, which means less curdling and separation with any plant milk. If you're having trouble with separation, switch to cold brew for foolproof results.
+            </div>
+
+            <h3>Sweeten Wisely</h3>
+            <p>If you like sweetened iced coffee, add sweetener to your espresso while it's still hot (sugar dissolves better in warm liquid) before adding ice and milk. Simple syrup works best for cold drinks since it's already dissolved.</p>
+
+            <h2>☕ Simple Iced Oat Milk Latte Recipe</h2>
+            
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                <li>2 shots espresso (or 1/2 cup strong brewed coffee)</li>
+                <li>1 cup oat milk (barista edition recommended)</li>
+                <li>Ice cubes</li>
+                <li>1-2 teaspoons simple syrup or maple syrup (optional)</li>
+            </ul>
+            
+            <p><strong>Instructions:</strong></p>
+            <ol>
+                <li>Fill a tall glass with ice cubes</li>
+                <li>Pour oat milk over the ice</li>
+                <li>If using sweetener, stir it into your hot espresso</li>
+                <li>Slowly pour espresso over the milk for a layered look, or stir immediately for a blended drink</li>
+                <li>Enjoy immediately!</li>
+            </ol>
+            
+            <div class="cta-box">
+                <h3>🛒 Iced Coffee Essentials</h3>
+                <a href="https://www.amazon.com/s?k=cold+brew+coffee+maker&tag=e12nni-20" class="cta-button" target="_blank" rel="noopener">
+                    Cold Brew Coffee Maker on Amazon →<br>
+                    <span class="cta-subtext">Make smooth, low-acid cold brew at home for the perfect iced coffee base</span>
+                </a>
+            </div>
+
+            <h2>❓ Frequently Asked Questions</h2>
+
+            <h3>What is the best plant milk for iced coffee?</h3>
+            <p>Oat milk is the best plant milk for iced coffee. It has a creamy texture, naturally sweet taste, and blends smoothly without separating. Barista editions work especially well for the creamiest iced lattes.</p>
+            
+            <h3>Why does plant milk separate in iced coffee?</h3>
+            <p>Plant milk separates in iced coffee due to temperature shock and acidity. The cold temperature combined with coffee's natural acids causes proteins to coagulate and clump together. Using barista blends, adding milk first, or letting coffee cool slightly before mixing can help prevent separation.</p>
+            
+            <h3>Does oat milk curdle in iced coffee?</h3>
+            <p>Oat milk rarely curdles in iced coffee, making it one of the best choices. Its low protein content and added stabilizers (especially in barista versions) help it blend smoothly even with cold, acidic coffee.</p>
+            
+            <h3>Is almond milk good for iced coffee?</h3>
+            <p>Almond milk works well for iced coffee if you prefer a lighter, lower-calorie drink. However, it's thinner than oat milk and may separate more easily. Choose barista-style almond milk for better texture and stability.</p>
+            
+            <h3>What plant milk tastes most like dairy in iced coffee?</h3>
+            <p>Oat milk tastes most like dairy milk in iced coffee. Its creamy texture and neutral-sweet flavor closely mimics the richness and mouthfeel of whole milk, making it the top choice for those transitioning from dairy.</p>
+            
+            <h3>Can I make iced lattes with plant milk?</h3>
+            <p>Yes! Plant milk makes excellent iced lattes. Use barista-style oat or soy milk for the creamiest results. Pour espresso over ice first, then add cold plant milk for the best texture and beautiful layered presentation.</p>
+
+        </article>
+
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h2>📚 Related Articles</h2>
+            <div class="related-articles-grid">
+                <a href="/blog/best-plant-milk-for-coffee.html" class="related-article-card">
+                    <h3>☕ Best Plant Milk for Coffee</h3>
+                    <p>Our complete guide to hot coffee with plant milk, including frothing tips.</p>
+                </a>
+                <a href="/blog/best-plant-milk-for-hot-chocolate.html" class="related-article-card">
+                    <h3>🍫 Best Plant Milk for Hot Chocolate</h3>
+                    <p>Find the creamiest plant milks for rich, indulgent hot cocoa.</p>
+                </a>
+                <a href="/blog/oat-milk-vs-almond-milk.html" class="related-article-card">
+                    <h3>🥛 Oat Milk vs Almond Milk</h3>
+                    <p>Compare these popular options for nutrition, taste, and environmental impact.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quiz CTA -->
+        <div style="text-align: center; margin: 50px 0 30px;">
+            <a href="/quiz" class="btn">🥛 Take Our Plant Milk Quiz</a>
+        </div>
+        
+        <p style="text-align: center; color: #999; font-size: 0.9em;">Not sure which plant milk is right for your overall lifestyle? Take our 2-minute quiz for personalized recommendations!</p>
+
+        <footer>
+            <p>
+                © 2025 NonCow | 
+                <a href="/disclosure">Affiliate Disclosure</a>
+            </p>
+            <p>
+                As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // Cookie Consent Management
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B4ZDS9NB49');
+        }
+        
+        function acceptCookies() {
+            setCookie('cookieConsent', 'accepted', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+            loadGoogleAnalytics();
+        }
+        
+        function declineCookies() {
+            setCookie('cookieConsent', 'declined', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            } else if (consent === 'accepted') {
+                loadGoogleAnalytics();
+            }
+        });
+    </script>
+</body>
+</html>
