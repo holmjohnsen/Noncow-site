@@ -75,6 +75,7 @@
         </div>
         
         <div class="screen" id="quiz-screen">
+            <p style="text-align: center; color: #667eea; font-weight: 600; margin-bottom: 10px; font-size: 0.95em;" id="question-counter">Question 1 of 6</p>
             <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
             <div class="question" id="question-container"></div>
             <div class="nav-buttons">
@@ -117,6 +118,8 @@
                 searchTerm:"oat+milk+unsweetened",
                 topProduct:"Oatly Barista Edition",
                 productSearch:"oatly+barista",
+                learnMoreUrl:"/blog/best-plant-milk-for-coffee.html",
+                learnMoreText:"Best Plant Milk for Coffee",
                 description:"Perfect for coffee lovers who care about sustainability. Oat milk has a naturally sweet, creamy taste and froths beautifully for lattes. It's also one of the most eco-friendly options with low water usage and carbon footprint."
             },
             almond:{
@@ -125,6 +128,8 @@
                 searchTerm:"almond+milk+unsweetened",
                 topProduct:"Califia Farms Unsweetened",
                 productSearch:"califia+farms+almond+milk+unsweetened",
+                learnMoreUrl:"/blog/oat-milk-vs-almond-milk.html",
+                learnMoreText:"Oat Milk vs Almond Milk Comparison",
                 description:"Light, versatile, and subtly nutty. Almond milk is perfect for those who want a low-calorie option that doesn't overpower other flavors. Great in smoothies, cereal, and baking."
             },
             soy:{
@@ -133,6 +138,8 @@
                 searchTerm:"soy+milk+organic",
                 topProduct:"Silk Organic Soymilk",
                 productSearch:"silk+organic+soy+milk+unsweetened",
+                learnMoreUrl:"/blog/best-plant-milk-for-protein.html",
+                learnMoreText:"Best Plant Milk for Protein",
                 description:"The OG dairy alternative with the most protein. Soy milk has a creamy texture and neutral taste that works everywhere - from coffee to cooking. It's also one of the most nutritionally complete options."
             },
             coconut:{
@@ -141,6 +148,8 @@
                 searchTerm:"coconut+milk+beverage",
                 topProduct:"So Delicious Coconutmilk",
                 productSearch:"so+delicious+coconut+milk+beverage",
+                learnMoreUrl:"/blog/best-plant-milk-for-smoothies.html",
+                learnMoreText:"Best Plant Milk for Smoothies",
                 description:"Tropical vibes and naturally sweet. Coconut milk brings a rich, exotic flavor to everything it touches. Perfect for curries, smoothies, and anyone who loves a hint of sweetness."
             },
             cashew:{
@@ -149,6 +158,8 @@
                 searchTerm:"cashew+milk+unsweetened",
                 topProduct:"Silk Cashew Milk",
                 productSearch:"silk+cashew+milk+unsweetened",
+                learnMoreUrl:"/blog/best-plant-milk-for-baking.html",
+                learnMoreText:"Best Plant Milk for Baking",
                 description:"Luxuriously creamy and naturally sweet. Cashew milk has the richest, most indulgent texture of all plant milks. It's perfect for those who want dairy-level creaminess without dairy."
             }
         };
@@ -156,40 +167,68 @@
         let currentQuestion=0;let answers={};
         function startQuiz(){showScreen('quiz-screen');showQuestion()}
         function showScreen(screenId){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(screenId).classList.add('active')}
-        function showQuestion(){const q=questions[currentQuestion];const container=document.getElementById('question-container');let html=`<h3>Question ${currentQuestion+1} of ${questions.length}</h3><p style="color:#666;margin-bottom:20px;">${q.question}</p><div class="options">`;q.options.forEach((opt,idx)=>{const inputType=q.type==='multiple'?'checkbox':'radio';const inputName=q.type==='multiple'?`q${currentQuestion}_${idx}`:`q${currentQuestion}`;let isSelected=false;if(q.type==='multiple'){isSelected=answers[currentQuestion]&&answers[currentQuestion].includes(opt.value)}else{isSelected=answers[currentQuestion]===opt.value}const selected=isSelected?'selected':'';html+=`<div class="option ${selected}" onclick="selectOption(${currentQuestion},'${opt.value}',this,'${q.type}')"><input type="${inputType}" name="${inputName}" value="${opt.value}" ${isSelected?'checked':''} style="margin-right:10px;pointer-events:none;"><div style="flex:1;"><div class="option-title">${opt.text}</div><div class="option-desc">${opt.desc}</div></div></div>`});html+='</div>';container.innerHTML=html;updateProgress();updateButtons()}
+        function showQuestion(){const q=questions[currentQuestion];const container=document.getElementById('question-container');document.getElementById('question-counter').textContent=`Question ${currentQuestion+1} of ${questions.length}`;let html=`<h3>Question ${currentQuestion+1} of ${questions.length}</h3><p style="color:#666;margin-bottom:20px;">${q.question}</p><div class="options">`;q.options.forEach((opt,idx)=>{const inputType=q.type==='multiple'?'checkbox':'radio';const inputName=q.type==='multiple'?`q${currentQuestion}_${idx}`:`q${currentQuestion}`;let isSelected=false;if(q.type==='multiple'){isSelected=answers[currentQuestion]&&answers[currentQuestion].includes(opt.value)}else{isSelected=answers[currentQuestion]===opt.value}const selected=isSelected?'selected':'';html+=`<div class="option ${selected}" onclick="selectOption(${currentQuestion},'${opt.value}',this,'${q.type}')"><input type="${inputType}" name="${inputName}" value="${opt.value}" ${isSelected?'checked':''} style="margin-right:10px;pointer-events:none;"><div style="flex:1;"><div class="option-title">${opt.text}</div><div class="option-desc">${opt.desc}</div></div></div>`});html+='</div>';container.innerHTML=html;updateProgress();updateButtons()}
         function selectOption(questionIdx,value,element,type){if(type==='multiple'){if(!answers[questionIdx]){answers[questionIdx]=[]}const checkbox=element.querySelector('input[type="checkbox"]');if(checkbox.checked){checkbox.checked=false;answers[questionIdx]=answers[questionIdx].filter(v=>v!==value);element.classList.remove('selected')}else{checkbox.checked=true;if(!answers[questionIdx].includes(value)){answers[questionIdx].push(value)}element.classList.add('selected')}}else{answers[questionIdx]=value;const allOptions=element.parentElement.querySelectorAll('.option');allOptions.forEach(o=>o.classList.remove('selected'));element.classList.add('selected');const radio=element.querySelector('input[type="radio"]');if(radio)radio.checked=true}}
         function updateProgress(){const progress=((currentQuestion+1)/questions.length)*100;document.getElementById('progress-bar').style.width=progress+'%'}
         function updateButtons(){document.getElementById('prev-btn').style.display=currentQuestion>0?'block':'none';document.getElementById('next-btn').textContent=currentQuestion===questions.length-1?'See Results':'Next'}
         function nextQuestion(){const q=questions[currentQuestion];if(!answers[currentQuestion]||(Array.isArray(answers[currentQuestion])&&answers[currentQuestion].length===0)){alert('Please select at least one option before continuing!');return}if(currentQuestion<questions.length-1){currentQuestion++;showQuestion()}else{showResults()}}
         function prevQuestion(){if(currentQuestion>0){currentQuestion--;showQuestion()}}
         function showResults(){
-            const milk=calculateMatch();
-            const result=milkTypes[milk];
+            const topMatches=calculateTopMatches();
+            const firstMatch=milkTypes[topMatches[0].milk];
+            const secondMatch=milkTypes[topMatches[1].milk];
+            const thirdMatch=milkTypes[topMatches[2].milk];
+            
             let html=`
-                <div class="result-icon">${result.icon}</div>
-                <h2>Your Perfect Match: ${result.name}</h2>
-                <p class="result-desc">${result.description}</p>
+                <div class="result-icon">${firstMatch.icon}</div>
+                <h2>Your Perfect Match: ${firstMatch.name}</h2>
+                <p class="result-desc">${firstMatch.description}</p>
+                
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 12px; margin: 25px 0; border-left: 4px solid #4caf50;">
+                    <p style="margin: 0; color: #2e7d32; font-weight: 600; font-size: 0.95em;">📖 Want to learn more?</p>
+                    <p style="margin: 5px 0 0; color: #2e7d32;"><a href="${firstMatch.learnMoreUrl}" style="color: #1b5e20; text-decoration: underline; font-weight: 600;">Read: ${firstMatch.learnMoreText} →</a></p>
+                </div>
                 
                 <div class="affiliate-section">
                     <h3 style="font-size: 1.3em; margin-bottom: 15px; color: #333;">🏆 Our Top Pick</h3>
-                    <a href="https://www.amazon.com/s?k=${result.productSearch}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 20px; text-decoration: none; border-radius: 12px; margin-bottom: 15px; transition: transform 0.2s;">
-                        <div style="font-size: 1.3em; font-weight: 600; margin-bottom: 5px; color: white;">${result.topProduct}</div>
+                    <a href="https://www.amazon.com/s?k=${firstMatch.productSearch}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 20px; text-decoration: none; border-radius: 12px; margin-bottom: 15px; transition: transform 0.2s;">
+                        <div style="font-size: 1.3em; font-weight: 600; margin-bottom: 5px; color: white;">${firstMatch.topProduct}</div>
                         <div style="font-size: 1em; opacity: 0.95; color: white;">See prices & reviews on Amazon →</div>
                     </a>
-                    <a href="https://www.amazon.com/s?k=${result.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: block; text-align: center; color: #667eea; text-decoration: none; font-size: 0.95em; margin-top: 10px;">
-                        Or browse all ${result.name} options
+                    <a href="https://www.amazon.com/s?k=${firstMatch.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: block; text-align: center; color: #667eea; text-decoration: none; font-size: 0.95em; margin-top: 10px;">
+                        Or browse all ${firstMatch.name} options
                     </a>
                 </div>
                 
+                <div style="margin: 35px 0 25px; padding-top: 25px; border-top: 2px solid #e0e0e0;">
+                    <h3 style="font-size: 1.2em; margin-bottom: 20px; color: #333; text-align: center;">Also Great For You:</h3>
+                    
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 10px; margin-bottom: 12px; border: 2px solid #e0e0e0;">
+                        <div style="font-size: 1.1em; font-weight: 600; color: #333; margin-bottom: 5px;">${secondMatch.icon} ${secondMatch.name}</div>
+                        <p style="margin: 0; color: #666; font-size: 0.9em;">${secondMatch.description}</p>
+                        <a href="https://www.amazon.com/s?k=${secondMatch.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: inline-block; margin-top: 8px; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${secondMatch.name} →</a>
+                    </div>
+                    
+                    <div style="background: #f8f9ff; padding: 15px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                        <div style="font-size: 1.1em; font-weight: 600; color: #333; margin-bottom: 5px;">${thirdMatch.icon} ${thirdMatch.name}</div>
+                        <p style="margin: 0; color: #666; font-size: 0.9em;">${thirdMatch.description}</p>
+                        <a href="https://www.amazon.com/s?k=${thirdMatch.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: inline-block; margin-top: 8px; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${thirdMatch.name} →</a>
+                    </div>
+                </div>
+                
                 <div class="share-buttons" style="margin-top: 30px;">
-                    <button class="share-btn" onclick="shareResult('${result.name}')" style="margin: 0 10px;">Share Result</button>
+                    <button class="share-btn" onclick="shareResult('${firstMatch.name}')" style="margin: 0 10px;">Share Result</button>
                     <button class="share-btn" onclick="restartQuiz()" style="margin: 0 10px;">Retake Quiz</button>
                 </div>
             `;
             document.getElementById('result-container').innerHTML=html;
             showScreen('result-screen');
         }
-        function calculateMatch(){const scores={oat:0,almond:0,soy:0,coconut:0,cashew:0};const uses=Array.isArray(answers[0])?answers[0]:[answers[0]];uses.forEach(use=>{if(use==='coffee'){scores.oat+=3;scores.soy+=2;scores.cashew+=1}else if(use==='cereal'){scores.cashew+=3;scores.oat+=2;scores.almond+=1}else if(use==='cooking'){scores.soy+=3;scores.almond+=2;scores.oat+=1}else if(use==='drinking'){scores.cashew+=3;scores.coconut+=2;scores.oat+=1}});const flavor=answers[1];if(flavor==='creamy'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(flavor==='neutral'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(flavor==='sweet'){scores.coconut+=3;scores.oat+=2;scores.cashew+=1}else if(flavor==='nutty'){scores.almond+=3;scores.cashew+=2;scores.coconut+=1}const priority=answers[2];if(priority==='eco'){scores.oat+=3;scores.soy+=2;scores.almond+=1}else if(priority==='nutrition'){scores.soy+=3;scores.oat+=2;scores.almond+=1}else if(priority==='budget'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(priority==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const allergens=Array.isArray(answers[3])?answers[3]:[answers[3]];if(!allergens.includes('none')){if(allergens.includes('nuts')){scores.almond=-999;scores.cashew=-999}if(allergens.includes('soy')){scores.soy=-999}if(allergens.includes('oats')){scores.oat=-999}if(allergens.includes('coconut')){scores.coconut=-999}}const texture=answers[4];if(texture==='smooth'){scores.cashew+=3;scores.almond+=2;scores.soy+=1}else if(texture==='thick'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(texture==='light'){scores.almond+=3;scores.coconut+=2;scores.soy+=1}else if(texture==='any'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const shopping=answers[5];if(shopping==='mainstream'){scores.almond+=2;scores.soy+=2;scores.oat+=1}else if(shopping==='specialty'){scores.cashew+=2;scores.oat+=2;scores.coconut+=1}else if(shopping==='diy'){scores.oat+=2;scores.almond+=2;scores.cashew+=1}else if(shopping==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}let maxScore=-1000;let bestMilk='oat';for(const[milk,score]of Object.entries(scores)){if(score>maxScore){maxScore=score;bestMilk=milk}}return bestMilk}
+        
+        function calculateTopMatches(){const scores={oat:0,almond:0,soy:0,coconut:0,cashew:0};const uses=Array.isArray(answers[0])?answers[0]:[answers[0]];uses.forEach(use=>{if(use==='coffee'){scores.oat+=3;scores.soy+=2;scores.cashew+=1}else if(use==='cereal'){scores.cashew+=3;scores.oat+=2;scores.almond+=1}else if(use==='cooking'){scores.soy+=3;scores.almond+=2;scores.oat+=1}else if(use==='drinking'){scores.cashew+=3;scores.coconut+=2;scores.oat+=1}});const flavor=answers[1];if(flavor==='creamy'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(flavor==='neutral'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(flavor==='sweet'){scores.coconut+=3;scores.oat+=2;scores.cashew+=1}else if(flavor==='nutty'){scores.almond+=3;scores.cashew+=2;scores.coconut+=1}const priority=answers[2];if(priority==='eco'){scores.oat+=3;scores.soy+=2;scores.almond+=1}else if(priority==='nutrition'){scores.soy+=3;scores.oat+=2;scores.almond+=1}else if(priority==='budget'){scores.almond+=3;scores.soy+=2;scores.oat+=1}else if(priority==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const allergens=Array.isArray(answers[3])?answers[3]:[answers[3]];if(!allergens.includes('none')){if(allergens.includes('nuts')){scores.almond=-999;scores.cashew=-999}if(allergens.includes('soy')){scores.soy=-999}if(allergens.includes('oats')){scores.oat=-999}if(allergens.includes('coconut')){scores.coconut=-999}}const texture=answers[4];if(texture==='smooth'){scores.cashew+=3;scores.almond+=2;scores.soy+=1}else if(texture==='thick'){scores.cashew+=3;scores.oat+=2;scores.coconut+=1}else if(texture==='light'){scores.almond+=3;scores.coconut+=2;scores.soy+=1}else if(texture==='any'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}const shopping=answers[5];if(shopping==='mainstream'){scores.almond+=2;scores.soy+=2;scores.oat+=1}else if(shopping==='specialty'){scores.cashew+=2;scores.oat+=2;scores.coconut+=1}else if(shopping==='diy'){scores.oat+=2;scores.almond+=2;scores.cashew+=1}else if(shopping==='flexible'){scores.oat+=1;scores.almond+=1;scores.soy+=1;scores.coconut+=1;scores.cashew+=1}
+        
+        const sortedMilks=Object.entries(scores).map(([milk,score])=>({milk,score})).sort((a,b)=>b.score-a.score);return sortedMilks.slice(0,3)}
+        
         function shareResult(milkName){const text=`I'm a ${milkName} person! Find your perfect dairy alternative at noncow.com`;if(navigator.share){navigator.share({text:text,url:window.location.href})}else{alert('Share this: '+text)}}
         function restartQuiz(){currentQuestion=0;answers={};showScreen('start-screen')}
     </script>
