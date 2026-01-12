@@ -37,7 +37,10 @@
                 "@id": "https://noncow.com/#organization",
                 "name": "NonCow",
                 "url": "https://noncow.com",
-                "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" }
+                "logo": { "@type": "ImageObject", "url": "https://noncow.com/logo.png" },
+                "sameAs": [
+                    "https://www.pinterest.com/noncowcom/"
+                ]
             },
             {
                 "@type": "WebApplication",
@@ -48,6 +51,72 @@
                 "applicationCategory": "LifestyleApplication",
                 "operatingSystem": "Any",
                 "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+            }
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the best plant milk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best plant milk depends on your needs. Oat milk is best for coffee and cooking with its creamy texture. Soy milk has the most protein (7-8g per cup) making it ideal for nutrition. Almond milk is lowest in calories for weight loss. Our quiz helps you find your perfect match based on taste, lifestyle, and values."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which plant milk is healthiest?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Soy milk is generally considered the healthiest plant milk with 7-8g of protein per cup, all essential amino acids, and fortified vitamins. Oat milk provides fiber and beta-glucans for heart health. Pea milk offers 8g of protein. Choose fortified versions for calcium and vitamin D to match dairy's nutrition."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between oat milk and almond milk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oat milk is creamier with 90-120 calories per cup and works well in coffee and cooking. Almond milk is lighter with only 30-40 calories per cup but has minimal protein (1g). Oat milk has a naturally sweet flavor while almond milk is more neutral. Oat milk is better for the environment using less water than almonds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use plant milk instead of regular milk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, plant milk can replace regular milk in almost all uses. Use oat or soy milk as 1:1 substitutes in cooking and baking. Choose barista editions for coffee to get proper foam. Select fortified plant milks to match dairy's calcium and vitamin D content. Different plant milks work better for different purposes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is plant milk better for the environment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all plant milks have significantly lower environmental impact than dairy milk. Oat milk produces 80% fewer greenhouse gas emissions than dairy. Soy milk uses 95% less water. Even almond milk, despite high water use, has a smaller carbon footprint than dairy. Plant milks require less land and produce less pollution."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://noncow.com"
             }
         ]
     }
@@ -92,26 +161,38 @@
         <div style="margin-top: 50px;">
             <h2 style="font-size: 1.8em; color: #333; margin-bottom: 25px; text-align: center;">📚 Latest from the Blog</h2>
             
-            <!-- Featured Article #1: Toddlers -->
+            <!-- Featured Article #1: Matcha -->
             <div style="background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); padding: 20px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #4caf50; position: relative;">
                 <span style="position: absolute; top: 10px; right: 10px; background: #4caf50; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75em; font-weight: 600;">NEW</span>
                 <div style="display: flex; gap: 20px; align-items: flex-start;">
-                   <img src="/images/plant-milk-glass-jar-straw-wooden-board.jpg" alt="Plant-based milk in glass jar with reusable straw on wooden cutting board" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <img src="/images/matcha-latte-breakfast-acai-bowl-cafe.jpg" alt="Matcha latte with latte art served alongside acai bowl in modern cafe setting" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
-                        <h4 style="margin: 0 0 8px 0; font-size: 1.2em;"><a href="/blog/best-plant-milk-for-toddlers.html" style="color: #333; text-decoration: none;">Best Plant Milk for Toddlers: Parent's Guide (Ages 1-3)</a></h4>
+                        <h4 style="margin: 0 0 8px 0; font-size: 1.2em;"><a href="/blog/best-plant-milk-for-matcha.html" style="color: #333; text-decoration: none;">Best Plant Milk for Matcha Lattes: Creamy, Authentic Taste</a></h4>
+                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 12, 2026 | ⏱️ 11 min read</p>
+                        <p style="color: #666; font-size: 0.95em; margin: 0; line-height: 1.5;">Discover which plant milk creates the smoothest, most delicious matcha lattes. Compare oat, coconut, soy, and almond milk.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Article: Toddlers -->
+            <div style="background: #f8f9ff; padding: 20px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #e0e0e0;">
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <img src="/images/toddler-smoothie-banana-healthy.jpg" alt="Healthy toddler smoothie with banana in glass" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
+                    <div>
+                        <h4 style="margin: 0 0 8px 0; font-size: 1.1em;"><a href="/blog/best-plant-milk-for-toddlers.html" style="color: #333; text-decoration: none;">Best Plant Milk for Toddlers: Parent's Guide (Ages 1-3)</a></h4>
                         <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 5, 2026 | ⏱️ 11 min read</p>
                         <p style="color: #666; font-size: 0.95em; margin: 0; line-height: 1.5;">Choosing plant milk for toddlers ages 1-3? Compare nutrition, taste, and safety with transition tips for parents.</p>
                     </div>
                 </div>
             </div>
             
-            <!-- Second Article: Lattes -->
+            <!-- Third Article: Lattes -->
             <div style="background: #f8f9ff; padding: 20px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #e0e0e0;">
                 <div style="display: flex; gap: 20px; align-items: flex-start;">
                     <img src="/images/latte-art-plant-milk-closeup.jpg" alt="Perfect latte art made with plant-based milk" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
                         <h4 style="margin: 0 0 8px 0; font-size: 1.1em;"><a href="/blog/best-plant-milk-for-lattes.html" style="color: #333; text-decoration: none;">Best Plant Milk for Lattes: Barista-Quality Foam at Home</a></h4>
-                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 1, 2026 | ⏱️ 9 min read</p>
+                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 1, 2026 | ⏱️ 12 min read</p>
                         <p style="color: #666; font-size: 0.95em; margin: 0; line-height: 1.5;">Discover which plant milk creates the best microfoam for lattes. Compare oat, soy, almond, and coconut milk for steaming and latte art.</p>
                     </div>
                 </div>
@@ -123,7 +204,7 @@
                     <img src="/images/overnight-oats-mason-jar.jpg" alt="Layered overnight oats in mason jars" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
                     <div>
                         <h4 style="margin: 0 0 8px 0; font-size: 1.1em;"><a href="/blog/best-plant-milk-for-overnight-oats.html" style="color: #333; text-decoration: none;">Best Plant Milk for Overnight Oats</a></h4>
-                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 December 21, 2025 | ⏱️ 7 min read</p>
+                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 11, 2026 | ⏱️ 7 min read</p>
                         <p style="color: #666; font-size: 0.95em; margin: 0; line-height: 1.5;">Discover the best plant milk for overnight oats. Compare oat, almond, soy, and coconut milk for creamy meal prep breakfasts.</p>
                     </div>
                 </div>
@@ -132,31 +213,14 @@
             <!-- Text-only Articles -->
             <div style="background: #f8f9ff; padding: 15px 20px; border-radius: 15px; margin-bottom: 15px; border: 2px solid #e0e0e0;">
                 <h4 style="margin: 0 0 5px 0; font-size: 1.05em;"><a href="/blog/best-plant-milk-for-iced-coffee.html" style="color: #333; text-decoration: none;">Best Plant Milk for Iced Coffee</a></h4>
-                <p style="color: #888; font-size: 0.85em; margin: 0 0 5px 0;">📅 December 14, 2025 | ⏱️ 8 min read</p>
+                <p style="color: #888; font-size: 0.85em; margin: 0 0 5px 0;">📅 January 1, 2026 | ⏱️ 8 min read</p>
                 <p style="color: #666; font-size: 0.9em; margin: 0;">Discover the best plant milk for iced coffee. Compare oat, almond, soy, and coconut milk for taste and texture.</p>
             </div>
             
             <div style="background: #f8f9ff; padding: 15px 20px; border-radius: 15px; margin-bottom: 15px; border: 2px solid #e0e0e0;">
                 <h4 style="margin: 0 0 5px 0; font-size: 1.05em;"><a href="/blog/best-plant-milk-for-cooking.html" style="color: #333; text-decoration: none;">Best Plant Milk for Cooking: Savory Dishes Guide</a></h4>
-                <p style="color: #888; font-size: 0.85em; margin: 0 0 5px 0;">📅 November 26, 2025 | ⏱️ 10 min read</p>
+                <p style="color: #888; font-size: 0.85em; margin: 0 0 5px 0;">📅 January 11, 2026 | ⏱️ 10 min read</p>
                 <p style="color: #666; font-size: 0.9em; margin: 0;">Discover which plant milk works best for mashed potatoes, soups, and pasta sauces.</p>
-            </div>
-            
-            <div style="background: #f8f9ff; padding: 15px 20px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #e0e0e0;">
-                <h4 style="margin: 0 0 5px 0; font-size: 1.05em;"><a href="/blog/best-plant-milk-for-protein-shakes.html" style="color: #333; text-decoration: none;">Best Plant Milk for Protein Shakes</a></h4>
-                <p style="color: #888; font-size: 0.85em; margin: 0 0 5px 0;">📅 November 21, 2025 | ⏱️ 8 min read</p>
-                <p style="color: #666; font-size: 0.9em; margin: 0;">Find the best plant milk for protein shakes and post-workout nutrition.</p>
-            </div>
-
-            <div style="background: #f8f9ff; padding: 20px; border-radius: 15px; margin-bottom: 20px; border: 2px solid #e0e0e0;">
-                <div style="display: flex; gap: 20px; align-items: flex-start;">
-                    <img src="/images/two-smoothies-mango-berry-gold-straws.jpg" alt="Two smoothies with gold straws - yellow mango and purple berry" style="width: 150px; height: 100px; object-fit: cover; border-radius: 10px; flex-shrink: 0;">
-                    <div>
-                        <h4 style="margin: 0 0 8px 0; font-size: 1.1em;"><a href="/blog/best-plant-milk-for-smoothies.html" style="color: #333; text-decoration: none;">Best Plant Milk for Smoothies</a></h4>
-                        <p style="color: #888; font-size: 0.85em; margin: 0 0 8px 0;">📅 January 10, 2026 | ⏱️ 6 min read</p>
-                        <p style="color: #666; font-size: 0.95em; margin: 0; line-height: 1.5;">Find the perfect plant milk base for creamy, delicious smoothies. Compare oat, soy, almond, and coconut milk for texture and nutrition.</p>
-                    </div>
-                </div>
             </div>
             
             <div style="text-align: center;">
