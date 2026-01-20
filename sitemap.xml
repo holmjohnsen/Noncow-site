@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://noncow.com/</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,12 +14,18 @@
   </url>
   <url>
     <loc>https://noncow.com/blog/</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Blog Articles -->
+  <url>
+    <loc>https://noncow.com/blog/soy-milk-vs-oat-milk.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://noncow.com//blog/best-plant-milk-for-matcha.html</loc>
     <lastmod>2026-01-12</lastmod>
