@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- glass -->
+  <path d="M156 104 H356 L330 420 Q328 440 308 440 H204 Q184 440 182 420 Z"
+        fill="#ffffff" fill-opacity="0.22" stroke="#ffffff" stroke-width="16" stroke-linejoin="round"/>
+  <!-- milk -->
+  <path d="M170 210 Q213 190 256 210 T342 210 L323 418 Q322 433 306 433 H206 Q190 433 189 418 Z"
+        fill="#ffffff"/>
+  <!-- shine -->
+  <path d="M196 236 L208 392" stroke="#c9d1fb" stroke-width="14" stroke-linecap="round"/>
+</svg>

@@ -9,7 +9,7 @@ Hostes på GitHub Pages fra `main` (domenet ligger i `CNAME`). Ingen byggesteg, 
 - `blog/index.html`: bloggoversikt (kort sortert med nyeste først) · `blog/*.html`: artikler
 - `style.css`: felles stilark · `sitemap.xml` · `robots.txt`
 - `images/`: bilder. `*-vertical.jpg` (1000×1500) er Pinterest-bilder, de andre er artikkelbilder
-- `logo.png` (512×512) brukes som `publisher.logo` i schema. Kilden er `images/logo.svg`
+- `logo.png` (512×512) brukes som `publisher.logo` i schema. Favicons: `favicon.svg`, `favicon-48.png`, `favicon.ico`, `apple-touch-icon.png`. Kilden til alle er `images/logo.svg`
 
 Header, footer og cookie-banner er kopiert inn i hver side. Endres de, må alle sidene oppdateres.
 
@@ -25,9 +25,11 @@ Header, footer og cookie-banner er kopiert inn i hver side. Endres de, må alle 
 
 **Google Analytics (G-B4ZDS9NB49):** lastes KUN via `loadGoogleAnalytics()` i samtykkeskriptet nederst på hver side, etter at brukeren har trykket «Accept». Legg aldri `gtag.js` direkte i `<head>`, det bryter GDPR og personvernerklæringen. Cookie-banneret lenker til `/privacy`.
 
+**Head:** canonical, favicon-lenkene, Open Graph (`og:type/url/title/description/image/site_name`) og Twitter Card (`summary_large_image`). `og:url` = canonical.
+
 **Schema (JSON-LD):** Artikler har `Article` (med `image`, `datePublished`, `dateModified`, `mainEntityOfPage`, `publisher.logo` = `https://noncow.com/logo.png`) og `BreadcrumbList`, og ev. `FAQPage` eller `Recipe`. Alle URL-er i schema og `og:image` må peke på filer som finnes.
 
-**Overskrifter:** én `<h1>` per side. Logoen i headeren (`.logo`) er i dag en `<h1>` på de fleste sidene, men det er en kjent feil som ikke skal kopieres videre.
+**Overskrifter:** én `<h1>` per side. Logoen i headeren er `<div class="logo-title">`, ikke en overskrift.
 
 **Merke:** farger `#667eea` → `#764ba2` (gradient). Logoen i headeren er `🥛 NonCow`.
 
@@ -47,10 +49,6 @@ Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (riktig struktur: cooki
 ## Kjente mangler (ikke fikset ennå)
 
 - `author` i Article-schema er `Organization`, bør være en `Person` (E-E-A-T, særlig for helseartikler)
-- Open Graph mangler på de fleste artiklene, og ingen sider har favicon
-- Mange bilder mangler `width`/`height` (CLS)
-- `BreadcrumbList` mangler på enkelte artikler
-- `disclosure.html` mangler footer og har en `</div>` for mye
 - `privacy.html` mangler kontakt-e-post (TODO i filen)
 - Titlene inneholder «(2026)» og må oppdateres ved årsskiftet
 - På sikt: flytte header/footer/cookie-banner til Jekyll `_includes/`

@@ -57,8 +57,10 @@ nav a:hover {
 }
 
 .logo h1,
-.logo h2 {
+.logo h2,
+.logo .logo-title {
     font-size: 2.5em;
+    font-weight: bold;
     color: #667eea;
     margin-bottom: 10px;
 }
@@ -569,7 +571,8 @@ footer a {
     }
     
     .logo h1,
-    .logo h2 {
+    .logo h2,
+    .logo .logo-title {
         font-size: 2em;
     }
     
