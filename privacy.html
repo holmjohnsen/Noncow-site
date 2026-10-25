@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,29 +25,10 @@
     
 </head>
 <body>
-  <div class="cookie-banner" id="cookie-banner">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies. <a href="/privacy">Privacy Policy</a></p>
-            </div>
-            <div class="cookie-buttons">
-                <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
-                <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
-            </div>
-        </div>
-    </div>
+  {% include cookie-banner.html %}
 
     <div class="container">
-        <div class="logo">
-            <div class="logo-title">🥛 NonCow</div>
-            <p>Find Your Perfect Plant Milk</p>
-        </div>
-        
-        <nav>
-            <a href="/">🏠 Home</a>
-            <a href="/quiz">🥛 Take Quiz</a>
-            <a href="/blog/">📚 Blog</a>
-        </nav>
+        {% include header.html %}
             
             <!-- Privacy Content -->
         <article>
@@ -136,64 +119,9 @@
             </div>
         </article>
 
-        <footer>
-            <p>© 2026 NonCow | <a href="/disclosure">Affiliate Disclosure</a> | <a href="/privacy">Privacy Policy</a></p>
-            <p>As an Amazon Associate, I earn from qualifying purchases.</p>
-        </footer>
+        {% include footer.html %}
     </div>
 
-    <script>
-        // Cookie Consent Management
-        function setCookie(name, value, days) {
-            const d = new Date();
-            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
-        }
-        
-        function getCookie(name) {
-            const nameEQ = name + "=";
-            const ca = document.cookie.split(';');
-            for(let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-        
-        function loadGoogleAnalytics() {
-            // Load Google Analytics
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
-            document.head.appendChild(script);
-            
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B4ZDS9NB49');
-        }
-        
-        function acceptCookies() {
-            setCookie('cookieConsent', 'accepted', 365);
-            document.getElementById('cookie-banner').classList.remove('show');
-            loadGoogleAnalytics();
-        }
-        
-        function declineCookies() {
-            setCookie('cookieConsent', 'declined', 365);
-            document.getElementById('cookie-banner').classList.remove('show');
-        }
-        
-        // Check cookie consent on page load
-        window.addEventListener('DOMContentLoaded', function() {
-            const consent = getCookie('cookieConsent');
-            if (!consent) {
-                document.getElementById('cookie-banner').classList.add('show');
-            } else if (consent === 'accepted') {
-                loadGoogleAnalytics();
-            }
-        });
-    </script>
+    {% include consent.html %}
 </body>
 </html>

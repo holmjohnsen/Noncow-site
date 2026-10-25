@@ -1,7 +1,7 @@
 # NonCow (noncow.com)
 
 Statisk nettsted om plantemelk: quiz, bloggartikler og Amazon-affiliate-lenker. Innholdet er på engelsk.
-Hostes på GitHub Pages fra `main` (domenet ligger i `CNAME`). Ingen byggesteg, ingen pakker. Alt i repoet blir publisert, unntatt det som står i `exclude` i `_config.yml`.
+Hostes på GitHub Pages fra `main` (domenet ligger i `CNAME`). GitHub Pages bygger med Jekyll, men det brukes bare til felles includes. Det er ingen layouts, pakker eller lokalt byggesteg som kreves. Alt i repoet blir publisert, unntatt filer/mapper som starter med `_` eller `.`, og det som står i `exclude` i `_config.yml`.
 
 ## Struktur
 
@@ -11,7 +11,15 @@ Hostes på GitHub Pages fra `main` (domenet ligger i `CNAME`). Ingen byggesteg, 
 - `images/`: bilder. `*-vertical.jpg` (1000×1500) er Pinterest-bilder, de andre er artikkelbilder
 - `logo.png` (512×512) brukes som `publisher.logo` i schema. Favicons: `favicon.svg`, `favicon-48.png`, `favicon.ico`, `apple-touch-icon.png`. Kilden til alle er `images/logo.svg`
 
-Header, footer og cookie-banner er kopiert inn i hver side. Endres de, må alle sidene oppdateres.
+**Felles elementer ligger i `_includes/` og skal ALDRI kopieres inn i sidene:**
+- `cookie-banner.html`: rett etter `<body>`
+- `header.html`: logo og meny, først inne i `.container`
+- `footer.html`: sist inne i `.container` (årstallet settes automatisk)
+- `consent.html`: samtykke- og GA-skriptet, rett før `</body>`
+
+Alle sider starter med en tom front matter (`---` / `---`), ellers kjører ikke Jekyll includes. Pass på at sidene ikke inneholder `{{` eller `{%` utenfor includes (Liquid-syntaks).
+
+**Teste lokalt:** `jekyll build` og deretter `python3 -m http.server 8000 -d _site` (installert med `gem install --user-install jekyll -v 3.10.0`, samme versjon som GitHub Pages).
 
 ## Konvensjoner
 
@@ -23,11 +31,11 @@ Header, footer og cookie-banner er kopiert inn i hver side. Endres de, må alle 
 
 **Affiliate-lenker:** `https://www.amazon.com/s?k=SØK+ORD&tag=e12nni-20`, med `target="_blank" rel="sponsored noopener"`. Alle Amazon-lenker skal ha `sponsored`, også de som genereres i quiz-JS.
 
-**Google Analytics (G-B4ZDS9NB49):** lastes KUN via `loadGoogleAnalytics()` i samtykkeskriptet nederst på hver side, etter at brukeren har trykket «Accept». Legg aldri `gtag.js` direkte i `<head>`, det bryter GDPR og personvernerklæringen. Cookie-banneret lenker til `/privacy`.
+**Google Analytics (G-B4ZDS9NB49):** lastes KUN via `loadGoogleAnalytics()` i `_includes/consent.html`, etter at brukeren har trykket «Accept». Legg aldri `gtag.js` direkte i `<head>`, det bryter GDPR og personvernerklæringen. Cookie-banneret lenker til `/privacy`.
 
 **Head:** canonical, favicon-lenkene, Open Graph (`og:type/url/title/description/image/site_name`) og Twitter Card (`summary_large_image`). `og:url` = canonical.
 
-**Schema (JSON-LD):** Artikler har `Article` (med `image`, `datePublished`, `dateModified`, `mainEntityOfPage`, `publisher.logo` = `https://noncow.com/logo.png`) og `BreadcrumbList`, og ev. `FAQPage` eller `Recipe`. Alle URL-er i schema og `og:image` må peke på filer som finnes.
+**Schema (JSON-LD):** Artikler har `Article` (med `image`, `datePublished`, `dateModified`, `mainEntityOfPage`, `author` = Person «Øyvind Holm-Johnsen» med `sameAs` LinkedIn, `publisher.logo` = `https://noncow.com/logo.png`) og `BreadcrumbList`, og ev. `FAQPage` eller `Recipe`. Alle URL-er i schema og `og:image` må peke på filer som finnes.
 
 **Overskrifter:** én `<h1>` per side. Logoen i headeren er `<div class="logo-title">`, ikke en overskrift.
 
@@ -35,7 +43,7 @@ Header, footer og cookie-banner er kopiert inn i hver side. Endres de, må alle 
 
 ## Ny artikkel: sjekkliste
 
-Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (riktig struktur: cookie-banner → `.container` → `.logo` → `nav` → `.breadcrumbs` → `article` → `.related-articles` → `footer` → samtykkeskript).
+Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (front matter → head → `{% include cookie-banner.html %}` → `.container` → `{% include header.html %}` → `.breadcrumbs` → `article` → `.related-articles` → `{% include footer.html %}` → `{% include consent.html %}`).
 
 1. `<title>` ≤ 60 tegn, `meta description` ≤ 160 tegn, canonical, Open Graph (`og:title`, `og:description`, `og:image`, `og:url`, `og:type=article`)
 2. Schema som beskrevet over, med et bilde som finnes i `images/`
@@ -48,7 +56,5 @@ Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (riktig struktur: cooki
 
 ## Kjente mangler (ikke fikset ennå)
 
-- `author` i Article-schema er `Organization`, bør være en `Person` (E-E-A-T, særlig for helseartikler)
 - `privacy.html` mangler kontakt-e-post (TODO i filen)
 - Titlene inneholder «(2026)» og må oppdateres ved årsskiftet
-- På sikt: flytte header/footer/cookie-banner til Jekyll `_includes/`
