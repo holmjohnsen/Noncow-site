@@ -1,0 +1,4 @@
+# GitHub Pages (Jekyll) settings. The site is plain HTML; this file only
+# keeps internal docs from being published.
+exclude:
+  - CLAUDE.md
