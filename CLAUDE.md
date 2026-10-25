@@ -59,7 +59,7 @@ Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (front matter → head 
 3. `.affiliate-disclosure` øverst, `.affiliate-section` for produktlenker, `.cta-box` med lenke til `/quiz`, `.related-articles` til slutt
 4. Bilder: beskrivende `alt`, `width`/`height` og `loading="lazy"` (ikke på det første bildet)
 5. Legg til et kort i `blog/index.html` (med dato og lesetid, ca. 220 ord/min)
-6. Legg til i `sitemap.xml` (`lastmod` = sist endret)
+6. Legg til i `sitemap.xml` (`lastmod` = sist endret) og i `llms.txt` (riktig seksjon, én linje med beskrivelse)
 7. Lenk til artikkelen fra minst 2–3 relaterte artikler, så den ikke blir foreldreløs
 8. Når en artikkel endres: oppdater `dateModified` i schema, «Updated» i `.blog-meta` og `lastmod` i sitemap
 

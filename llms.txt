@@ -1,0 +1,70 @@
+# NonCow
+
+> NonCow (noncow.com) helps people choose the right plant-based milk. It has an interactive quiz that recommends a dairy alternative based on use, taste, values, allergies and texture, and in-depth guides comparing oat, soy, almond, coconut, pea and other plant milks for specific uses such as coffee, tea, baking, cooking, smoothies, kids and diets.
+
+Content is written by Øyvind Holm-Johnsen (https://www.linkedin.com/in/holmjohnsen/). The site earns commissions through the Amazon Associates program; recommendations are based on nutrition, use case and taste, and the quiz is not influenced by commissions. Articles are updated regularly and dated.
+
+Key recommendations from the guides:
+
+- Coffee, lattes and cappuccino: barista-edition oat milk froths best and resists curdling; barista soy milk is the high-protein runner-up.
+- Iced coffee and hot chocolate: oat milk is creamiest and blends without separating.
+- Matcha: barista oat milk for creaminess; oat or unsweetened soy milk for the most traditional taste.
+- Chai: barista oat milk balances the spices best; full-fat coconut milk adds richness.
+- Cereal: oat milk for flavor, almond milk keeps flakes crisp longest, soy milk adds the most protein.
+- Overnight oats: oat milk gives the creamiest texture; base recipe is 1/2 cup oats to 1 cup plant milk.
+- Smoothies and protein shakes: soy milk (7-9 g protein per cup) is the best all-round base; oat milk is creamiest.
+- Highest protein: soy milk (8-9 g per cup), pea milk (8 g) and oat protein milks (8 g).
+- Soy vs oat: soy wins on protein and complete amino acids; oat wins on taste, creaminess and coffee performance.
+- Oat vs almond: oat wins for coffee, creaminess and sustainability; almond for low calories, smoothies and budget.
+
+## Main pages
+
+- [Plant milk quiz](https://noncow.com/quiz): Six-question quiz that matches you with the best plant milk for your needs
+- [Home](https://noncow.com/): Overview, quiz and latest guides
+- [Blog index](https://noncow.com/blog/): All guides, reviews and comparisons
+
+## Guides by use
+
+- [Best plant milk for coffee](https://noncow.com/blog/best-plant-milk-for-coffee.html): Which plant milks froth, avoid curdling and taste best in coffee, plus how to froth at home
+- [Best plant milk for lattes](https://noncow.com/blog/best-plant-milk-for-lattes.html): Microfoam, steaming and latte art with oat, soy, almond and coconut milk
+- [Best plant milk for cappuccino](https://noncow.com/blog/best-plant-milk-for-cappuccino.html): Which plant milks create thick, stable cappuccino foam
+- [Best plant milk for iced coffee](https://noncow.com/blog/best-plant-milk-for-iced-coffee.html): Taste, texture and separation in cold coffee drinks
+- [Best plant milk for chai lattes](https://noncow.com/blog/best-plant-milk-for-chai-lattes.html): Pairing oat, coconut, soy and almond milk with chai spices
+- [Best plant milk for matcha](https://noncow.com/blog/best-plant-milk-for-matcha.html): Plant milks for smooth hot and iced matcha lattes
+- [Best plant milk for tea](https://noncow.com/blog/best-plant-milk-for-tea.html): Which plant milks work in black, green and chai tea without curdling
+- [Best plant milk for hot chocolate](https://noncow.com/blog/best-plant-milk-for-hot-chocolate.html): Plant milks for rich, creamy dairy-free cocoa
+- [Best plant milk for cereal](https://noncow.com/blog/best-plant-milk-for-cereal.html): Crunch-tested comparison of oat, almond, soy and pea milk with cereal
+- [Best plant milk for overnight oats](https://noncow.com/blog/best-plant-milk-for-overnight-oats.html): Plant milks for creamy meal-prep overnight oats
+- [Best plant milk for smoothies](https://noncow.com/blog/best-plant-milk-for-smoothies.html): Texture, protein, taste and price for smoothies
+- [Best plant milk for protein shakes](https://noncow.com/blog/best-plant-milk-for-protein-shakes.html): Protein content, mixing and taste for post-workout shakes
+- [Best plant milk for baking](https://noncow.com/blog/best-plant-milk-for-baking.html): Substituting dairy in cakes, cookies and bread, with ratios and troubleshooting
+- [Best plant milk for cooking](https://noncow.com/blog/best-plant-milk-for-cooking.html): Plant milks for savory dishes such as mashed potatoes, soups and pasta sauces
+
+## Nutrition, health and diet
+
+- [Best plant milk for protein](https://noncow.com/blog/best-plant-milk-for-protein.html): Ranking of plant milks by protein content
+- [High protein plant-based milk 2026](https://noncow.com/blog/high-protein-plant-based-milk-2026.html): Soy vs pea vs oat protein milks, amino acids, price and taste
+- [Best plant milk for weight loss](https://noncow.com/blog/best-plant-milk-for-weight-loss.html): Calories, protein and sugar compared
+- [Best plant milk for keto](https://noncow.com/blog/best-plant-milk-for-keto.html): Carbs, fat and taste of low-carb plant milks
+- [Best plant milk for kids](https://noncow.com/blog/best-plant-milk-for-kids.html): Nutrition, safety and taste of plant milks for children
+- [Best plant milk for toddlers](https://noncow.com/blog/best-plant-milk-for-toddlers.html): Plant milk for ages 1-3, with nutrition comparison and transition tips
+- [Soy milk benefits: is it healthy?](https://noncow.com/blog/soy-milk-benefits-healthy.html): Evidence on soy milk nutrition, hormones, GMOs and thyroid concerns
+- [Best plant milk for the environment](https://noncow.com/blog/best-plant-milk-for-environment.html): Water use, carbon emissions and land use of oat, almond, soy and coconut milk
+
+## Comparisons
+
+- [Soy milk vs oat milk](https://noncow.com/blog/soy-milk-vs-oat-milk.html): Nutrition, taste, environmental impact and cost
+- [Oat milk vs almond milk](https://noncow.com/blog/oat-milk-vs-almond-milk.html): Taste, nutrition, sustainability, price and best uses
+- [Plant milk flavor comparison](https://noncow.com/blog/plant-milk-flavor-comparison.html): Taste test of oat, almond, soy and coconut milk and best uses for each
+
+## Recipes
+
+- [Overnight oats with plant milk](https://noncow.com/blog/overnight-oats-plant-milk-recipe.html): No-cook breakfast recipe with flavor variations and meal prep tips
+- [Golden milk latte](https://noncow.com/blog/golden-milk-latte-recipe.html): Turmeric, ginger and cinnamon latte with the best plant milks to use
+- [Berry smoothie bowl](https://noncow.com/blog/berry-plant-based-smoothie-bowl-recipe.html): Plant milk smoothie bowl with toppings and plant milk picks
+- [Plant-based hot chocolate bar](https://noncow.com/blog/plant-based-hot-chocolate-bar.html): Party setup guide with recipe, toppings and plant milk comparison
+
+## Optional
+
+- [Affiliate disclosure](https://noncow.com/disclosure): How NonCow earns money and keeps recommendations independent
+- [Privacy policy](https://noncow.com/privacy): Cookies, analytics and personal data
