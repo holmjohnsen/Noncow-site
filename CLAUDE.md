@@ -41,6 +41,15 @@ Alle sider starter med en tom front matter (`---` / `---`), ellers kjører ikke 
 
 **Merke:** farger `#667eea` → `#764ba2` (gradient). Logoen i headeren er `🥛 NonCow`.
 
+## Etter hver push: IndexNow
+
+Bing er den viktigste søkekanalen (den forsyner også Yahoo, DuckDuckGo, ChatGPT-søk og Copilot). Etter at GitHub Pages har bygget, varsle IndexNow om endrede sider:
+
+- `_tools/indexnow.sh https://noncow.com/blog/<slug>.html ...` sender bestemte URL-er
+- `_tools/indexnow.sh --all` sender alle URL-er i `sitemap.xml` (etter store endringer)
+
+Nøkkelfilen `b2255992a86765c4c50f10220347e417.txt` i roten må ligge der (den beviser eierskap). HTTP 200/202 betyr mottatt. Google bruker ikke IndexNow, der gjelder Search Console og sitemap.
+
 ## Ny artikkel: sjekkliste
 
 Ta utgangspunkt i `blog/best-plant-milk-for-baking.html` (front matter → head → `{% include cookie-banner.html %}` → `.container` → `{% include header.html %}` → `.breadcrumbs` → `article` → `.related-articles` → `{% include footer.html %}` → `{% include consent.html %}`).
