@@ -75,7 +75,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://noncow.com//blog/best-plant-milk-for-matcha.html</loc>
+    <loc>https://noncow.com/blog/best-plant-milk-for-matcha.html</loc>
     <lastmod>2026-01-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -193,5 +193,17 @@
     <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://noncow.com/disclosure</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://noncow.com/privacy</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

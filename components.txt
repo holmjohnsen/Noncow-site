@@ -21,7 +21,7 @@ All styling comes from style.css - no inline styles needed!
 <nav>
     <a href="/">🏠 Home</a>
     <a href="/quiz">🥛 Take Quiz</a>
-    <a href="/blog">📚 Blog</a>
+    <a href="/blog/">📚 Blog</a>
 </nav>
 
 
@@ -34,7 +34,7 @@ Styling is in style.css
 <div class="cookie-banner" id="cookie-banner">
     <div class="cookie-content">
         <div class="cookie-text">
-            <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+            <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies. <a href="/privacy">Privacy Policy</a></p>
         </div>
         <div class="cookie-buttons">
             <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
@@ -184,7 +184,7 @@ Usage: Use this format for all Amazon links
 Amazon Associate Tag: e12nni-20
 
 <!-- Generic search link (preferred for most cases) -->
-<a href="https://www.amazon.com/s?k=SEARCH+TERMS&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+<a href="https://www.amazon.com/s?k=SEARCH+TERMS&tag=e12nni-20" class="product-link" target="_blank" rel="sponsored noopener">
     <div class="product-name">Product Name →</div>
     <div class="product-desc">Brief product description</div>
 </a>
@@ -218,7 +218,7 @@ Usage: Add after each plant milk section in blog posts
 
 <div class="affiliate-section">
     <h3>🛒 Shop [PRODUCT NAME]</h3>
-    <a href="https://www.amazon.com/s?k=YOUR+SEARCH&tag=e12nni-20" class="product-link" target="_blank" rel="noopener">
+    <a href="https://www.amazon.com/s?k=YOUR+SEARCH&tag=e12nni-20" class="product-link" target="_blank" rel="sponsored noopener">
         <div class="product-name">Product Name →</div>
         <div class="product-desc">Brief description of why this product is good</div>
     </a>

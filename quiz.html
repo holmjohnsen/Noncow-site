@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover your perfect dairy alternative with our interactive quiz. Find the best plant-based milk for your lifestyle.">
     <title>Find Your Perfect Non-Cow Milk | noncow.com</title>
+    <link rel="canonical" href="https://noncow.com/quiz">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,7 +36,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     
     <script type="application/ld+json">
     {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://noncow.com/#website","url":"https://noncow.com","name":"NonCow","description":"Find your perfect dairy alternative with our interactive plant milk matcher quiz","publisher":{"@id":"https://noncow.com/#organization"}},{"@type":"Organization","@id":"https://noncow.com/#organization","name":"NonCow","url":"https://noncow.com","logo":{"@type":"ImageObject","url":"https://noncow.com/logo.png"}},{"@type":"WebApplication","@id":"https://noncow.com/#webapp","url":"https://noncow.com","name":"Dairy Alternative Matcher","description":"Interactive quiz to match you with the perfect non-dairy milk based on your taste preferences, lifestyle, and values","applicationCategory":"LifestyleApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["Personalized milk recommendations","6-question interactive quiz","Product recommendations","Shareable results"]}]}
@@ -44,7 +45,7 @@
 <body>
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-content">
-            <div class="cookie-text"><p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p></div>
+            <div class="cookie-text"><p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies. <a href="/privacy">Privacy Policy</a></p></div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
                 <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
@@ -63,12 +64,12 @@
         <nav>
             <a href="/">🏠 Home</a>
             <a href="/quiz">🥛 Take Quiz</a>
-            <a href="/blog">📚 Blog</a>
+            <a href="/blog/">📚 Blog</a>
         </nav>
         
         <div class="screen active" id="start-screen">
             <div class="start-screen">
-                <h2>Discover Your Dairy Alternative Match</h2>
+                <h1>Discover Your Dairy Alternative Match</h1>
                 <p>Answer 6 quick questions and we'll match you with the perfect non-dairy milk for your lifestyle, taste preferences, and values.</p>
                 <button class="btn" onclick="startQuiz()">Start Quiz</button>
             </div>
@@ -89,7 +90,7 @@
         </div>
         
         <footer>
-            <p>© 2026 NonCow | <a href="/disclosure">Affiliate Disclosure</a></p>
+            <p>© 2026 NonCow | <a href="/disclosure">Affiliate Disclosure</a> | <a href="/privacy">Privacy Policy</a></p>
             <p>As an Amazon Associate, I earn from qualifying purchases.</p>
         </footer>
     </div>
@@ -191,11 +192,11 @@
                 
                 <div class="affiliate-section">
                     <h3 style="font-size: 1.3em; margin-bottom: 15px; color: #333;">🏆 Our Top Pick</h3>
-                    <a href="https://www.amazon.com/s?k=${firstMatch.productSearch}&tag=e12nni-20" class="product-link" target="_blank" rel="noopener" style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 20px; text-decoration: none; border-radius: 12px; margin-bottom: 15px; transition: transform 0.2s;">
+                    <a href="https://www.amazon.com/s?k=${firstMatch.productSearch}&tag=e12nni-20" class="product-link" target="_blank" rel="sponsored noopener" style="display: block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 20px; text-decoration: none; border-radius: 12px; margin-bottom: 15px; transition: transform 0.2s;">
                         <div style="font-size: 1.3em; font-weight: 600; margin-bottom: 5px; color: white;">${firstMatch.topProduct}</div>
                         <div style="font-size: 1em; opacity: 0.95; color: white;">See prices & reviews on Amazon →</div>
                     </a>
-                    <a href="https://www.amazon.com/s?k=${firstMatch.searchTerm}&tag=e12nni-20" target="_blank" rel="noopener" style="display: block; text-align: center; color: #667eea; text-decoration: none; font-size: 0.95em; margin-top: 10px;">
+                    <a href="https://www.amazon.com/s?k=${firstMatch.searchTerm}&tag=e12nni-20" target="_blank" rel="sponsored noopener" style="display: block; text-align: center; color: #667eea; text-decoration: none; font-size: 0.95em; margin-top: 10px;">
                         Or browse all ${firstMatch.name} options
                     </a>
                 </div>
@@ -207,8 +208,8 @@
                         <div style="font-size: 1.1em; font-weight: 600; color: #333; margin-bottom: 5px;">${secondMatch.icon} ${secondMatch.name}</div>
                         <p style="margin: 0; color: #666; font-size: 0.9em;">${secondMatch.description}</p>
                         <div style="margin-top: 10px;">
-                            <a href="https://www.amazon.com/s?k=${secondMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="noopener" style="display: inline-block; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${secondMatch.name} →</a>
-                            <a href="https://www.amazon.com/s?k=${secondMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="noopener" style="display: inline-block; margin-left: 12px; padding: 6px 12px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; font-size: 0.85em; color: #d39e00; text-decoration: none; font-weight: 600;">Check prices on Amazon</a>
+                            <a href="https://www.amazon.com/s?k=${secondMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="sponsored noopener" style="display: inline-block; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${secondMatch.name} →</a>
+                            <a href="https://www.amazon.com/s?k=${secondMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="sponsored noopener" style="display: inline-block; margin-left: 12px; padding: 6px 12px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; font-size: 0.85em; color: #d39e00; text-decoration: none; font-weight: 600;">Check prices on Amazon</a>
                         </div>
                     </div>
                     
@@ -216,8 +217,8 @@
                         <div style="font-size: 1.1em; font-weight: 600; color: #333; margin-bottom: 5px;">${thirdMatch.icon} ${thirdMatch.name}</div>
                         <p style="margin: 0; color: #666; font-size: 0.9em;">${thirdMatch.description}</p>
                         <div style="margin-top: 10px;">
-                            <a href="https://www.amazon.com/s?k=${thirdMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="noopener" style="display: inline-block; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${thirdMatch.name} →</a>
-                            <a href="https://www.amazon.com/s?k=${thirdMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="noopener" style="display: inline-block; margin-left: 12px; padding: 6px 12px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; font-size: 0.85em; color: #d39e00; text-decoration: none; font-weight: 600;">Check prices on Amazon</a>
+                            <a href="https://www.amazon.com/s?k=${thirdMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="sponsored noopener" style="display: inline-block; color: #667eea; text-decoration: none; font-size: 0.9em; font-weight: 600;">Shop ${thirdMatch.name} →</a>
+                            <a href="https://www.amazon.com/s?k=${thirdMatch.searchTerm}&tag=e12nni-20&utm_source=noncow&utm_medium=quiz&utm_campaign=affiliate-links" target="_blank" rel="sponsored noopener" style="display: inline-block; margin-left: 12px; padding: 6px 12px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 6px; font-size: 0.85em; color: #d39e00; text-decoration: none; font-weight: 600;">Check prices on Amazon</a>
                         </div>
                     </div>
                 </div>

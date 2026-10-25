@@ -137,21 +137,13 @@
     }
     </script>
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-B4ZDS9NB49');
-    </script>
 </head>
 <body>
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-content">
             <div class="cookie-text">
-                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies.</p>
+                <p>We use cookies to analyze site traffic with Google Analytics. By clicking "Accept", you consent to our use of cookies. <a href="/privacy">Privacy Policy</a></p>
             </div>
             <div class="cookie-buttons">
                 <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
@@ -168,13 +160,13 @@
         
         <nav>
             <a href="/">🏠 Home</a>
-            <a href="/quiz.html">🥛 Take Quiz</a>
-            <a href="/blog">📚 Blog</a>
+            <a href="/quiz">🥛 Take Quiz</a>
+            <a href="/blog/">📚 Blog</a>
         </nav>
 
         <!-- Breadcrumbs -->
         <div class="breadcrumbs">
-            <a href="/">Home</a> > <a href="/blog">Blog</a> > <span>High Protein Plant Based Milk 2026</span>
+            <a href="/">Home</a> > <a href="/blog/">Blog</a> > <span>High Protein Plant Based Milk 2026</span>
         </div>
 
         <article>
@@ -257,11 +249,11 @@
 
             <div class="affiliate-section">
                 <h3>🛒 Best High Protein Soy Milk:</h3>
-                <a href="https://www.amazon.com/s?k=silk+soy+milk&tag=e12nni-20" target="_blank" rel="noopener" class="product-link">
+                <a href="https://www.amazon.com/s?k=silk+soy+milk&tag=e12nni-20" target="_blank" rel="sponsored noopener" class="product-link">
                     <div class="product-name">Silk Original Soy Milk →</div>
                     <div class="product-desc">9g protein, creamy, most affordable option</div>
                 </a>
-                <a href="https://www.amazon.com/s?k=westSoy+unsweetened&tag=e12nni-20" target="_blank" rel="noopener" class="product-link">
+                <a href="https://www.amazon.com/s?k=westSoy+unsweetened&tag=e12nni-20" target="_blank" rel="sponsored noopener" class="product-link">
                     <div class="product-name">West Soy Unsweetened →</div>
                     <div class="product-desc">8g protein, 0g sugar, perfect for fitness</div>
                 </a>
@@ -281,7 +273,7 @@
 
             <div class="affiliate-section">
                 <h3>🛒 Best High Protein Pea Milk:</h3>
-                <a href="https://www.amazon.com/s?k=ripple+pea+milk&tag=e12nni-20" target="_blank" rel="noopener" class="product-link">
+                <a href="https://www.amazon.com/s?k=ripple+pea+milk&tag=e12nni-20" target="_blank" rel="sponsored noopener" class="product-link">
                     <div class="product-name">Ripple Pea Milk →</div>
                     <div class="product-desc">8g protein, creamy, modern brand</div>
                 </a>
@@ -298,7 +290,7 @@
 
             <div class="affiliate-section">
                 <h3>🛒 High Protein Oat Milk:</h3>
-                <a href="https://www.amazon.com/s?k=chobani+plant+based+protein&tag=e12nni-20" target="_blank" rel="noopener" class="product-link">
+                <a href="https://www.amazon.com/s?k=chobani+plant+based+protein&tag=e12nni-20" target="_blank" rel="sponsored noopener" class="product-link">
                     <div class="product-name">Chobani Plant-Based Protein →</div>
                     <div class="product-desc">8g protein, sweet vanilla flavor, great for smoothies</div>
                 </a>
@@ -346,7 +338,7 @@ A: Soy milk has the creamiest, most neutral taste. Pea milk is slightly earthy. 
             <div class="cta-box">
                 <h3>🥜 Not Sure Which Plant Milk Is Right for You?</h3>
                 <p>Take our free quiz to find your perfect match based on your taste preferences, values, and lifestyle!</p>
-                <a href="/quiz.html" class="cta-button">Take the Quiz →</a>
+                <a href="/quiz" class="cta-button">Take the Quiz →</a>
             </div>
         </article>
     </div>
@@ -355,6 +347,58 @@ A: Soy milk has the creamiest, most neutral taste. Pea milk is slightly earthy. 
         <p>&copy; 2026 NonCow. All rights reserved. | <a href="/disclosure">Affiliate Disclosure</a> | <a href="/privacy">Privacy Policy</a></p>
     </footer>
 
-    <script src="/cookie.js"></script>
+    <script>
+        // Cookie Consent Management
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+        }
+        
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+        
+        function loadGoogleAnalytics() {
+            // Load Google Analytics
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-B4ZDS9NB49';
+            document.head.appendChild(script);
+            
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B4ZDS9NB49');
+        }
+        
+        function acceptCookies() {
+            setCookie('cookieConsent', 'accepted', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+            loadGoogleAnalytics();
+        }
+        
+        function declineCookies() {
+            setCookie('cookieConsent', 'declined', 365);
+            document.getElementById('cookie-banner').classList.remove('show');
+        }
+        
+        // Check cookie consent on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookie-banner').classList.add('show');
+            } else if (consent === 'accepted') {
+                loadGoogleAnalytics();
+            }
+        });
+    </script>
 </body>
 </html>
